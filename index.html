@@ -32,6 +32,9 @@
   .lab h2{font-size:30px;letter-spacing:-.5px;color:var(--navy);font-weight:800}
   .sub{color:var(--mut);margin-bottom:26px;font-size:16px;max-width:640px}
   .shots{display:flex;flex-direction:column;gap:22px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .subh{font-weight:800;color:var(--navy);font-size:18px;margin:2px 0 4px}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
   .shot{display:block;border-radius:14px;overflow:hidden;box-shadow:0 20px 44px -24px rgba(27,42,74,.5);border:1px solid var(--line);background:#fff}
   .shot img{width:100%;display:block}
   .caseblock{margin-bottom:30px}
@@ -74,9 +77,17 @@
 <section>
   <div class="wrap">
     <div class="lab"><span class="n">01</span><h2>Work samples</h2></div>
-    <p class="sub">Social posts, short-form video editing and copywriting, produced end to end.</p>
-    <div class="shots">
-      <a class="shot" href="img/s02.jpg" target="_blank"><img src="img/s02.jpg" alt="Social posts" loading="lazy"></a>
+    <p class="sub">Social identity and posts, short-form video editing and copywriting, produced end to end.</p>
+    <div class="subh">Social media identity &amp; posts, created for StealthEnomics</div>
+    <p class="sub" style="margin-bottom:18px">A full visual identity for a fintech-education brand: logo system, palette, a "corporate surrealism" visual strategy and the posts built on it.</p>
+    <div class="grid2" style="margin-bottom:22px">
+      <a class="shot" href="img/se-post1.jpg" target="_blank"><img src="img/se-post1.jpg" alt="StealthEnomics social post" loading="lazy"></a>
+      <a class="shot" href="img/se-post2.jpg" target="_blank"><img src="img/se-post2.jpg" alt="StealthEnomics social post" loading="lazy"></a>
+      <a class="shot" href="img/se-post3.jpg" target="_blank"><img src="img/se-post3.jpg" alt="StealthEnomics visual strategy" loading="lazy"></a>
+      <a class="shot" href="img/se-post4.jpg" target="_blank"><img src="img/se-post4.jpg" alt="StealthEnomics brand system" loading="lazy"></a>
+    </div>
+    <div class="subh">Video editing &amp; copywriting</div>
+    <div class="shots" style="margin-top:14px">
       <a class="shot" href="img/s03.jpg" target="_blank"><img src="img/s03.jpg" alt="Video editing" loading="lazy"></a>
       <a class="shot" href="img/s04.jpg" target="_blank"><img src="img/s04.jpg" alt="Copywriting" loading="lazy"></a>
     </div>
