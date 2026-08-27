@@ -34,6 +34,14 @@
   .shots{display:flex;flex-direction:column;gap:22px}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .subh{font-weight:800;color:var(--navy);font-size:18px;margin:2px 0 4px}
+  .vid{position:relative}
+  .vid:after{content:"\25B6";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:62px;height:62px;background:rgba(20,25,40,.55);border:2px solid #fff;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;padding-left:4px}
+  .copycard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:12px;padding:24px 26px;box-shadow:0 14px 34px -24px rgba(27,42,74,.4)}
+  .copycard .plat{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+  .copycard p{color:var(--ink);font-size:15.5px;margin-bottom:10px}
+  .copycard p:last-child{margin-bottom:0}
+  .statcard{background:var(--navy);border-radius:16px;padding:34px 36px}
+  .statcard .metrics{margin:0}
   @media(max-width:640px){.grid2{grid-template-columns:1fr}}
   .shot{display:block;border-radius:14px;overflow:hidden;box-shadow:0 20px 44px -24px rgba(27,42,74,.5);border:1px solid var(--line);background:#fff}
   .shot img{width:100%;display:block}
@@ -68,10 +76,10 @@
 </header>
 
 <div class="strip"><div class="wrap">
-  <span><b>+34K</b> organic followers in 8 months</span>
-  <span><b>$9M</b> revenue linked to content</span>
   <span><b>20K+</b> community built (Web3)</span>
   <span><b>256%</b> more qualified leads</span>
+  <span><b>R$10M+</b> pipeline built</span>
+  <span><b>10+ yrs</b> fintech, SaaS &amp; Web3</span>
 </div></div>
 
 <section>
@@ -86,10 +94,17 @@
       <a class="shot" href="img/se-post3.jpg" target="_blank"><img src="img/se-post3.jpg" alt="StealthEnomics visual strategy" loading="lazy"></a>
       <a class="shot" href="img/se-post4.jpg" target="_blank"><img src="img/se-post4.jpg" alt="StealthEnomics brand system" loading="lazy"></a>
     </div>
-    <div class="subh">Video editing &amp; copywriting</div>
-    <div class="shots" style="margin-top:14px">
-      <a class="shot" href="img/s03.jpg" target="_blank"><img src="img/s03.jpg" alt="Video editing" loading="lazy"></a>
-      <a class="shot" href="img/s04.jpg" target="_blank"><img src="img/s04.jpg" alt="Copywriting" loading="lazy"></a>
+    <div class="subh">Short-form &amp; explainer video</div>
+    <p class="sub" style="margin-bottom:14px">Motion-graphics explainer and short-form edits for a B2B fintech-education brand.</p>
+    <div class="grid2" style="margin-bottom:28px">
+      <div class="shot vid"><img src="img/se-vid1.jpg" alt="StealthEnomics explainer video" loading="lazy"></div>
+      <div class="shot vid"><img src="img/se-vid2.jpg" alt="StealthEnomics explainer video" loading="lazy"></div>
+    </div>
+    <div class="subh">Copywriting</div>
+    <p class="sub" style="margin-bottom:14px">B2B copy that turns technical topics into clear, persuasive messaging.</p>
+    <div class="grid2">
+      <div class="copycard"><div class="plat">LinkedIn &middot; IT procurement</div><p>Most tech overspending doesn't come from bad intentions. It comes from fragmented decisions and vendor-led narratives.</p><p>The real question isn't "Can we afford an advisor?" It's "Are we buying the right technology at the right terms?"</p><p><b>Are your tech investments driven by strategy, or by sales decks?</b></p></div>
+      <div class="copycard"><div class="plat">Instagram &middot; short form</div><p>Structured, independent tech procurement can cut IT costs by 10 to 30%.</p><p>Most overspending isn't bad intentions, it's fragmented decisions and vendor-led narratives.</p><p><b>Save this for your next vendor evaluation.</b></p></div>
     </div>
   </div>
 </section>
@@ -121,20 +136,14 @@
     </div>
 
     <div class="caseblock">
-      <div class="casehd"><span class="tag">Wellness &amp; Beauty</span><span class="t">From strong engagement to predictable growth</span></div>
-      <div class="metrics">
-        <div class="metric"><div class="v">+34K</div><div class="l">organic followers / 8 months</div></div>
-        <div class="metric"><div class="v">$9M</div><div class="l">revenue linked to content</div></div>
-      </div>
-      <div class="shots">
-        <a class="shot" href="img/s06.jpg" target="_blank"><img src="img/s06.jpg" alt="Beauty case" loading="lazy"></a>
-      </div>
-    </div>
-
-    <div class="caseblock">
-      <div class="casehd"><span class="tag">Fitness &amp; Health</span><span class="t">Turning viral content into predictable results</span></div>
-      <div class="shots">
-        <a class="shot" href="img/s10.jpg" target="_blank"><img src="img/s10.jpg" alt="Fitness case" loading="lazy"></a>
+      <div class="casehd"><span class="tag">SaaS &middot; Video tech</span><span class="t">Sambatech, go-to-market and brand repositioning</span></div>
+      <p class="sub" style="margin-bottom:18px">Led go-to-market and brand repositioning for a video SaaS across content, PR, inbound, outbound and events, working closely with sales and product.</p>
+      <div class="statcard">
+        <div class="metrics">
+          <div class="metric"><div class="v" style="color:var(--amber)">+256%</div><div class="l" style="color:#c7d0e0">qualified leads</div></div>
+          <div class="metric"><div class="v" style="color:var(--amber)">R$10M+</div><div class="l" style="color:#c7d0e0">sales pipeline built</div></div>
+          <div class="metric"><div class="v" style="color:var(--amber)">&#9733;</div><div class="l" style="color:#c7d0e0">"Out of the Curve" award</div></div>
+        </div>
       </div>
     </div>
   </div>
