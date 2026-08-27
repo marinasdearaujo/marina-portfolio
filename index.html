@@ -35,7 +35,9 @@
   .shots .shot{max-width:760px;margin-left:auto;margin-right:auto;width:100%}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px;margin-left:auto;margin-right:auto}
   .subh{font-weight:800;color:var(--navy);font-size:18px;margin:2px 0 4px}
-  .vidplayer{display:block;width:100%;max-width:460px;border-radius:14px;box-shadow:0 20px 44px -24px rgba(27,42,74,.5);background:#000}
+  .vidrow{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+  .vidrow .vp{height:440px;width:auto;max-width:100%;border-radius:12px;box-shadow:0 20px 44px -24px rgba(27,42,74,.5);background:#000}
+  @media(max-width:640px){.vidrow .vp{height:auto;width:100%;max-width:320px}}
   .copycard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:12px;padding:24px 26px;box-shadow:0 14px 34px -24px rgba(27,42,74,.4)}
   .copycard .plat{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
   .copycard p{color:var(--ink);font-size:15.5px;margin-bottom:10px}
@@ -96,10 +98,12 @@
       <a class="shot" href="img/se-post4.jpg" target="_blank"><img src="img/se-post4.jpg" alt="StealthEnomics brand system" loading="lazy"></a>
     </div>
     <div class="subh">Short-form &amp; explainer video</div>
-    <p class="sub" style="margin-bottom:14px">Motion-graphics explainer for a B2B fintech-education brand (press play).</p>
-    <video class="vidplayer" controls preload="metadata" poster="img/se-vid1.jpg" playsinline style="margin-bottom:28px">
-      <source src="img/se-explainer.mp4" type="video/mp4">
-    </video>
+    <p class="sub" style="margin-bottom:14px">Motion-graphics explainer and short-form ad edits for a B2B fintech-education brand (press play).</p>
+    <div class="vidrow" style="margin-bottom:28px">
+      <video class="vp" controls preload="metadata" poster="img/se-vid1.jpg" playsinline><source src="img/se-explainer.mp4" type="video/mp4"></video>
+      <video class="vp" controls preload="metadata" poster="img/se-vid-a.jpg" playsinline><source src="img/se-vid-a.mp4" type="video/mp4"></video>
+      <video class="vp" controls preload="metadata" poster="img/se-vid-b.jpg" playsinline><source src="img/se-vid-b.mp4" type="video/mp4"></video>
+    </div>
     <div class="subh">Copywriting</div>
     <p class="sub" style="margin-bottom:14px">B2B copy that turns technical topics into clear, persuasive messaging.</p>
     <div class="grid2">
@@ -124,12 +128,9 @@
     <div class="caseblock">
       <div class="casehd"><span class="tag">Fintech &middot; Financial education</span><span class="t">StealthEnomics, content plus AI-optimized systems</span></div>
       <p class="sub" style="margin-bottom:16px">Social content and go-to-market for a B2B brand in financial and economics education, backed by AI-optimized systems: automated data pipelines and a live performance dashboard with an AI query bar.</p>
-      <div class="grid2" style="margin-bottom:22px">
+      <div class="grid2">
         <a class="shot" href="img/se-case1.jpg" target="_blank"><img src="img/se-case1.jpg" alt="StealthEnomics social post" loading="lazy"></a>
         <a class="shot" href="img/se-case2.jpg" target="_blank"><img src="img/se-case2.jpg" alt="StealthEnomics social post" loading="lazy"></a>
-      </div>
-      <div class="shots">
-        <a class="shot" href="img/se-dash.jpg" target="_blank"><img src="img/se-dash.jpg" alt="StealthEnomics live marketing dashboard" loading="lazy"></a>
       </div>
     </div>
 
@@ -147,6 +148,22 @@
           <div class="metric"><div class="v" style="color:var(--amber)">&#9733;</div><div class="l" style="color:#c7d0e0">"Out of the Curve" award</div></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="lab"><span class="n">03</span><h2>Data &amp; AI systems</h2></div>
+    <p class="sub">Beyond content, I build the systems that measure it. An automated pipeline pulls Facebook, Instagram, LinkedIn, YouTube, community and ad data into one live dashboard, with an AI query bar and per-platform deep dives that turn numbers into decisions.</p>
+    <div class="shots">
+      <a class="shot" href="img/se-dash.jpg" target="_blank"><img src="img/se-dash.jpg" alt="Live marketing performance dashboard" loading="lazy"></a>
+    </div>
+    <div class="subh" style="margin-top:26px">Per-platform deep dives</div>
+    <p class="sub" style="margin-bottom:16px">Each channel gets its own breakdown: best content, best format, best day and time, and audience performance.</p>
+    <div class="shots">
+      <a class="shot" href="img/dash-li.jpg" target="_blank"><img src="img/dash-li.jpg" alt="LinkedIn deep dive" loading="lazy"></a>
+      <a class="shot" href="img/dash-fb.jpg" target="_blank"><img src="img/dash-fb.jpg" alt="Facebook deep dive" loading="lazy"></a>
     </div>
   </div>
 </section>
