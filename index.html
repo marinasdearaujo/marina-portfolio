@@ -63,6 +63,30 @@
   .cta a{background:var(--orange);color:#fff;text-decoration:none;font-weight:700;padding:14px 28px;border-radius:30px;display:inline-block;font-size:15px}
   footer{text-align:center;color:var(--mut);font-size:13.5px;padding:30px 0 46px}
   @media(max-width:640px){h1{font-size:34px}.hero:after{font-size:90px}.lab h2{font-size:24px}}
+
+  /* view toggle + resume */
+  .toggle{position:sticky;top:0;z-index:50;background:rgba(20,29,48,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:8px;padding:11px}
+  .toggle button{background:transparent;border:1px solid rgba(255,255,255,.2);color:#dfe6f1;font-family:inherit;font-size:13.5px;font-weight:700;letter-spacing:.6px;padding:9px 24px;border-radius:30px;cursor:pointer;transition:.2s}
+  .toggle button.on{background:var(--orange);border-color:var(--orange);color:#fff}
+  .view{display:none}
+  .view.shown{display:block;animation:fadein .5s ease}
+  @keyframes fadein{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .resume{max-width:900px;margin:0 auto;padding:60px 26px 30px}
+  .rz-sum{font-size:17px;line-height:1.7;color:#33404f}
+  .rz h2{font-size:13px;text-transform:uppercase;letter-spacing:2px;color:var(--orange);margin:36px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  .rz-skills{display:flex;flex-wrap:wrap;gap:8px}
+  .rz-skills span{background:#eef2f8;color:#26365c;font-size:13px;padding:6px 13px;border-radius:20px}
+  .rz-job{margin-bottom:20px}
+  .rz-job .rt{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px}
+  .rz-job .t{font-size:17px;font-weight:800;color:var(--navy)}
+  .rz-job .co{color:var(--orange);font-weight:700}
+  .rz-job .date{font-size:13px;color:var(--mut);white-space:nowrap}
+  .rz-job ul{margin:8px 0 0 18px}
+  .rz-job li{font-size:15px;line-height:1.6;color:#3a4757;margin-bottom:4px}
+  .rz-edu div{font-size:15px;margin-bottom:8px;color:#3a4757;line-height:1.5}
+  .rz-edu b{color:var(--navy)}
+  .rz-edu .muted{color:var(--mut)}
+  .dlbtn{display:inline-block;margin-top:26px;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 28px;border-radius:30px;font-size:15px}
 </style>
 </head>
 <body>
@@ -78,6 +102,12 @@
     </div>
   </div>
 </header>
+
+<nav class="toggle">
+  <button id="btn-portfolio" class="on" onclick="showView('portfolio')">Portfolio</button>
+  <button id="btn-resume" onclick="showView('resume')">R&eacute;sum&eacute;</button>
+</nav>
+<div id="view-portfolio" class="view shown">
 
 <div class="strip"><div class="wrap">
   <span><b>20K+</b> community built (Web3)</span>
@@ -109,7 +139,7 @@
     <p class="sub" style="margin-bottom:14px">A couple of real samples, one personal, one for a brand I ran.</p>
     <div class="grid2">
       <div class="copycard"><div class="plat">LinkedIn &middot; Founder story</div><p>I watched a client rebuild the same report every Monday morning for eight months. Copy from one tab, paste into another, fix whatever broke, send it before the 9am call.</p><p>She didn't see it as a problem anymore. It was just Monday. We wired those tabs together in one afternoon, and the next week she texted me: "I forgot I used to do this by hand."</p><p>That's the part I like most. Finding the quiet thing eating someone's week and taking it off their plate for good.</p></div>
-      <div class="copycard"><div class="plat">Instagram &middot; Sambatech</div><p>Como transformar IA em resultado mensurável?</p><p>Líderes de grandes empresas revelam o que move o ponteiro em suas operações. Baixe o material "IA que gera valor: Finance &amp; Tech 2026" e veja como estão transformando IA em valor real.</p></div>
+      <div class="copycard"><div class="plat">Instagram &middot; Sambatech</div><p>How do you turn AI into measurable results?</p><p>Leaders at major companies share what actually moves the needle in their operations. Download "AI that creates value: Finance &amp; Tech 2026" and see how they're turning AI into real results.</p></div>
     </div>
   </div>
 </section>
@@ -177,6 +207,38 @@
     <a href="mailto:marinasdearaujo@gmail.com">marinasdearaujo@gmail.com</a>
   </div>
 </div>
+</div>
+
+<div id="view-resume" class="view">
+  <div class="resume rz">
+    <p class="rz-sum">Growth and content marketer with 10+ years across financial services, SaaS and Web3, with a growth hacking and go-to-market backbone that shapes how I run social and content. I started in banking (HSBC, Bradesco Seguros) and grew into leading content, social media and campaigns for tech and fintech brands. I turn complex topics into clear content that builds audience and pipeline, and I use AI across research, writing and video to move fast without losing a human voice.</p>
+
+    <h2>Core skills</h2>
+    <div class="rz-skills">
+      <span>Content Marketing</span><span>Social Media (Instagram, LinkedIn, YouTube)</span><span>Podcast (Spotify)</span><span>Community (Discord, WhatsApp, Telegram)</span><span>Email &amp; Automation</span><span>Copywriting</span><span>growth hacking</span><span>Go-to-Market Strategy</span><span>Brand Positioning</span><span>Events (online &amp; in-person)</span><span>Paid Media (Meta)</span><span>AI Content &amp; Video Tools</span><span>Analytics &amp; Dashboards</span>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="rz-job"><div class="rt"><div><span class="t">Growth &amp; Content Marketing</span> <span class="co">StealthEnomics</span></div><span class="date">2024 &ndash; Present</span></div><ul><li>Own content and go-to-market for a B2B platform that helps small businesses launch and grow with done-for-you websites, tools and integrations.</li><li>Build AI-optimized marketing systems: automated data pipelines, live reporting dashboards and AI content workflows.</li></ul></div>
+    <div class="rz-job"><div class="rt"><div><span class="t">Marketing &amp; Growth Coordinator</span> <span class="co">Sambatech (video SaaS)</span></div><span class="date">2022 &ndash; 2023</span></div><ul><li>Led go-to-market and brand repositioning across content, PR, inbound, outbound and events. 256% increase in qualified leads and a R$10M+ pipeline. "Out of the Curve" award.</li></ul></div>
+    <div class="rz-job"><div class="rt"><div><span class="t">Brand &amp; Community Lead</span> <span class="co">The CryptoPlayers (Web3 / NFT)</span></div><span class="date">2022</span></div><ul><li>Launched and positioned the first World Cup NFT football game; grew a crypto-native social community to 20,000+ members through the World Cup cycle.</li></ul></div>
+    <div class="rz-job"><div class="rt"><div><span class="t">Acquisition Coordinator</span> <span class="co">Anthor (marketplace app)</span></div><span class="date">2021 &ndash; 2022</span></div><ul><li>Ran user acquisition, onboarding and activation content for a services marketplace app, and led launches in new cities.</li></ul></div>
+    <div class="rz-job"><div class="rt"><div><span class="t">Head of Acquisition &amp; Marketing</span> <span class="co">MAISPS (B2B)</span></div><span class="date">2016 &ndash; 2021, 2023 &ndash; Present</span></div><ul><li>Built the marketing area from the ground up: R$4.6M qualified pipeline, LTV +98%, CRM and BI structure, content and B2B events.</li></ul></div>
+    <div class="rz-job"><div class="rt"><div><span class="t">Corporate Communication</span> <span class="co">HSBC &amp; Bradesco Seguros</span></div><span class="date">2015 &ndash; 2016</span></div></div>
+
+    <h2>Education &amp; tools</h2>
+    <div class="rz-edu">
+      <div><b>Data Science Foundations Specialization</b>, University of London <span class="muted">&middot; 2025</span></div>
+      <div><b>Postgraduate Diploma (Lato Sensu), Digital Marketing</b>, Escola Conquer <span class="muted">&middot; 2022 &ndash; 2023</span></div>
+      <div><b>B.A. in Organizational Communication</b>, Federal University of Technology &ndash; Paran&aacute; (UTFPR) <span class="muted">&middot; 2015 &ndash; 2019</span></div>
+      <div><b>Organizational Communication (exchange)</b>, University of Bras&iacute;lia (UnB) <span class="muted">&middot; 2018</span></div>
+      <div style="margin-top:10px"><b>Tools:</b> Claude &amp; Claude Code, ChatGPT, Perplexity, Submagic, CapCut, Higgsfield, Google Flow, ElevenLabs, Runway, Meta Ads, GA4, HubSpot, Canva, Figma.</div>
+      <div><b>Languages:</b> Portuguese (native), English (C1), French (basic).</div>
+    </div>
+
+    <a class="dlbtn" href="Marina-Scheffer-CV.pdf" target="_blank" rel="noopener">Download PDF</a>
+  </div>
+</div>
 
 <footer>Marina Scheffer &middot; Social Media &amp; Growth &middot; Remote (GMT-3)</footer>
 
@@ -194,6 +256,16 @@
  function run(){document.querySelectorAll('.shot,.caseblock,.strip span,.lab').forEach(function(el){el.setAttribute('data-rise','');io.observe(el);});}
  if(document.readyState!=='loading')run();else document.addEventListener('DOMContentLoaded',run);
 })();
+</script>
+<script>
+function showView(v){
+  var pf=document.getElementById('view-portfolio'), rz=document.getElementById('view-resume');
+  var bp=document.getElementById('btn-portfolio'), br=document.getElementById('btn-resume');
+  var on=v==='resume';
+  pf.classList.toggle('shown',!on); rz.classList.toggle('shown',on);
+  bp.classList.toggle('on',!on); br.classList.toggle('on',on);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 </script>
 </body>
 </html>
