@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interaction Lab — Marina Scheffer</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--navy:#0e1730;--pan:#16203c;--txt:#eef2f8;--mut:#95a2bd;--orange:#e8631a;--amber:#f5a623;--teal:#2fb6a5;--line:#26314f}
+  html{scroll-behavior:smooth}
+  body{font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;background:var(--navy);color:var(--txt);line-height:1.6;overflow-x:hidden}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+  a{color:inherit}
+  /* progress bar */
+  #prog{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--orange),var(--amber));z-index:100}
+  /* custom cursor + spotlight */
+  #cur{position:fixed;top:0;left:0;width:26px;height:26px;border:2px solid var(--orange);border-radius:50%;pointer-events:none;z-index:99;transform:translate(-50%,-50%);transition:width .18s,height .18s,background .18s;mix-blend-mode:difference}
+  #cur.big{width:54px;height:54px;background:rgba(232,99,26,.25)}
+  #spot{position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),rgba(47,182,165,.10),transparent 70%)}
+  @media(max-width:820px){#cur,#spot{display:none}}
+  /* hero */
+  header{position:relative;overflow:hidden;padding:90px 0 70px;text-align:center}
+  .aurora{position:absolute;inset:-40% -20%;z-index:0;background:
+     radial-gradient(40% 40% at 20% 30%,rgba(232,99,26,.5),transparent 60%),
+     radial-gradient(40% 40% at 80% 20%,rgba(47,182,165,.45),transparent 60%),
+     radial-gradient(50% 50% at 60% 80%,rgba(245,163,35,.4),transparent 60%);
+     filter:blur(60px);animation:swirl 16s ease-in-out infinite alternate}
+  @keyframes swirl{0%{transform:translate(0,0) rotate(0)}100%{transform:translate(4%,3%) rotate(12deg)}}
+  header .wrap{position:relative;z-index:2}
+  .kf{color:var(--amber);letter-spacing:4px;text-transform:uppercase;font-size:13px;margin-bottom:18px}
+  h1{font-size:60px;font-weight:800;letter-spacing:-1.5px;line-height:1.02;min-height:66px}
+  h1 .cw{border-right:3px solid var(--orange);padding-right:4px;animation:blink 1s step-end infinite}
+  @keyframes blink{50%{border-color:transparent}}
+  header p{color:var(--mut);max-width:520px;margin:18px auto 0;font-size:17px}
+  /* section shell */
+  section{padding:70px 0;border-top:1px solid var(--line);position:relative;z-index:2}
+  .tag{color:var(--orange);font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+  h2{font-size:30px;font-weight:800;letter-spacing:-.5px;margin:8px 0 6px}
+  .desc{color:var(--mut);max-width:620px;margin-bottom:26px}
+  .demo{background:var(--pan);border:1px solid var(--line);border-radius:18px;padding:30px}
+  /* 1 reveal */
+  .rev{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .rev.in{opacity:1;transform:none}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .card{background:#1c274a;border:1px solid var(--line);border-radius:14px;padding:24px;transition:transform .25s,box-shadow .25s,border-color .25s}
+  .card:hover{transform:translateY(-6px);border-color:var(--teal);box-shadow:0 24px 50px -24px rgba(47,182,165,.5)}
+  .card h3{font-size:19px;margin-bottom:6px}
+  .card p{color:var(--mut);font-size:14px}
+  @media(max-width:720px){.cards{grid-template-columns:1fr}}
+  /* 2 count-up */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  .stat .v{font-size:44px;font-weight:800;color:var(--amber);line-height:1}
+  .stat .l{color:var(--mut);font-size:13px;margin-top:6px}
+  @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+  /* 3 tilt */
+  .tilt{width:280px;height:180px;margin:0 auto;border-radius:16px;background:linear-gradient(135deg,var(--orange),var(--amber));display:flex;align-items:center;justify-content:center;color:#1a1200;font-weight:800;font-size:20px;transform-style:preserve-3d;transition:transform .1s;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+  /* 4 magnetic */
+  .magwrap{text-align:center;padding:20px}
+  .mag{display:inline-block;background:var(--orange);color:#fff;font-weight:800;padding:18px 40px;border-radius:40px;cursor:pointer;transition:transform .15s}
+  /* 5 lightbox */
+  .lbgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .lbgrid .th{height:110px;border-radius:12px;cursor:zoom-in;transition:transform .2s}
+  .lbgrid .th:hover{transform:scale(1.04)}
+  #lb{position:fixed;inset:0;background:rgba(6,10,20,.9);z-index:90;display:none;align-items:center;justify-content:center;cursor:zoom-out}
+  #lb.on{display:flex}
+  #lb div{width:min(70vw,560px);height:min(60vh,420px);border-radius:16px;box-shadow:0 40px 80px rgba(0,0,0,.6)}
+  @media(max-width:720px){.lbgrid{grid-template-columns:repeat(2,1fr)}}
+  /* 6 before/after */
+  .ba{position:relative;width:100%;max-width:640px;height:280px;margin:0 auto;border-radius:14px;overflow:hidden;user-select:none}
+  .ba .after{position:absolute;inset:0;background:linear-gradient(135deg,#2fb6a5,#1b6f66);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;letter-spacing:1px}
+  .ba .before{position:absolute;inset:0;background:linear-gradient(135deg,#3a4666,#232c46);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;letter-spacing:1px;clip-path:inset(0 50% 0 0)}
+  .ba .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%)}
+  .ba .handle:after{content:"‹ ›";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;color:var(--navy);font-weight:800;padding:6px 10px;border-radius:20px;font-size:13px}
+  .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize}
+  /* 7 filter */
+  .fbtns{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .fbtns button{background:transparent;border:1px solid var(--line);color:var(--txt);padding:8px 16px;border-radius:20px;cursor:pointer;font-family:inherit;font-weight:600;font-size:13px;transition:.2s}
+  .fbtns button.on{background:var(--orange);border-color:var(--orange)}
+  .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .fitem{height:90px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;transition:.3s}
+  .fitem.hide{opacity:0;transform:scale(.8);pointer-events:none;position:absolute;visibility:hidden}
+  @media(max-width:720px){.fgrid{grid-template-columns:1fr 1fr}}
+  /* 8 parallax */
+  .plx{height:320px;border-radius:16px;position:relative;overflow:hidden;background:#0a1226}
+  .plx .layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800}
+  .plx .l1{font-size:120px;color:rgba(232,99,26,.18)}
+  .plx .l2{font-size:46px;color:#fff}
+  /* 9 sticky */
+  .stickwrap{display:grid;grid-template-columns:220px 1fr;gap:24px}
+  .stickwrap .sticky{position:sticky;top:80px;align-self:start;background:var(--orange);color:#fff;border-radius:14px;padding:22px;font-weight:800}
+  .stickwrap .flow>div{background:#1c274a;border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:14px}
+  @media(max-width:720px){.stickwrap{grid-template-columns:1fr}.stickwrap .sticky{position:static}}
+  /* 10 horizontal */
+  .hscroll{display:flex;gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory}
+  .hscroll .hc{min-width:240px;height:150px;border-radius:14px;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+  /* 11 particles */
+  #pcanvas{width:100%;height:240px;border-radius:16px;display:block;background:#0a1226;cursor:crosshair}
+  /* 12 confetti */
+  .confwrap{text-align:center}
+  .conf{background:var(--teal);color:#04231f;font-weight:800;padding:16px 34px;border-radius:40px;cursor:pointer;border:none;font-family:inherit;font-size:15px}
+  #confcanvas{position:fixed;inset:0;pointer-events:none;z-index:95}
+  /* marquee */
+  .mq{overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0}
+  .mq div{display:inline-block;animation:scrollx 18s linear infinite;font-weight:800;font-size:22px;color:var(--mut)}
+  .mq span{margin:0 26px;color:var(--orange)}
+  @keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  footer{padding:60px 0;text-align:center;color:var(--mut);border-top:1px solid var(--line)}
+  .pick{display:inline-block;margin-top:12px;background:var(--orange);color:#fff;text-decoration:none;font-weight:800;padding:12px 26px;border-radius:30px}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div id="spot"></div>
+<div id="cur"></div>
+
+<header>
+  <div class="aurora"></div>
+  <div class="wrap">
+    <div class="kf">Interaction Lab</div>
+    <h1><span id="tw"></span><span class="cw">&nbsp;</span></h1>
+    <p>Every effect below is live. Scroll, hover, drag, click. Tell me which ones you want in your portfolio. (Animated aurora background + typewriter + custom cursor are running right now.)</p>
+  </div>
+</header>
+
+<section><div class="wrap">
+  <div class="tag">01 · Scroll reveal</div><h2 class="rev">Blocks rise in as you scroll</h2>
+  <p class="desc rev">The staggered entrance you already have. Subtle, and it makes a page feel alive.</p>
+  <div class="cards">
+    <div class="card rev"><h3>One</h3><p>Fades up on enter</p></div>
+    <div class="card rev" style="transition-delay:.08s"><h3>Two</h3><p>Slight delay after the first</p></div>
+    <div class="card rev" style="transition-delay:.16s"><h3>Three</h3><p>Cascade effect</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">02 · Count-up numbers</div><h2>Stats count from zero</h2>
+  <p class="desc">Your 20K / 256% / R$10M numbers animate up when they hit the screen. High impact, feels premium.</p>
+  <div class="demo"><div class="stats" id="stats">
+    <div class="stat"><div class="v" data-to="20000" data-suf="+">0</div><div class="l">community built</div></div>
+    <div class="stat"><div class="v" data-to="256" data-suf="%">0</div><div class="l">more leads</div></div>
+    <div class="stat"><div class="v" data-to="34" data-pre="+" data-suf="K">0</div><div class="l">followers</div></div>
+    <div class="stat"><div class="v" data-to="100" data-suf="M+">0</div><div class="l">reach</div></div>
+  </div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">03 · 3D tilt</div><h2>Cards tilt toward your mouse</h2>
+  <p class="desc">Move the mouse over the card. It leans in 3D, like it has depth.</p>
+  <div class="demo"><div class="tilt" id="tilt">Hover me</div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">04 · Magnetic button</div><h2>Buttons that pull toward the cursor</h2>
+  <p class="desc">Get close to the button. It reaches for you, then snaps back.</p>
+  <div class="demo magwrap"><span class="mag" id="mag">Let's talk</span></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">05 · Lightbox</div><h2>Click an image to open it big</h2>
+  <p class="desc">Much better than opening a new tab. Click any tile, click again to close.</p>
+  <div class="demo"><div class="lbgrid" id="lbgrid">
+    <div class="th" style="background:linear-gradient(135deg,#e8631a,#f5a623)"></div>
+    <div class="th" style="background:linear-gradient(135deg,#2fb6a5,#1b6f66)"></div>
+    <div class="th" style="background:linear-gradient(135deg,#3a4666,#232c46)"></div>
+    <div class="th" style="background:linear-gradient(135deg,#8794b8,#2c3350)"></div>
+  </div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">06 · Before / After</div><h2>Drag to compare</h2>
+  <p class="desc">Perfect for showing a redesign or a result. Drag the handle left and right.</p>
+  <div class="demo"><div class="ba">
+    <div class="after">AFTER</div>
+    <div class="before" id="baBefore">BEFORE</div>
+    <div class="handle" id="baHandle"></div>
+    <input type="range" min="0" max="100" value="50" id="baRange">
+  </div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">07 · Filters</div><h2>Filter the work by type</h2>
+  <p class="desc">Let people jump straight to Social, Video or Dashboards.</p>
+  <div class="demo">
+    <div class="fbtns" id="fbtns">
+      <button class="on" data-f="all">All</button><button data-f="social">Social</button><button data-f="video">Video</button><button data-f="data">Dashboards</button>
+    </div>
+    <div class="fgrid" id="fgrid">
+      <div class="fitem" data-cat="social" style="background:#e8631a">Social 1</div>
+      <div class="fitem" data-cat="video" style="background:#2fb6a5">Video 1</div>
+      <div class="fitem" data-cat="data" style="background:#3757a6">Dash 1</div>
+      <div class="fitem" data-cat="social" style="background:#c94f8a">Social 2</div>
+      <div class="fitem" data-cat="data" style="background:#5a6b9e">Dash 2</div>
+      <div class="fitem" data-cat="video" style="background:#1b8f82">Video 2</div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">08 · Parallax</div><h2>Layers move at different speeds</h2>
+  <p class="desc">Scroll and watch the big word drift slower than the front text. Adds depth.</p>
+  <div class="demo"><div class="plx"><div class="layer l1" data-plx="0.25">GROWTH</div><div class="layer l2" data-plx="-0.08">Foreground</div></div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">09 · Sticky / pinned</div><h2>A label sticks while content scrolls</h2>
+  <p class="desc">The orange box stays put while the cards pass by. Great for case studies.</p>
+  <div class="demo"><div class="stickwrap">
+    <div class="sticky">I stay here while you scroll</div>
+    <div class="flow"><div>Scroll down...</div><div>...the label holds...</div><div>...until this block ends.</div><div>Nice for storytelling.</div></div>
+  </div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">10 · Horizontal scroll</div><h2>A row you scroll sideways</h2>
+  <p class="desc">Drag or scroll sideways. Snaps to each card.</p>
+  <div class="demo"><div class="hscroll">
+    <div class="hc" style="background:#e8631a">01</div><div class="hc" style="background:#2fb6a5">02</div><div class="hc" style="background:#3757a6">03</div><div class="hc" style="background:#c94f8a">04</div><div class="hc" style="background:#f5a623;color:#241a00">05</div>
+  </div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">11 · Particles</div><h2>Dots that react to your mouse</h2>
+  <p class="desc">Move the cursor over the panel. The dots connect near it. Nice for a hero background.</p>
+  <div class="demo"><canvas id="pcanvas"></canvas></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">12 · Delight</div><h2>A little confetti</h2>
+  <p class="desc">For a thank-you moment or a submitted form. Click it.</p>
+  <div class="demo confwrap"><button class="conf" id="confbtn">🎉 Celebrate</button></div>
+</div></section>
+
+<div class="mq"><div>Interactive <span>·</span> Fast <span>·</span> Memorable <span>·</span> On-brand <span>·</span> Interactive <span>·</span> Fast <span>·</span> Memorable <span>·</span> On-brand <span>·</span> </div></div>
+
+<footer><div class="wrap">
+  <div>That's the menu, live. Tell me which numbers you want in your portfolio.</div>
+  <a class="pick" href="index.html">← Back to the portfolio</a>
+</div></footer>
+
+<div id="lb"><div></div></div>
+<canvas id="confcanvas"></canvas>
+
+<script>
+/* progress bar */
+addEventListener('scroll',function(){var st=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-innerHeight;document.getElementById('prog').style.width=(h>0?st/h*100:0)+'%';});
+/* cursor + spotlight */
+var cur=document.getElementById('cur');
+addEventListener('mousemove',function(e){cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';document.documentElement.style.setProperty('--mx',e.clientX+'px');document.documentElement.style.setProperty('--my',e.clientY+'px');});
+document.querySelectorAll('a,button,.mag,.th,.card,.tilt').forEach(function(el){el.addEventListener('mouseenter',function(){cur.classList.add('big');});el.addEventListener('mouseleave',function(){cur.classList.remove('big');});});
+/* typewriter */
+(function(){var words=['makes people stop.','feels alive.','earns the click.','is worth remembering.'];var i=0,j=0,del=false,el=document.getElementById('tw');function t(){var w=words[i];el.textContent=w.slice(0,j);if(!del&&j<w.length){j++;setTimeout(t,55);}else if(del&&j>0){j--;setTimeout(t,28);}else{if(!del){del=true;setTimeout(t,1200);}else{del=false;i=(i+1)%words.length;setTimeout(t,180);}}}t();})();
+/* reveal */
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});document.querySelectorAll('.rev').forEach(function(el){io.observe(el);});})();
+/* count-up */
+(function(){var done=false;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!done){done=true;document.querySelectorAll('#stats .v').forEach(function(el){var to=+el.dataset.to,pre=el.dataset.pre||'',suf=el.dataset.suf||'',t0=null;function fmt(n){if(to>=1000)return Math.round(n).toLocaleString();return Math.round(n);}function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1400,1);var e=1-Math.pow(1-p,3);el.textContent=pre+fmt(to*e)+suf;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);});}});},{threshold:.4});io.observe(document.getElementById('stats'));})();
+/* tilt */
+(function(){var c=document.getElementById('tilt');c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(600px) rotateY('+(x*16)+'deg) rotateX('+(-y*16)+'deg) scale(1.04)';});c.addEventListener('mouseleave',function(){c.style.transform='perspective(600px) rotateY(0) rotateX(0)';});})();
+/* magnetic */
+(function(){var m=document.getElementById('mag');m.addEventListener('mousemove',function(e){var r=m.getBoundingClientRect();m.style.transform='translate('+((e.clientX-r.left-r.width/2)*.4)+'px,'+((e.clientY-r.top-r.height/2)*.5)+'px)';});m.addEventListener('mouseleave',function(){m.style.transform='translate(0,0)';});})();
+/* lightbox */
+(function(){var lb=document.getElementById('lb'),inner=lb.firstElementChild;document.getElementById('lbgrid').addEventListener('click',function(e){var t=e.target.closest('.th');if(!t)return;inner.style.background=t.style.background;lb.classList.add('on');});lb.addEventListener('click',function(){lb.classList.remove('on');});})();
+/* before-after */
+(function(){var r=document.getElementById('baRange'),b=document.getElementById('baBefore'),h=document.getElementById('baHandle');function up(){var v=r.value;b.style.clipPath='inset(0 '+(100-v)+'% 0 0)';h.style.left=v+'%';}r.addEventListener('input',up);up();})();
+/* filter */
+(function(){var g=document.getElementById('fgrid');document.getElementById('fbtns').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;this.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');var f=b.dataset.f;g.querySelectorAll('.fitem').forEach(function(it){it.classList.toggle('hide',!(f==='all'||it.dataset.cat===f));});});})();
+/* parallax */
+addEventListener('scroll',function(){document.querySelectorAll('[data-plx]').forEach(function(el){var r=el.parentElement.getBoundingClientRect(),off=(r.top+r.height/2-innerHeight/2);el.style.transform='translateY('+(off*parseFloat(el.dataset.plx))+'px)';});});
+/* particles */
+(function(){var cv=document.getElementById('pcanvas');if(!cv)return;var ctx=cv.getContext('2d'),W,H,pts=[],mouse={x:-999,y:-999};function size(){W=cv.width=cv.offsetWidth*2;H=cv.height=cv.offsetHeight*2;}size();addEventListener('resize',size);for(var i=0;i<60;i++)pts.push({x:Math.random()*1,y:Math.random()*1,vx:(Math.random()-.5)*.0009,vy:(Math.random()-.5)*.0009});cv.addEventListener('mousemove',function(e){var r=cv.getBoundingClientRect();mouse.x=(e.clientX-r.left)/r.width;mouse.y=(e.clientY-r.top)/r.height;});cv.addEventListener('mouseleave',function(){mouse.x=mouse.y=-999;});function loop(){ctx.clearRect(0,0,W,H);for(var i=0;i<pts.length;i++){var p=pts[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>1)p.vx*=-1;if(p.y<0||p.y>1)p.vy*=-1;ctx.fillStyle='rgba(47,182,165,.8)';ctx.beginPath();ctx.arc(p.x*W,p.y*H,3,0,7);ctx.fill();var dx=(p.x-mouse.x),dy=(p.y-mouse.y),d=Math.sqrt(dx*dx+dy*dy);if(d<.18){ctx.strokeStyle='rgba(232,99,26,'+(1-d/.18)+')';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(p.x*W,p.y*H);ctx.lineTo(mouse.x*W,mouse.y*H);ctx.stroke();}}requestAnimationFrame(loop);}loop();})();
+/* confetti */
+(function(){var cv=document.getElementById('confcanvas'),ctx=cv.getContext('2d'),parts=[];function size(){cv.width=innerWidth;cv.height=innerHeight;}size();addEventListener('resize',size);var cols=['#e8631a','#f5a623','#2fb6a5','#3757a6','#c94f8a','#ffffff'];document.getElementById('confbtn').addEventListener('click',function(e){for(var i=0;i<130;i++)parts.push({x:innerWidth/2,y:innerHeight/2,vx:(Math.random()-.5)*14,vy:(Math.random()-.9)*14,g:.3,c:cols[i%cols.length],r:Math.random()*6+3,life:90});});function loop(){ctx.clearRect(0,0,cv.width,cv.height);for(var i=parts.length-1;i>=0;i--){var p=parts[i];p.vy+=p.g;p.x+=p.vx;p.y+=p.vy;p.life--;ctx.fillStyle=p.c;ctx.fillRect(p.x,p.y,p.r,p.r);if(p.life<0||p.y>cv.height)parts.splice(i,1);}requestAnimationFrame(loop);}loop();})();
+</script>
+</body>
+</html>
