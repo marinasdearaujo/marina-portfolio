@@ -50,9 +50,10 @@
   .hscroll{display:flex;gap:16px;overflow-x:auto;padding:4px 4px 18px;scroll-snap-type:x mandatory;position:relative;z-index:1}
   .hscroll::-webkit-scrollbar{height:8px}
   .hscroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
-  .hscroll .shot{flex:0 0 auto;height:360px;scroll-snap-align:start;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 50px -26px rgba(0,0,0,.7);background:var(--pan);display:block}
-  .hscroll .shot img{height:360px;width:auto;display:block}
-  .hscroll .vp{flex:0 0 auto;height:360px;scroll-snap-align:start;border-radius:14px;background:#000;box-shadow:0 24px 50px -26px rgba(0,0,0,.7)}
+  .hscroll .shot{flex:0 0 auto;height:480px;scroll-snap-align:start;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 50px -26px rgba(0,0,0,.7);background:var(--pan);display:block}
+  .hscroll .shot img{height:480px;width:auto;display:block}
+  .hscroll .vp{flex:0 0 auto;height:480px;scroll-snap-align:start;border-radius:14px;background:#000;box-shadow:0 24px 50px -26px rgba(0,0,0,.7)}
+  @media(max-width:640px){.hscroll .shot,.hscroll .shot img,.hscroll .vp{height:380px}}
   .hint{color:var(--mut);font-size:12.5px;letter-spacing:1px;text-transform:uppercase;margin:2px 0 12px;position:relative;z-index:1}
   .hint:before{content:"\2192  ";color:var(--orange)}
   /* single shot */
@@ -72,6 +73,10 @@
   /* copy cards */
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;position:relative;z-index:1}
   @media(max-width:720px){.grid2{grid-template-columns:1fr}}
+  .imgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:720px;margin:0 auto;position:relative;z-index:1}
+  .imgrid .shot{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 50px -26px rgba(0,0,0,.7);background:var(--pan)}
+  .imgrid .shot img{width:100%;display:block}
+  @media(max-width:640px){.imgrid{grid-template-columns:1fr}}
   .copycard{background:var(--pan);border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:14px;padding:26px;box-shadow:0 20px 44px -28px rgba(0,0,0,.6);transition:transform .12s ease}
   .copycard .plat{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
   .copycard p{color:#d7dfec;font-size:15.5px;margin-bottom:10px}
@@ -109,7 +114,23 @@
   .rz-edu div{font-size:15px;margin-bottom:8px;color:#c2ccdc;line-height:1.5}
   .rz-edu b{color:#fff}
   .rz-edu .muted{color:var(--mut)}
-  .dlbtn{display:inline-block;margin-top:26px;background:var(--orange);color:#fff;text-decoration:none;font-weight:800;padding:13px 28px;border-radius:30px;font-size:15px}
+  .dlbtn{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;font-weight:800;padding:13px 28px;border-radius:30px;font-size:15px}
+  .rz-top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid var(--line)}
+  .rz-top .nm{font-size:32px;font-weight:800;letter-spacing:-.5px}
+  .rz-top .rl{color:var(--orange);font-weight:700;font-size:15px;margin-top:4px}
+  .rz-stats{display:flex;gap:34px;flex-wrap:wrap;margin:24px 0 30px}
+  .rz-stats .v{font-size:32px;font-weight:800;color:var(--amber);line-height:1}
+  .rz-stats .l{font-size:12.5px;color:var(--mut);margin-top:6px;max-width:150px}
+  .rz-tl{position:relative;padding-left:28px;margin-top:6px}
+  .rz-tl:before{content:"";position:absolute;left:5px;top:8px;bottom:10px;width:2px;background:linear-gradient(var(--orange),rgba(232,99,26,.15))}
+  .rz-tl .rz-job:before{content:"";position:absolute;left:-28px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(232,99,26,.16)}
+  .rz-tl .rz-job{position:relative}
+  .view.shown .rz-tl .rz-job{animation:rzslide .55s cubic-bezier(.2,.7,.2,1) both}
+  .rz-tl .rz-job:nth-child(1){animation-delay:.04s}.rz-tl .rz-job:nth-child(2){animation-delay:.12s}.rz-tl .rz-job:nth-child(3){animation-delay:.2s}.rz-tl .rz-job:nth-child(4){animation-delay:.28s}.rz-tl .rz-job:nth-child(5){animation-delay:.36s}.rz-tl .rz-job:nth-child(6){animation-delay:.44s}
+  @keyframes rzslide{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:none}}
+  .view.shown .rz-skills span{animation:rzpop .45s ease both}
+  .rz-skills span:hover{border-color:var(--orange);color:#fff;transform:translateY(-2px);transition:.15s}
+  @keyframes rzpop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
   /* interactive layer */
   #prog{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--orange),var(--amber));z-index:210}
   #cur{position:fixed;top:0;left:0;width:24px;height:24px;border:2px solid var(--orange);border-radius:50%;pointer-events:none;z-index:209;transform:translate(-50%,-50%);transition:width .18s,height .18s,background .18s;mix-blend-mode:difference}
@@ -161,9 +182,9 @@
     <p class="sub">Social identity and posts, short-form video and copywriting, produced end to end.</p>
 
     <div class="subh">The StealthEnomics rebrand, drag to compare</div>
-    <p class="sub" style="margin-bottom:16px">I rebuilt the social identity of a B2B business-launch platform, from a busy promo look into a bold "corporate surrealism" system. Drag the handle.</p>
+    <p class="sub" style="margin-bottom:16px">I rebuilt the identity of a B2B business-launch brand: same "Launch your business in 45 days" webinar, taken from a busy, dated promo into a clean, confident new look. Drag the handle.</p>
     <div class="ba">
-      <div class="side after"><img src="img/se-post1.jpg" alt="After: new identity"><span class="ba-lab">After</span></div>
+      <div class="side after"><img src="img/se-after.jpg" alt="After: new identity"><span class="ba-lab">After</span></div>
       <div class="side before" id="baBefore"><img src="img/se-before.jpg" alt="Before: old promo"><span class="ba-lab">Before</span></div>
       <div class="handle" id="baHandle"></div>
       <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Before after slider">
@@ -172,10 +193,10 @@
     <div class="subh">Social identity &amp; posts</div>
     <div class="hint">scroll sideways</div>
     <div class="hscroll">
-      <a class="shot" href="img/se-post1.jpg"><img src="img/se-post1.jpg" alt="StealthEnomics social post" loading="lazy"></a>
-      <a class="shot" href="img/se-post2.jpg"><img src="img/se-post2.jpg" alt="StealthEnomics social post" loading="lazy"></a>
-      <a class="shot" href="img/se-post3.jpg"><img src="img/se-post3.jpg" alt="StealthEnomics visual strategy" loading="lazy"></a>
       <a class="shot" href="img/se-post4.jpg"><img src="img/se-post4.jpg" alt="StealthEnomics brand system" loading="lazy"></a>
+      <a class="shot" href="img/se-post3.jpg"><img src="img/se-post3.jpg" alt="StealthEnomics visual strategy" loading="lazy"></a>
+      <a class="shot" href="img/se-post2.jpg"><img src="img/se-post2.jpg" alt="StealthEnomics social post" loading="lazy"></a>
+      <a class="shot" href="img/se-post1.jpg"><img src="img/se-post1.jpg" alt="StealthEnomics social post" loading="lazy"></a>
     </div>
 
     <div class="subh" style="margin-top:22px">Short-form &amp; explainer video</div>
@@ -209,8 +230,7 @@
     <div class="caseblock">
       <div class="casehd"><span class="tag">SaaS &middot; Business launch</span><span class="t">StealthEnomics, content plus AI-optimized systems</span></div>
       <p class="sub" style="margin-bottom:16px">Social content and go-to-market for a B2B platform that helps small businesses launch and grow with done-for-you websites, tools and integrations, backed by AI-optimized systems: automated data pipelines and a live performance dashboard with an AI query bar.</p>
-      <div class="hint">scroll sideways</div>
-      <div class="hscroll">
+      <div class="imgrid">
         <a class="shot" href="img/se-case1.jpg"><img src="img/se-case1.jpg" alt="StealthEnomics social post" loading="lazy"></a>
         <a class="shot" href="img/se-case2.jpg"><img src="img/se-case2.jpg" alt="StealthEnomics social post" loading="lazy"></a>
       </div>
@@ -219,8 +239,7 @@
     <div class="caseblock">
       <div class="casehd"><span class="tag">SaaS &middot; Video tech</span><span class="t">Sambatech, go-to-market and brand repositioning</span></div>
       <p class="sub" style="margin-bottom:16px">Led go-to-market and brand repositioning for a video SaaS across content, social, PR, inbound, outbound and live executive events, including the C-Level Talks series and the Sambatalks podcast. Instagram <b>@_sambatech</b> (28.6K followers) &middot; Sambatalks podcast on Spotify.</p>
-      <div class="hint">scroll sideways</div>
-      <div class="hscroll" style="margin-bottom:18px">
+      <div class="shots" style="margin-bottom:18px;display:flex;flex-direction:column;gap:16px">
         <a class="shot" href="img/samba-ig.jpg"><img src="img/samba-ig.jpg" alt="Sambatech Instagram @_sambatech" loading="lazy"></a>
         <a class="shot" href="img/samba-podcast.jpg"><img src="img/samba-podcast.jpg" alt="Sambatalks podcast on Spotify" loading="lazy"></a>
         <a class="shot" href="img/samba-event.jpg"><img src="img/samba-event.jpg" alt="Sambatech C-Level Talks event" loading="lazy"></a>
@@ -241,8 +260,8 @@
     <p class="sub">Beyond content, I build the systems that measure it. An automated pipeline pulls Facebook, Instagram, LinkedIn, YouTube, community and ad data into one live dashboard, with an AI query bar and per-platform deep dives that turn numbers into decisions.</p>
     <div class="shots"><a class="shot" href="img/se-dash.jpg"><img src="img/se-dash.jpg" alt="Live marketing performance dashboard" loading="lazy"></a></div>
     <div class="subh" style="margin-top:26px">Per-platform deep dives</div>
-    <div class="hint">scroll sideways</div>
-    <div class="hscroll">
+    <p class="sub" style="margin-bottom:16px">Each channel gets its own breakdown: best content, best format, best day and time, and audience performance.</p>
+    <div class="shots" style="display:flex;flex-direction:column;gap:16px">
       <a class="shot" href="img/dash-li.jpg"><img src="img/dash-li.jpg" alt="LinkedIn deep dive" loading="lazy"></a>
       <a class="shot" href="img/dash-ig.jpg"><img src="img/dash-ig.jpg" alt="Instagram deep dive" loading="lazy"></a>
     </div>
@@ -250,7 +269,6 @@
 </section>
 
 <div class="cta">
-  <canvas id="ctaCanvas"></canvas>
   <div class="wrap">
     <h2>I want your brand to be my next case</h2>
     <p>Let's work together.</p>
@@ -261,18 +279,29 @@
 
 <div id="view-resume" class="view">
   <div class="resume rz">
+    <div class="rz-top">
+      <div><div class="nm">Marina Scheffer</div><div class="rl">Growth &amp; Content Marketing &middot; Social, Fintech &amp; AI</div></div>
+      <a class="dlbtn" href="Marina-Scheffer-CV.pdf" target="_blank" rel="noopener">Download PDF</a>
+    </div>
+    <div class="rz-stats">
+      <div><div class="v">10+</div><div class="l">years in marketing</div></div>
+      <div><div class="v">6</div><div class="l">companies</div></div>
+      <div><div class="v">4</div><div class="l">degrees &amp; certifications</div></div>
+    </div>
     <p class="rz-sum">Growth and content marketer with 10+ years across financial services, SaaS and Web3, with a growth hacking and go-to-market backbone that shapes how I run social and content. I started in banking (HSBC, Bradesco Seguros) and grew into leading content, social media and campaigns for tech and fintech brands. I turn complex topics into clear content that builds audience and pipeline, and I use AI across research, writing and video to move fast without losing a human voice.</p>
     <h2>Core skills</h2>
     <div class="rz-skills">
       <span>Content Marketing</span><span>Social Media (Instagram, LinkedIn, YouTube)</span><span>Podcast (Spotify)</span><span>Community (Discord, WhatsApp, Telegram)</span><span>Email &amp; Automation</span><span>Copywriting</span><span>growth hacking</span><span>Go-to-Market Strategy</span><span>Brand Positioning</span><span>Events (online &amp; in-person)</span><span>Paid Media (Meta)</span><span>AI Content &amp; Video Tools</span><span>Analytics &amp; Dashboards</span>
     </div>
     <h2>Experience</h2>
+    <div class="rz-tl">
     <div class="rz-job"><div class="rt"><div><span class="t">Growth &amp; Content Marketing</span> <span class="co">StealthEnomics</span></div><span class="date">2024 &ndash; Present</span></div><ul><li>Own content and go-to-market for a B2B platform that helps small businesses launch and grow with done-for-you websites, tools and integrations.</li><li>Build AI-optimized marketing systems: automated data pipelines, live reporting dashboards and AI content workflows.</li></ul></div>
     <div class="rz-job"><div class="rt"><div><span class="t">Marketing &amp; Growth Coordinator</span> <span class="co">Sambatech (video SaaS)</span></div><span class="date">2022 &ndash; 2023</span></div><ul><li>Led go-to-market and brand repositioning across content, PR, inbound, outbound and events. 256% increase in qualified leads and a R$10M+ pipeline. "Out of the Curve" award.</li></ul></div>
     <div class="rz-job"><div class="rt"><div><span class="t">Brand &amp; Community Lead</span> <span class="co">The CryptoPlayers (Web3 / NFT)</span></div><span class="date">2022</span></div><ul><li>Launched and positioned the first World Cup NFT football game; grew a crypto-native social community to 20,000+ members through the World Cup cycle.</li></ul></div>
     <div class="rz-job"><div class="rt"><div><span class="t">Acquisition Coordinator</span> <span class="co">Anthor (marketplace app)</span></div><span class="date">2021 &ndash; 2022</span></div><ul><li>Ran user acquisition, onboarding and activation content for a services marketplace app, and led launches in new cities.</li></ul></div>
     <div class="rz-job"><div class="rt"><div><span class="t">Head of Acquisition &amp; Marketing</span> <span class="co">MAISPS (B2B)</span></div><span class="date">2016 &ndash; 2021, 2023 &ndash; Present</span></div><ul><li>Built the marketing area from the ground up: R$4.6M qualified pipeline, LTV +98%, CRM and BI structure, content and B2B events.</li></ul></div>
     <div class="rz-job"><div class="rt"><div><span class="t">Corporate Communication</span> <span class="co">HSBC &amp; Bradesco Seguros</span></div><span class="date">2015 &ndash; 2016</span></div></div>
+    </div>
     <h2>Education &amp; tools</h2>
     <div class="rz-edu">
       <div><b>Data Science Foundations Specialization</b>, University of London <span class="muted">&middot; 2025</span></div>
@@ -282,7 +311,6 @@
       <div style="margin-top:10px"><b>Tools:</b> Claude &amp; Claude Code, ChatGPT, Perplexity, Submagic, CapCut, Higgsfield, Google Flow, ElevenLabs, Runway, Meta Ads, GA4, HubSpot, Canva, Figma.</div>
       <div><b>Languages:</b> Portuguese (native), English (C1), French (basic).</div>
     </div>
-    <a class="dlbtn" href="Marina-Scheffer-CV.pdf" target="_blank" rel="noopener">Download PDF</a>
   </div>
 </div>
 
@@ -304,6 +332,7 @@ function showView(v){
   var on=v==='resume';
   pf.classList.toggle('shown',!on);rz.classList.toggle('shown',on);
   bp.classList.toggle('on',!on);br.classList.toggle('on',on);
+  if(on&&!rz.dataset.counted){rz.dataset.counted='1';if(window.__mvCount)rz.querySelectorAll('.rz-stats .v').forEach(window.__mvCount);}
   window.scrollTo({top:0,behavior:'smooth'});
 }
 (function(){
@@ -326,6 +355,7 @@ function showView(v){
  /* count-up */
  function parseNum(t){var m=t.match(/^(\D*)([\d.,]+)(.*)$/);if(!m)return null;return{pre:m[1],num:parseFloat(m[2].replace(/,/g,'')),suf:m[3]};}
  function countUp(el){var info=parseNum(el.textContent.trim());if(!info)return;var t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1400,1),e=1-Math.pow(1-p,3),v=info.num*e;var out=info.num>=1000?Math.round(v).toLocaleString():(info.num%1?v.toFixed(1):Math.round(v));el.textContent=info.pre+out+info.suf;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+ window.__mvCount=countUp;
  if('IntersectionObserver'in window){var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});},{threshold:.6});document.querySelectorAll('.strip b, .metric .v').forEach(function(el){cio.observe(el);});}
  /* lightbox */
  var lb=document.getElementById('lb'),lbi=lb.firstElementChild;
