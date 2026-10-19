@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Marina Scheffer · Email, Funnels &amp; Web</title>
-<meta name="description" content="Email sequences, landing pages, funnels and the systems that connect them. Marina Scheffer's portfolio.">
+<title>Marina Scheffer · Customer Acquisition</title>
+<meta name="description" content="Customer acquisition from the first ad to the paying customer: paid ads, landing pages, email flows, automation and live dashboards. Marina Scheffer's portfolio.">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{--navy:#0e1730;--navy2:#0a1122;--pan:#16203c;--pan2:#1c274a;--txt:#eef2f8;--mut:#93a2bd;--orange:#e8631a;--amber:#f5a623;--teal:#2fb6a5;--line:#26314f}
@@ -65,6 +65,14 @@
   .plat .l{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);font-weight:700;margin-right:6px}
   .plat span.p{font-size:14.5px;font-weight:800;color:#fff;background:var(--navy2);border:1px solid var(--line);padding:6px 14px;border-radius:20px}
   .plat .note{flex-basis:100%;color:var(--mut);font-size:14px;margin-top:6px}
+  .note-card{background:#f6f1e7;color:#1d2433;border-radius:14px;padding:26px 28px;box-shadow:0 24px 50px -26px rgba(0,0,0,.7);font-size:15px}
+  .note-card .nh{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px solid #d9cfbd;padding-bottom:10px;margin-bottom:14px}
+  .note-card .nh b{font-size:17px}
+  .note-card .nh span{color:#7a6f5c;font-size:13px}
+  .note-card .it{display:grid;grid-template-columns:64px 1fr;gap:10px;margin-bottom:12px;align-items:start}
+  .note-card .tag{font-size:11.5px;font-weight:800;letter-spacing:1px;text-align:center;border-radius:6px;padding:4px 0;color:#fff}
+  .note-card .p0{background:#c2410c}.note-card .p1{background:#b7791f}.note-card .p2{background:#2f7d72}.note-card .now{background:#1d2433}
+  .note-card .src{color:#7a6f5c;font-size:12.5px;margin-top:6px;border-top:1px solid #d9cfbd;padding-top:10px}
   /* funnel map */
   .flow{background:var(--pan);border:1px solid var(--line);border-radius:16px;padding:26px 22px;margin-bottom:22px}
   .flow ol{list-style:none;display:flex;flex-wrap:wrap;gap:10px 0;align-items:stretch;counter-reset:s}
@@ -108,9 +116,9 @@
 <header>
   <div class="aurora"></div>
   <div class="wrap">
-    <div class="ey">Marina Scheffer · Email, funnels &amp; web</div>
-    <h1>The part of marketing that keeps working <em>after you log off.</em></h1>
-    <p>I build the emails that go out on their own, the landing pages they point to, and the checkout, CRM, ad audiences and reporting that connect them. You judge it by booked calls, attendance and sales, not by opens. Hands on with email for <b>ten years</b>, and most clients keep me for <b>one to five years</b>.</p>
+    <div class="ey">Marina Scheffer · Customer acquisition</div>
+    <h1>From the first ad to the paying customer, <em>every stage connected.</em></h1>
+    <p>I plan the whole acquisition funnel and run every stage of it except social media content: paid ads, landing pages, email flows, the automations between your tools, and the dashboards that show where it leaks. Every week you get a short written note on what changed, what to fix first and the numbers that pay the bills: <b>cost per lead, show-up rate, cost per buyer, revenue</b>.</p>
     <div class="contact">
       <a class="p" href="mailto:marinasdearaujo@gmail.com">Email me</a>
       <a class="s" href="https://www.linkedin.com/in/marinascheffer/">LinkedIn</a>
@@ -121,19 +129,83 @@
 
 <div class="strip"><div class="wrap">
   <span><b>10 years</b> hands on with email</span>
-  <span><b>68</b> automated emails built for one client</span>
+  <span><b>8 → 34</b> webinar registrations in one 30-day cycle</span>
   <span><b>89%</b> webinar show-up from email vs 28% from ads</span>
   <span><b>R$10M+</b> pipeline from inbound + outbound</span>
 </div></div>
 
 <nav class="jump"><div class="wrap">
-  <a href="#email">Email</a><a href="#pages">Landing pages</a><a href="#funnel">Funnels</a><a href="#reporting">Reporting</a><a href="#web">Websites</a><a href="#before">Earlier work</a><a href="#how">How I work</a>
+  <a href="#funnel">Funnel</a><a href="#ads">Paid ads</a><a href="#pages">Landing pages</a><a href="#email">Email</a><a href="#reporting">Data &amp; weekly notes</a><a href="#web">Websites</a><a href="#before">Earlier work</a><a href="#how">How I work</a>
 </div></nav>
 
 <main class="wrap">
 
+<section id="funnel">
+  <div class="lab"><span class="n">01</span><h2>Funnels, end to end</h2></div>
+  <p class="sub">The piece that usually breaks is the handoff between two tools. This is one funnel I built and tested with real payments on all three purchase paths.</p>
+  <div class="flow">
+    <ol>
+      <li><div class="b">Facebook ad<small>instant form</small></div></li>
+      <li><div class="b k">Zapier<small>phone formatted, list mapped</small></div></li>
+      <li><div class="b o">5-email sequence<small>12 days, GetResponse</small></div></li>
+      <li><div class="b">Training page<small>pixel + buy button</small></div></li>
+      <li><div class="b k">Stripe checkout<small>upgrade offered at checkout</small></div></li>
+      <li><div class="b k">Enrol service<small>unlocks the course, fires Purchase</small></div></li>
+      <li><div class="b o">Onboarding series<small>26 or 37 emails</small></div></li>
+    </ol>
+    <div class="legend"><span><i style="background:var(--navy2);border:1px solid var(--line)"></i>Page or ad</span><span><i style="background:var(--teal)"></i>Connection I built</span><span><i style="background:var(--orange)"></i>Email</span></div>
+  </div>
+  <div class="grid3">
+    <div class="box"><h4>No human step after payment</h4><p>The course platform's access link expires in two hours, so it can't sit in a static field. A small service mints it on each purchase and sends the buyer straight in.</p></div>
+    <div class="box"><h4>Meta sees the sale</h4><p>Stripe takes payment off site, so the success page fires the Purchase event. The campaign gets a real conversion signal and buyers can be excluded from ads.</p></div>
+    <div class="box"><h4>The CRM gets the lead too</h4><p>Lead source, ad, timing answer and first touch go into HubSpot, with a call queue for the person who phones the leads.</p></div>
+  </div>
+</section>
+
+<section id="ads">
+  <div class="lab"><span class="n">02</span><h2>Paid ads</h2></div>
+  <p class="sub">I structure, launch and read the campaigns myself, and an ad is only judged on what happens after the click.</p>
+  <div class="case">
+    <div class="txt">
+      <div class="who">Small business software · US</div>
+      <h3>Switched off the campaign that looked busy and rebuilt the one that converts</h3>
+      <p>A Traffic campaign had spent $451 for 1,603 landing page views and zero tracked registrations. I stopped it, rebuilt the webinar campaign on Meta's conversion objective with the registration as the event, and moved the email list to the front of the invite plan.</p>
+      <div class="metric">
+        <div><div class="v">8 → 34</div><div class="k">registrations, March to April</div></div>
+        <div><div class="v">$13.91</div><div class="k">per registration</div></div>
+        <div><div class="v">15</div><div class="k">attended, target was 10</div></div>
+      </div>
+      <div class="tags"><span>Meta Ads</span><span>Google Ads</span><span>Pixel &amp; events</span><span>GA4</span></div>
+    </div>
+    <div>
+      <div class="row" style="grid-template-columns:1fr 1fr">
+        <a class="frame" href="img/ad-1.jpg"><img src="img/ad-1.jpg" alt="Webinar ad creative" loading="lazy"></a>
+        <a class="frame" href="img/ad-2.jpg"><img src="img/ad-2.jpg" alt="Webinar ad variant" loading="lazy"></a>
+      </div>
+      <p class="sub" style="font-size:13.5px;margin:10px 0 0">A/B webinar variants for a real estate education brand. Lead forms carry a qualifying question, so the person who calls the leads starts with the warm ones.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pages">
+  <div class="lab"><span class="n">03</span><h2>Landing pages</h2></div>
+  <p class="sub">Written and built from scratch, wired to the form, the CRM and the conversion tag before they go live.</p>
+  <div class="row">
+    <a class="frame card" href="img/sys-lp-bpc.jpg"><img src="img/sys-lp-bpc.jpg" alt="Free business website landing page" loading="lazy"></a>
+    <a class="frame card" href="img/sys-lp-diag.jpg"><img src="img/sys-lp-diag.jpg" alt="Free business diagnostic landing page" loading="lazy"></a>
+    <a class="frame card" href="img/sys-lp-blueprint.jpg"><img src="img/sys-lp-blueprint.jpg" alt="45-day launch blueprint landing page" loading="lazy"></a>
+    <a class="frame card" href="img/sys-lp-apprentice.jpg"><img src="img/sys-lp-apprentice.jpg" alt="Membership sales page" loading="lazy"></a>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <div class="card"><div class="t">Free website offer</div><div class="d">Small business software · sign-up widget · own thank-you page for the Google Ads tag</div></div>
+    <div class="card"><div class="t">Business diagnostic</div><div class="d">Same company · its own widget, so each sign-up gets its own sequence</div></div>
+    <div class="card"><div class="t">Launch blueprint</div><div class="d">Lead magnet page for a PDF guide</div></div>
+    <div class="card"><div class="t">Membership sales page</div><div class="d">Real estate education · Stripe checkout and Meta pixel</div></div>
+  </div>
+</section>
+
 <section id="email">
-  <div class="lab"><span class="n">01</span><h2>Email sequences &amp; automation</h2></div>
+  <div class="lab"><span class="n">04</span><h2>Email sequences &amp; automation</h2></div>
   <p class="sub">Written in the client's voice, triggered by what the person actually did, and measured by what it brings in: calls booked, people who show up, purchases.</p>
   <div class="plat">
     <span class="l">Platforms</span>
@@ -184,51 +256,13 @@
   </div>
 </section>
 
-<section id="pages">
-  <div class="lab"><span class="n">02</span><h2>Landing pages</h2></div>
-  <p class="sub">Written and built from scratch, wired to the form, the CRM and the conversion tag before they go live.</p>
-  <div class="row">
-    <a class="frame card" href="img/sys-lp-bpc.jpg"><img src="img/sys-lp-bpc.jpg" alt="Free business website landing page" loading="lazy"></a>
-    <a class="frame card" href="img/sys-lp-diag.jpg"><img src="img/sys-lp-diag.jpg" alt="Free business diagnostic landing page" loading="lazy"></a>
-    <a class="frame card" href="img/sys-lp-blueprint.jpg"><img src="img/sys-lp-blueprint.jpg" alt="45-day launch blueprint landing page" loading="lazy"></a>
-    <a class="frame card" href="img/sys-lp-apprentice.jpg"><img src="img/sys-lp-apprentice.jpg" alt="Membership sales page" loading="lazy"></a>
-  </div>
-  <div class="row" style="margin-top:4px">
-    <div class="card"><div class="t">Free website offer</div><div class="d">Small business software · sign-up widget · own thank-you page for the Google Ads tag</div></div>
-    <div class="card"><div class="t">Business diagnostic</div><div class="d">Same company · its own widget, so each sign-up gets its own sequence</div></div>
-    <div class="card"><div class="t">Launch blueprint</div><div class="d">Lead magnet page for a PDF guide</div></div>
-    <div class="card"><div class="t">Membership sales page</div><div class="d">Real estate education · Stripe checkout and Meta pixel</div></div>
-  </div>
-</section>
-
-<section id="funnel">
-  <div class="lab"><span class="n">03</span><h2>Funnels, end to end</h2></div>
-  <p class="sub">The piece that usually breaks is the handoff between two tools. This is one funnel I built and tested with real payments on all three purchase paths.</p>
-  <div class="flow">
-    <ol>
-      <li><div class="b">Facebook ad<small>instant form</small></div></li>
-      <li><div class="b k">Zapier<small>phone formatted, list mapped</small></div></li>
-      <li><div class="b o">5-email sequence<small>12 days, GetResponse</small></div></li>
-      <li><div class="b">Training page<small>pixel + buy button</small></div></li>
-      <li><div class="b k">Stripe checkout<small>upgrade offered at checkout</small></div></li>
-      <li><div class="b k">Enrol service<small>unlocks the course, fires Purchase</small></div></li>
-      <li><div class="b o">Onboarding series<small>26 or 37 emails</small></div></li>
-    </ol>
-    <div class="legend"><span><i style="background:var(--navy2);border:1px solid var(--line)"></i>Page or ad</span><span><i style="background:var(--teal)"></i>Connection I built</span><span><i style="background:var(--orange)"></i>Email</span></div>
-  </div>
-  <div class="grid3">
-    <div class="box"><h4>No human step after payment</h4><p>The course platform's access link expires in two hours, so it can't sit in a static field. A small service mints it on each purchase and sends the buyer straight in.</p></div>
-    <div class="box"><h4>Meta sees the sale</h4><p>Stripe takes payment off site, so the success page fires the Purchase event. The campaign gets a real conversion signal and buyers can be excluded from ads.</p></div>
-    <div class="box"><h4>The CRM gets the lead too</h4><p>Lead source, ad, timing answer and first touch go into HubSpot, with a call queue for the person who phones the leads.</p></div>
-  </div>
-</section>
-
 <section id="reporting">
-  <div class="lab"><span class="n">04</span><h2>Reporting that updates itself</h2></div>
+  <div class="lab"><span class="n">05</span><h2>Data, weekly notes &amp; the KPIs that matter</h2></div>
+  <p class="sub">I'm the one watching the numbers. You get a live dashboard to look at whenever you like, and a written note every week that tells you what to do about them.</p>
   <div class="case">
     <div class="txt">
       <h3>One page instead of four logins</h3>
-      <p>Dashboards that pull from Meta Ads, Instagram, YouTube and the CRM on a schedule, so the weekly read takes minutes and the decision happens before the money is spent.</p>
+      <p>Live dashboards that pull from Meta Ads, Instagram, YouTube and the CRM every few hours, so nobody exports a spreadsheet and the decision happens before the money is spent.</p>
       <ul>
         <li>Every post gets an automatic reading at 24, 48 and 72 hours.</li>
         <li>Goals come from the account's own medians, not industry averages.</li>
@@ -242,10 +276,26 @@
       <a class="frame" href="img/dash-ig.jpg"><img src="img/dash-ig.jpg" alt="Instagram deep dive dashboard" loading="lazy"></a>
     </div>
   </div>
+
+  <div class="case flip" style="margin-top:10px">
+    <div class="txt">
+      <h3>A weekly note, not a wall of numbers</h3>
+      <p>Each week: where we are against the goal, then what to stop, change or watch, ranked by how much money it moves. One page, written so you can act on it in five minutes.</p>
+      <p>The KPIs it tracks are the ones that pay the bills: cost per lead, lead to call or registration rate, show-up rate, cost per buyer, revenue per email and payback. Opens, likes and impressions only appear when they explain one of those.</p>
+    </div>
+    <div class="note-card">
+      <div class="nh"><b>Weekly note · Webinar funnel</b><span>Week 3 · April</span></div>
+      <div class="it"><span class="tag now">NOW</span><div>34 registrations this cycle, up from 8 last month, at $13.91 each.</div></div>
+      <div class="it"><span class="tag p0">P0</span><div><b>Stop the Traffic campaign.</b> $451 spent, 1,603 page views, zero tracked registrations.</div></div>
+      <div class="it"><span class="tag p1">P1</span><div><b>Invite the email list first.</b> List contacts show up at 89%, ad sign-ups at 28%.</div></div>
+      <div class="it"><span class="tag p2">P2</span><div><b>Ignore the lead drop.</b> Leads fell 65%, but it's two paused lead form campaigns whose leads rarely bought. Registrations are the real scoreboard now.</div></div>
+      <div class="src">The format of my weekly note, filled with numbers from a real 2026 client cycle.</div>
+    </div>
+  </div>
 </section>
 
 <section id="web">
-  <div class="lab"><span class="n">05</span><h2>Websites</h2></div>
+  <div class="lab"><span class="n">06</span><h2>Websites</h2></div>
   <p class="sub">Written and built by me, from the first page to the domain.</p>
 
   <div class="row row3" style="margin-bottom:14px">
@@ -281,7 +331,7 @@
 </section>
 
 <section id="before">
-  <div class="lab"><span class="n">06</span><h2>Earlier work</h2></div>
+  <div class="lab"><span class="n">07</span><h2>Earlier work</h2></div>
   <div class="grid3">
     <div class="box"><div class="big">R$10M+</div><h4>B2B tech consultancy · 2022-23</h4><p>Ran inbound and outbound together: lifecycle emails in HubSpot, one outbound sequence per sector, about 25 calls a month from cold leads. +256% qualified leads.</p></div>
     <div class="box"><div class="big">R$4.6M</div><h4>Corporate training company</h4><p>Qualified pipeline for a B2B corporate learning company.</p></div>
@@ -290,10 +340,10 @@
 </section>
 
 <section id="how">
-  <div class="lab"><span class="n">07</span><h2>How I work</h2></div>
+  <div class="lab"><span class="n">08</span><h2>How I work</h2></div>
   <div class="grid3">
-    <div class="box"><h4>Async by default</h4><p>Written readouts, short videos and a shared board instead of status calls. You always know what moved this week.</p></div>
-    <div class="box"><h4>Fast first draft</h4><p>A sequence or a landing page in two to three working days from access and brand assets, a single email often the next day.</p></div>
+    <div class="box"><h4>Every stage, one owner</h4><p>I write the strategy and run the ads, pages, email and automation myself. Social media content stays with your team or a creator, and I plan it so it feeds the funnel.</p></div>
+    <div class="box"><h4>A written note every week</h4><p>Async by default: a short note on the numbers and the next moves, a live dashboard, and short videos when something needs showing. No status calls needed.</p></div>
     <div class="box"><h4>Tested, then handed over</h4><p>I buy, sign up and fill in the form myself, on every path, before I tell you it works. Then you get a written guide to what runs where, so anyone on your team can keep it going.</p></div>
   </div>
 </section>
