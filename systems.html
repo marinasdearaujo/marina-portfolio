@@ -90,7 +90,8 @@
   .lb{position:fixed;inset:0;background:rgba(5,9,20,.94);display:none;align-items:flex-start;justify-content:center;z-index:99;overflow:auto;padding:30px 16px;cursor:zoom-out}
   .lb.on{display:flex}
   .lb img{max-width:min(960px,100%);border-radius:10px}
-  @media(max-width:900px){.row{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}}
+  .row.row3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){.row,.row.row3{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}}
   @media(max-width:760px){
     h1{font-size:38px}.lab h2{font-size:27px}
     .case,.case.flip{grid-template-columns:1fr;gap:22px}.case.flip .txt{order:0}
@@ -99,7 +100,7 @@
     .flow li .b{max-width:none}
     .flow li:not(:last-child):after{content:"\2193";margin:4px 0 0 14px}
   }
-  @media(max-width:480px){.row{grid-template-columns:1fr}}
+  @media(max-width:480px){.row,.row.row3{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -247,7 +248,7 @@
   <div class="lab"><span class="n">05</span><h2>Websites</h2></div>
   <p class="sub">Written and built by me, from the first page to the domain.</p>
 
-  <div class="row" style="grid-template-columns:repeat(3,1fr);margin-bottom:14px">
+  <div class="row row3" style="margin-bottom:14px">
     <a class="frame card" href="img/sys-site-alb-home.jpg"><img src="img/sys-site-alb-home.jpg" alt="Amazon Lure Box home page" loading="lazy"><span class="cap">Live · amazonlurebox.com.br</span></a>
     <a class="frame card" href="img/sys-site-alb-premium.jpg"><img src="img/sys-site-alb-premium.jpg" alt="Premium kit page" loading="lazy"><span class="cap">Kit page</span></a>
     <a class="frame card" href="img/sys-site-alb-guia.jpg"><img src="img/sys-site-alb-guia.jpg" alt="Interactive lure guide" loading="lazy"><span class="cap">Lure guide</span></a>
