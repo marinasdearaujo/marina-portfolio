@@ -27,11 +27,18 @@
   .lab h2{font-size:31px;letter-spacing:-.6px;color:#fff;font-weight:800}
   .sub{color:var(--mut);margin-bottom:28px;font-size:16px;max-width:690px}
   .subh{font-weight:800;color:#fff;font-size:19px;margin:30px 0 6px}
-  .ex{margin-bottom:38px}
+  .ex{margin-bottom:44px}
   .shot{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 50px -26px rgba(0,0,0,.7);background:var(--pan)}
   .shot img{width:100%;display:block}
-  .cap{color:#c2ccdc;font-size:15.5px;margin-top:14px;max-width:730px}
+  .pair{display:grid;grid-template-columns:1fr 352px;gap:30px;margin-top:18px;align-items:start}
+  @media(max-width:880px){.pair{grid-template-columns:1fr}}
+  .cap{color:#c2ccdc;font-size:15.5px}
   .cap b{color:#fff}
+  .srcdoc{background:var(--pan);border:1px solid var(--line);border-radius:12px;padding:12px}
+  .srcdoc a{display:block;border-radius:8px;overflow:hidden;background:#fff}
+  .srcdoc img{width:100%;display:block}
+  .srcdoc figcaption{color:var(--mut);font-size:12px;letter-spacing:1.3px;text-transform:uppercase;font-weight:700;margin-top:11px}
+  .srcdoc .fn{color:#aab6cd;font-size:13px;margin-top:3px;text-transform:none;letter-spacing:0;font-weight:400}
   .hscroll{display:flex;gap:16px;overflow-x:auto;padding:4px 4px 16px}
   .hscroll::-webkit-scrollbar{height:8px}
   .hscroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
@@ -65,8 +72,8 @@
     <div class="ey">Healthcare marketing &middot; evidence pack</div>
     <h1>Physician marketing,<br>measured in revenue</h1>
     <p>Prepared by <b>Marina Scheffer</b>. A physician-led practice rebuilt around a patient intake funnel and
-    a weekly measurement discipline, the creative that ran alongside it, and the reporting that sat behind
-    every number. Each exhibit names the client document it came from.</p>
+    a weekly measurement discipline, the creative that ran alongside it, and the reporting behind every number.
+    Each exhibit is shown next to the client document it was taken from.</p>
   </div>
 </header>
 
@@ -84,18 +91,29 @@
 
     <div class="ex">
       <a class="shot" href="img/eclaire/en-03-patient-funnel.png"><img src="img/eclaire/en-03-patient-funnel.png" alt="Free assessment run as a clinical intake: four steps and the results against forecast"></a>
-      <p class="cap">A free assessment offered through organic and paid content. The patient completes a form,
-      then submits three photographs to a fixed protocol, <b>left profile, front, right profile</b>, exactly as
-      a practice would specify. A specialist reviews the submission and the recommendation returns by email.
-      It delivered <b>2,827 assessments against a forecast of 1,874</b>.</p>
+      <div class="pair">
+        <p class="cap">A free assessment offered through organic and paid content. The patient completes a
+        form, then submits three photographs to a fixed protocol, <b>left profile, front, right profile</b>,
+        exactly as a practice would specify. A specialist reviews the submission and the recommendation
+        returns by email. It delivered <b>2,827 assessments against a forecast of 1,874</b>.</p>
+        <figure class="srcdoc">
+          <a href="img/eclaire/src-funnel.png"><img src="img/eclaire/src-funnel.png" alt="Original client slide showing the assessment submission protocol"></a>
+          <figcaption>Source document<span class="fn">October Monthly Review, the assessment protocol as presented to the client</span></figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="ex">
-      <a class="shot" href="img/eclaire/en-04-forecast.png"><img src="img/eclaire/en-04-forecast.png" alt="Monthly action plan: forecast against delivered, including cancelled and underperforming items"></a>
-      <p class="cap">The monthly action plan, forecast against delivered. Two initiatives are marked
-      <b>cancelled</b> and one is marked <b>launched, not converting</b>. That is the part worth reading. The
-      reporting named what failed in the same slide that claimed what worked, in front of the client, every
-      month.</p>
+      <a class="shot" href="img/eclaire/en-04-forecast.png"><img src="img/eclaire/en-04-forecast.png" alt="Initiatives with a forecast set before launch and the delivered figure against it"></a>
+      <div class="pair">
+        <p class="cap">Every initiative carried a number before it ran, and the delivered figure was reported
+        against that forecast the following month. The assessment programme came in <b>51% above
+        forecast</b> on volume and 58% above on the revenue it produced.</p>
+        <figure class="srcdoc">
+          <a href="img/eclaire/src-actionplan.png"><img src="img/eclaire/src-actionplan.png" alt="Original client slide, monthly action plan with forecast and delivered columns"></a>
+          <figcaption>Source document<span class="fn">October Monthly Review, action plan, forecast and delivered side by side</span></figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
@@ -108,22 +126,41 @@
 
     <div class="ex">
       <a class="shot" href="img/eclaire/en-01-growth.png"><img src="img/eclaire/en-01-growth.png" alt="Follower count by month, January to October, rising every month"></a>
-      <p class="cap">Ten consecutive months without a single decline, from 44,405 to 78,277. A <b>76%
-      increase</b> in audience over the period.</p>
+      <div class="pair">
+        <p class="cap">Ten consecutive months without a single decline, from 44,405 to 78,277, a <b>76%
+        increase</b>. The tracking sheet beside it carries the same numbers month by month, with the
+        percentage change calculated against the prior month in every row.</p>
+        <figure class="srcdoc">
+          <a href="img/eclaire/src-sheet-growth.png"><img src="img/eclaire/src-sheet-growth.png" alt="Original tracking spreadsheet, followers reach impressions likes comments visits and clicks by month"></a>
+          <figcaption>Source spreadsheet<span class="fn">Social Media Report, January to October, every metric tracked against the previous month</span></figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="ex">
       <a class="shot" href="img/eclaire/en-05-revenue.png"><img src="img/eclaire/en-05-revenue.png" alt="Revenue attributed to each campaign in US dollars"></a>
-      <p class="cap">Every campaign carried a revenue figure rather than a reach figure. The three bars at the
-      bottom are the same play run three times, improving on each run, which is the difference between a lucky
-      campaign and a repeatable one.</p>
+      <div class="pair">
+        <p class="cap">Every campaign carried a revenue figure rather than a reach figure. The three shortest
+        bars are the same play run three times, improving on each run, which is the difference between a lucky
+        campaign and a repeatable one.</p>
+        <figure class="srcdoc">
+          <a href="img/eclaire/src-sheet-revenue.png"><img src="img/eclaire/src-sheet-revenue.png" alt="Original results spreadsheet showing revenue in reais attributed to each campaign"></a>
+          <figcaption>Source spreadsheet<span class="fn">Growth Hack, results sheet, revenue in reais per campaign and per run</span></figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="ex">
       <a class="shot" href="img/eclaire/en-02-monthly.png"><img src="img/eclaire/en-02-monthly.png" alt="October against September across six metrics, three up and three down"></a>
-      <p class="cap">October against September. Three metrics rose and three fell, and all six were shown.
-      Separately that month, a single capture campaign returned <b>2,645 leads</b>, and coupon-attributed
-      revenue moved from almost nothing in September to <b>US$8.7k</b> in October.</p>
+      <div class="pair">
+        <p class="cap">October against September. Three metrics rose and three fell, and all six were shown.
+        Separately that month, one capture campaign returned <b>2,645 leads</b> and coupon-attributed revenue
+        moved from almost nothing in September to <b>US$8.7k</b> in October.</p>
+        <figure class="srcdoc">
+          <a href="img/eclaire/src-monthly.png"><img src="img/eclaire/src-monthly.png" alt="Original client slide, monthly results with up and down arrows"></a>
+          <figcaption>Source document<span class="fn">October Monthly Review, results slide, green arrows up and red arrows down</span></figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
@@ -136,14 +173,28 @@
 
     <div class="ex">
       <a class="shot" href="img/eclaire/en-06-north-star.png"><img src="img/eclaire/en-06-north-star.png" alt="A declared north star metric with honest status lines beneath it"></a>
-      <p class="cap">A declared north star, <b>units sold per week</b>, with every other metric judged against
-      it. Four of the five status lines are bad news, written by the agency before the client asked for them.</p>
+      <div class="pair">
+        <p class="cap">A declared north star, <b>units sold per week</b>, with every other metric judged
+        against it. Four of the five status lines are bad news, written before the client asked for them.
+        Candidate experiments were scored independently by three people on cost, probability of success and
+        business impact, and the average decided what ran.</p>
+        <figure class="srcdoc">
+          <a href="img/eclaire/src-sheet-scoring.png"><img src="img/eclaire/src-sheet-scoring.png" alt="Original scoring spreadsheet, each hypothesis rated by three people on three axes"></a>
+          <figcaption>Source spreadsheet<span class="fn">Growth Hack, hypothesis scoring, three reviewers rating each idea 0 to 10 on three axes</span></figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="ex">
       <a class="shot" href="img/eclaire/en-07-lessons.png"><img src="img/eclaire/en-07-lessons.png" alt="Documented conclusions from closed experiments"></a>
-      <p class="cap">Written conclusions from closed experiments. Each one retired a tactic that looked strong
-      on an engagement report and did not move revenue.</p>
+      <div class="pair">
+        <p class="cap">Written conclusions from closed experiments. Each one retired a tactic that looked
+        strong on an engagement report and did not move revenue.</p>
+        <figure class="srcdoc">
+          <a href="img/eclaire/src-lessons.png"><img src="img/eclaire/src-lessons.png" alt="Original slide listing lessons learned from completed experiments"></a>
+          <figcaption>Source document<span class="fn">Growth Hack, October cycle, lessons recorded at the close of each experiment</span></figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
@@ -195,9 +246,9 @@
     </div>
 
     <div class="prov">
-      <b>On the exhibits.</b> Each one is rebuilt in English from the original client reporting, which was
-      written in Portuguese and is available on request. Figures are unchanged. Amounts originally in Brazilian
-      reais are converted at R$5.40 to the US dollar and both are shown.
+      <b>On the exhibits.</b> Each one is rebuilt in English from the client document shown beside it. The
+      originals are in Portuguese and the figures are unchanged. Amounts originally in Brazilian reais are
+      converted at R$5.40 to the US dollar, with both shown.
     </div>
   </div>
 </section>
