@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marina Scheffer — Healthcare Marketing Evidence</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--navy:#0e1730;--navy2:#0a1122;--pan:#16203c;--pan2:#1c274a;--txt:#eef2f8;--mut:#93a2bd;--orange:#e8631a;--amber:#f5a623;--teal:#2fb6a5;--line:#26314f}
+  html{scroll-behavior:smooth}
+  body{font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;background:var(--navy);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 26px}
+  a{color:inherit}
+  header{position:relative;overflow:hidden}
+  .aurora{position:absolute;inset:-50% -20%;z-index:0;background:radial-gradient(38% 38% at 22% 32%,rgba(232,99,26,.5),transparent 60%),radial-gradient(38% 38% at 82% 24%,rgba(47,182,165,.42),transparent 60%),radial-gradient(46% 46% at 62% 84%,rgba(245,163,35,.36),transparent 60%);filter:blur(64px)}
+  header .wrap{position:relative;z-index:2;padding:62px 26px 56px}
+  .ey{color:var(--amber);font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+  h1{font-size:50px;line-height:1.04;letter-spacing:-1.4px;font-weight:800;margin-bottom:14px;text-wrap:balance}
+  header p{max-width:660px;color:#c5d0e4;font-size:17px}
+  header p b{color:#fff}
+  .strip{background:var(--orange);color:#fff;position:relative;z-index:3}
+  .strip .wrap{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;padding:16px 26px;font-size:14px;font-weight:600}
+  .strip b{font-size:17px}
+  section{padding:62px 0 20px;position:relative}
+  .lab{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+  .lab .n{font-family:Georgia,serif;font-size:15px;color:var(--orange);font-weight:700}
+  .lab h2{font-size:31px;letter-spacing:-.6px;color:#fff;font-weight:800}
+  .sub{color:var(--mut);margin-bottom:26px;font-size:16px;max-width:680px}
+  .subh{font-weight:800;color:#fff;font-size:19px;margin:28px 0 6px}
+  .ex{margin-bottom:40px}
+  .exhd{display:flex;align-items:baseline;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+  .exhd .tag{background:var(--orange);color:#fff;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;padding:5px 12px;border-radius:20px;white-space:nowrap}
+  .exhd .t{font-size:20px;font-weight:800;color:#fff}
+  .shot{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 50px -26px rgba(0,0,0,.7);background:var(--pan)}
+  .shot img{width:100%;display:block}
+  .cap{color:#c2ccdc;font-size:15.5px;margin-top:12px;max-width:720px}
+  .cap b{color:#fff}
+  .note{color:var(--mut);font-size:13.5px;margin-top:7px;font-style:italic}
+  .statcard{background:linear-gradient(135deg,var(--pan2),var(--pan));border:1px solid var(--line);border-radius:16px;padding:28px 30px;margin-bottom:34px}
+  .metrics{display:flex;gap:34px;flex-wrap:wrap}
+  .metric .v{font-size:32px;font-weight:800;color:var(--amber);line-height:1.05;font-variant-numeric:tabular-nums}
+  .metric .l{font-size:13.5px;color:var(--mut);margin-top:6px;max-width:190px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:760px){.grid2{grid-template-columns:1fr}}
+  .hscroll{display:flex;gap:16px;overflow-x:auto;padding:4px 4px 16px}
+  .hscroll::-webkit-scrollbar{height:8px}
+  .hscroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+  .hscroll .vp{flex:0 0 auto;height:460px;border-radius:14px;background:#000;box-shadow:0 24px 50px -26px rgba(0,0,0,.7)}
+  @media(max-width:640px){.hscroll .vp{height:360px}}
+  .hint{color:var(--mut);font-size:12.5px;letter-spacing:1px;text-transform:uppercase;margin:2px 0 12px}
+  .hint:before{content:"\2192  ";color:var(--orange)}
+  .copycard{background:var(--pan);border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:14px;padding:24px}
+  .copycard .plat{font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+  .copycard p{color:#d7dfec;font-size:15.5px;margin-bottom:10px}
+  .copycard p:last-child{margin-bottom:0}
+  .caselist{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+  @media(max-width:860px){.caselist{grid-template-columns:1fr}}
+  .case{background:var(--pan);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .case .who{font-size:12px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--teal);margin-bottom:9px}
+  .case .t{font-size:17px;font-weight:800;color:#fff;margin-bottom:8px}
+  .case p{color:#c2ccdc;font-size:14.5px}
+  footer{text-align:center;color:var(--mut);font-size:13.5px;padding:40px 0 54px;border-top:1px solid var(--line);margin-top:40px}
+  footer a{color:var(--amber)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="aurora"></div>
+  <div class="wrap">
+    <div class="ey">Healthcare marketing &middot; evidence pack</div>
+    <h1>Physician marketing,<br>measured in revenue</h1>
+    <p>Prepared by <b>Marina Scheffer</b>. Three physician accounts, the creative that ran on them, and the
+    reporting that sat behind the numbers. Every figure on this page comes from the client reporting shown
+    beside it, not from a summary written afterwards.</p>
+  </div>
+</header>
+
+<div class="strip"><div class="wrap">
+  <span><b>44K &rarr; 78K</b> followers, 10 straight months</span>
+  <span><b>2,827</b> free assessments, vs 1,874 forecast</span>
+  <span><b>+68.5%</b> product revenue, period on period</span>
+</div></div>
+
+<section>
+  <div class="wrap">
+    <div class="lab"><span class="n">01</span><h2>The patient funnel</h2></div>
+    <p class="sub">This is the piece that transfers most directly to a practice. Not a follower count, an
+    intake process.</p>
+
+    <div class="ex">
+      <div class="exhd"><span class="tag">Exhibit A</span><span class="t">Free assessment, built as a clinical intake</span></div>
+      <a class="shot" href="img/eclaire/ev-05-free-assessment.png"><img src="img/eclaire/ev-05-free-assessment.png" alt="Free skin assessment funnel: submission protocol and how it works"></a>
+      <p class="cap">A free skin assessment offered through social content. The patient fills a form, then
+      submits three photographs to a fixed protocol, <b>left profile, front, right profile</b>, exactly as a
+      practice would specify. A specialist reviews the submission and the recommendation comes back by email.
+      The four steps along the middle read: complete the form, attach the photos to the standard, wait for the
+      specialist's analysis, receive the result by email.</p>
+      <p class="note">Slides are the original client reporting, in Portuguese. Captions are translations.</p>
+    </div>
+
+    <div class="ex">
+      <div class="exhd"><span class="tag">Exhibit B</span><span class="t">What that funnel returned, against forecast</span></div>
+      <a class="shot" href="img/eclaire/ev-04-action-plan.png"><img src="img/eclaire/ev-04-action-plan.png" alt="Action plan, forecast versus delivered"></a>
+      <p class="cap">The monthly action plan, forecast on the left and delivered on the right. The assessment
+      line was forecast at <b>1,874 submissions and R$12k</b>. It delivered <b>2,827 submissions and R$19k</b>,
+      beating the forecast by 51% on volume and 58% on revenue.</p>
+      <p class="cap">Two lines above it are marked <b>cancelled</b>, and one is marked <b>delivered, but not
+      performing</b>. That is the part worth reading. The reporting named what failed in the same slide that
+      claimed what worked, in front of the client, every month.</p>
+    </div>
+
+    <div class="ex">
+      <div class="exhd"><span class="tag">Exhibit C</span><span class="t">A second capture campaign</span></div>
+      <a class="shot" href="img/eclaire/ev-03-leadgen.png"><img src="img/eclaire/ev-03-leadgen.png" alt="Lead generation campaign results, 2645 leads"></a>
+      <p class="cap"><b>2,645 leads at R$31.7k</b> from a single campaign, captured on a name and email form
+      with an incentive wheel. Minimal data collected at the point of capture, which is how a practice would
+      want it.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="lab"><span class="n">02</span><h2>Growth and revenue</h2></div>
+    <p class="sub">Reported to the client monthly, with the prior month beside it so a bad month could not
+    hide.</p>
+
+    <div class="statcard"><div class="metrics">
+      <div class="metric"><div class="v">44,405 &rarr; 78,277</div><div class="l">Followers, January to October, up every single month</div></div>
+      <div class="metric"><div class="v">+68.5%</div><div class="l">Product revenue, R$311,656 to R$894,347 across comparable periods</div></div>
+      <div class="metric"><div class="v">R$47k</div><div class="l">Coupon-attributed revenue in one month, from R$120 the month before</div></div>
+    </div></div>
+
+    <div class="grid2">
+      <div class="ex">
+        <div class="exhd"><span class="tag">Exhibit D</span><span class="t">Monthly results</span></div>
+        <a class="shot" href="img/eclaire/ev-01-monthly-results.png"><img src="img/eclaire/ev-01-monthly-results.png" alt="Monthly results, September versus October"></a>
+        <p class="cap">September against October. Followers 76,483 to 78,277. Reach 1.34M to 1.48M. Likes 28,592
+        to 43,688, up 52.8%. Profile visits and link clicks are both marked <b>down</b>, in red, rather than
+        left out.</p>
+      </div>
+      <div class="ex">
+        <div class="exhd"><span class="tag">Exhibit E</span><span class="t">Revenue per month</span></div>
+        <a class="shot" href="img/eclaire/ev-02-coupon-revenue.png"><img src="img/eclaire/ev-02-coupon-revenue.png" alt="Averages per post and coupon revenue"></a>
+        <p class="cap">Averages per post, then the line at the bottom: <b>coupon sales, September R$120,
+        October R$47k</b>. Fewer posts that month, 104 against 114, with higher average reach and more
+        revenue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="lab"><span class="n">03</span><h2>How decisions got made</h2></div>
+    <p class="sub">The reason the numbers moved. Every campaign ran as a scored experiment with a success
+    criterion set before launch.</p>
+
+    <div class="grid2">
+      <div class="ex">
+        <div class="exhd"><span class="tag">Exhibit F</span><span class="t">One metric above the rest</span></div>
+        <a class="shot" href="img/eclaire/ev-06-north-star.png"><img src="img/eclaire/ev-06-north-star.png" alt="Metrics review with a declared north star"></a>
+        <p class="cap">A declared north star, <b>units sold per week</b>, with every vanity metric listed
+        underneath and judged against it. The honest entries are the point: followers are falling month on
+        month, monthly sales are stuck, and comments only grew because of a giveaway.</p>
+      </div>
+      <div class="ex">
+        <div class="exhd"><span class="tag">Exhibit G</span><span class="t">Lessons that killed tactics</span></div>
+        <a class="shot" href="img/eclaire/ev-07-lessons.png"><img src="img/eclaire/ev-07-lessons.png" alt="Documented lessons from completed experiments"></a>
+        <p class="cap">Written conclusions from completed experiments. <b>Discount coupons devalue the brand and
+        saturate. Gamification engages but does not necessarily sell. Giveaways engage heavily but do not
+        necessarily sell.</b> Each one retired a tactic that looked good on an engagement report.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="lab"><span class="n">04</span><h2>The creative</h2></div>
+    <p class="sub">Three reels edited for a 197,000-follower health brand, and the copy written for the same
+    account. English language, practitioner on camera.</p>
+    <div class="hint">scroll sideways &middot; press play</div>
+    <div class="hscroll">
+      <video class="vp" controls preload="metadata" poster="img/ashton-v1.jpg" playsinline><source src="img/ashton-v1.mp4" type="video/mp4"></video>
+      <video class="vp" controls preload="metadata" poster="img/ashton-v2.jpg" playsinline><source src="img/ashton-v2.mp4" type="video/mp4"></video>
+      <video class="vp" controls preload="metadata" poster="img/ashton-v3.jpg" playsinline><source src="img/ashton-v3.mp4" type="video/mp4"></video>
+    </div>
+    <div class="subh">Copy written for the same account</div>
+    <div class="grid2" style="margin-top:12px">
+      <div class="copycard"><div class="plat">Instagram &middot; Testimonial</div><p>She's a single mom of two, supporting the whole family and being told: "Your BMI needs to be 28." No one asked what got her here.</p><p>What looked like a motivation problem was actually exhaustion, iron deficiency, low thyroid and high inflammation, and no one had tested any of it, until now. DM me "PROCESS" if you're done guessing and ready for a plan that fits your life.</p></div>
+      <div class="copycard"><div class="plat">Instagram &middot; POV</div><p>Everyone says it's a shared journey. But when it's time to carry the weight, it rarely feels equal.</p><p>Support is showing up for the hard parts together. If you're ready to step up and be the best you can be in your fertility journey, DM me "READY".</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="lab"><span class="n">05</span><h2>The three physician accounts</h2></div>
+    <p class="sub">Two are Portuguese-language audiences in Brazil. The methods carry over; the language does
+    not.</p>
+    <div class="caselist">
+      <div class="case">
+        <div class="who">Gynecology</div>
+        <div class="t">From zero to a patient funnel</div>
+        <p>A new presence in endometriosis, urogynecology and integrative gynecology. Authority content plus
+        paid media, with a funnel built to attract, educate and convert new patients. Past 10,000 followers in
+        under eighteen months.</p>
+      </div>
+      <div class="case">
+        <div class="who">Aesthetic medicine</div>
+        <div class="t">Content tied to revenue</div>
+        <p>The account behind every exhibit above. Strong engagement, inconsistent sales, and nothing linking
+        the two. Rebuilt around a weekly measurement ritual, a declared north star and scored experiments.</p>
+      </div>
+      <div class="case">
+        <div class="who">Pediatrics</div>
+        <div class="t">Authority at scale</div>
+        <p>Content strategy and production for one of the largest pediatric audiences in its market. 400,000+
+        engaged followers in under two years, 100M+ reach, now past 712,000.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Prepared for StealthEnomics. Figures taken from the client reporting reproduced above.<br>
+    More work at <a href="general.html">the full portfolio</a>.
+  </div>
+</footer>
+
+</body>
+</html>
