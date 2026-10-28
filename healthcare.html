@@ -62,6 +62,12 @@
   .prov b{color:#fff}
   footer{text-align:center;color:var(--mut);font-size:13.5px;padding:40px 0 54px;border-top:1px solid var(--line);margin-top:40px}
   footer a{color:var(--amber)}
+  /* lightbox */
+  .lb{position:fixed;inset:0;z-index:999;background:rgba(6,10,20,.93);display:flex;align-items:center;justify-content:center;padding:4vh 4vw}
+  .lb img{max-width:100%;max-height:92vh;width:auto;height:auto;border-radius:10px;box-shadow:0 30px 80px -24px rgba(0,0,0,.9);display:block}
+  .lbx{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));right:16px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(14,23,48,.9);color:#fff;font-size:26px;line-height:1;cursor:pointer;font-family:inherit}
+  .lbx:hover{background:var(--orange);border-color:var(--orange)}
+  .shot,.srcdoc a{cursor:zoom-in}
 </style>
 </head>
 <body>
@@ -79,7 +85,7 @@
 
 <div class="strip"><div class="wrap">
   <span><b>44K &rarr; 78K</b> followers, ten straight months</span>
-  <span><b>2,827</b> assessments, against 1,874 forecast</span>
+  <span><b>212 &rarr; 2,827</b> patient assessments in four months</span>
   <span><b>US$1.78M</b> annualised revenue</span>
 </div></div>
 
@@ -95,10 +101,11 @@
         <p class="cap">A free assessment offered through organic and paid content. The patient completes a
         form, then submits three photographs to a fixed protocol, <b>left profile, front, right profile</b>,
         exactly as a practice would specify. A specialist reviews the submission and the recommendation
-        returns by email. It delivered <b>2,827 assessments against a forecast of 1,874</b>.</p>
+        returns by email. It collected <b>2,827 assessments across four months</b>, still adding roughly 950
+        a month by October.</p>
         <figure class="srcdoc">
-          <a href="img/eclaire/src-funnel.png"><img src="img/eclaire/src-funnel.png" alt="Original client slide showing the assessment submission protocol"></a>
-          <figcaption>Source document<span class="fn">October Monthly Review, the assessment protocol as presented to the client. The embedded landing page capture is a flattened screenshot and remains in Portuguese</span></figcaption>
+          <a href="img/eclaire/src-funnel.png"><img src="img/eclaire/src-funnel.png" alt="The patient-facing infographic: photo submission guidelines and the four steps"></a>
+          <figcaption>Source document<span class="fn">The patient-facing infographic, showing the photo submission guidelines and the four steps</span></figcaption>
         </figure>
       </div>
     </div>
@@ -106,12 +113,12 @@
     <div class="ex">
       <a class="shot" href="img/eclaire/en-04-forecast.png"><img src="img/eclaire/en-04-forecast.png" alt="Initiatives with a forecast set before launch and the delivered figure against it"></a>
       <div class="pair">
-        <p class="cap">Every initiative carried a number before it ran, and the delivered figure was reported
-        against that forecast the following month. The assessment programme came in <b>51% above
-        forecast</b> on volume and 58% above on the revenue it produced.</p>
+        <p class="cap">The intake was reported every month as a running total and as that month's additions,
+        so the direction of travel stayed visible. It added <b>roughly 950 new assessments a month</b> by
+        the end, and the revenue attached to it grew alongside the volume rather than lagging behind it.</p>
         <figure class="srcdoc">
           <a href="img/eclaire/src-leads.png"><img src="img/eclaire/src-leads.png" alt="Client slide reporting 2,645 leads from the capture campaign"></a>
-          <figcaption>Source document<span class="fn">October Monthly Review, the capture campaign reported at 2,645 leads</span></figcaption>
+          <figcaption>Source document<span class="fn">October Monthly Review, a separate capture campaign reported at 2,645 leads</span></figcaption>
         </figure>
       </div>
     </div>
@@ -248,8 +255,8 @@
     <div class="prov">
       <b>On the exhibits.</b> Each one is rebuilt in English from the client document shown beside it. Those
       source documents are the originals with their wording translated and nothing else altered, so the
-      layout, figures and formatting are exactly as the client received them. Amounts stay in Brazilian reais
-      in the sources, and are converted at R$5.40 to the US dollar in the exhibits.
+      layout, figures and formatting are exactly as the client received them. All amounts are shown in US
+      dollars, converted from the original currency.
     </div>
   </div>
 </section>
@@ -260,6 +267,28 @@
     More work at <a href="general.html">the full portfolio</a>.
   </div>
 </footer>
+
+<div class="lb" id="lb" hidden>
+  <button class="lbx" id="lbx" aria-label="Close image">&times;</button>
+  <img id="lbimg" alt="">
+</div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'),im=document.getElementById('lbimg'),bx=document.getElementById('lbx');
+  function open(src,alt){im.src=src;im.alt=alt||'';lb.hidden=false;document.body.style.overflow='hidden';bx.focus();}
+  function close(){lb.hidden=true;im.removeAttribute('src');document.body.style.overflow='';}
+  document.querySelectorAll('a.shot, .srcdoc a').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var img=a.querySelector('img'); if(!img) return;
+      e.preventDefault(); open(a.getAttribute('href')||img.src,img.alt);
+    });
+  });
+  bx.addEventListener('click',close);
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!lb.hidden) close(); });
+})();
+</script>
 
 </body>
 </html>
