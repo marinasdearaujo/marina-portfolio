@@ -38,7 +38,7 @@
   .srcdoc a{display:block;border-radius:8px;overflow:hidden;background:#fff}
   .srcdoc img{width:100%;display:block}
   .srcdoc figcaption{color:var(--mut);font-size:12px;letter-spacing:1.3px;text-transform:uppercase;font-weight:700;margin-top:11px}
-  .srcdoc .fn{color:#aab6cd;font-size:13px;margin-top:3px;text-transform:none;letter-spacing:0;font-weight:400}
+  .srcdoc .fn{display:block;color:#aab6cd;font-size:13px;margin-top:4px;text-transform:none;letter-spacing:0;font-weight:400}
   .hscroll{display:flex;gap:16px;overflow-x:auto;padding:4px 4px 16px}
   .hscroll::-webkit-scrollbar{height:8px}
   .hscroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
@@ -60,6 +60,16 @@
   .case p{color:#c2ccdc;font-size:14.5px}
   .prov{background:var(--pan);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:14px;padding:20px 24px;color:#c2ccdc;font-size:15px;margin-top:34px}
   .prov b{color:#fff}
+  /* client banner */
+  .client{border-top:1px solid var(--line);padding-top:30px;margin-top:14px}
+  .client .ctag{display:inline-block;background:rgba(47,182,165,.14);color:var(--teal);font-size:11.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:14px}
+  .client .cname{font-size:30px;font-weight:800;color:#fff;letter-spacing:-.6px;line-height:1.15}
+  .client .cname .sep{color:var(--orange);margin:0 10px;font-weight:400}
+  .client .cname .co{color:var(--amber)}
+  .client dl{display:grid;grid-template-columns:150px 1fr;gap:8px 18px;margin-top:18px;max-width:830px}
+  @media(max-width:620px){.client dl{grid-template-columns:1fr;gap:2px 0}.client dl dd{margin-bottom:12px}}
+  .client dt{font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--mut);padding-top:4px}
+  .client dd{font-size:16px;color:#d2dbe9}
   footer{text-align:center;color:var(--mut);font-size:13.5px;padding:40px 0 54px;border-top:1px solid var(--line);margin-top:40px}
   footer a{color:var(--amber)}
   /* lightbox */
@@ -91,7 +101,24 @@
   <span><b>US$1.78M</b> annualised revenue</span>
 </div></div>
 
-<section>
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="client" style="border-top:none;padding-top:0;margin-top:0">
+      <span class="ctag">Client one</span>
+      <div class="cname">Dr. Lucas Fustinoni<span class="sep">/</span><span class="co">Éclairé</span></div>
+      <dl>
+        <dt>What they sold</dt>
+        <dd>A physician-led skincare and supplement line, sold direct to consumers, alongside consultations
+        with the doctor himself.</dd>
+        <dt>What I delivered</dt>
+        <dd>Content strategy and production, paid media, the free skin assessment funnel, a weekly growth
+        testing cycle, and the monthly reporting the client ran the business from.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:34px">
   <div class="wrap">
     <div class="lab"><span class="n">01</span><h2>The patient funnel</h2></div>
     <p class="sub">The piece that transfers most directly to a practice. Not a follower count, an intake
@@ -151,7 +178,8 @@
       <div class="pair">
         <p class="cap">Every campaign carried a revenue figure rather than a reach figure. The three shortest
         bars are the same play run three times, improving on each run, which is the difference between a lucky
-        campaign and a repeatable one.</p>
+        campaign and a repeatable one. In October alone, a single capture campaign returned <b>2,645 leads</b>
+        and coupon-attributed revenue reached <b>US$8.7k</b>, up from almost nothing the month before.</p>
         <figure class="srcdoc">
           <a href="img/eclaire/src-sheet-revenue.png"><img src="img/eclaire/src-sheet-revenue.png" alt="Original results spreadsheet showing revenue in reais attributed to each campaign"></a>
           <figcaption>Source spreadsheet<span class="fn">Growth Hack, results sheet, revenue in reais per campaign and per run</span></figcaption>
@@ -159,18 +187,6 @@
       </div>
     </div>
 
-    <div class="ex">
-      <a class="shot" href="img/eclaire/en-02-monthly.png"><img src="img/eclaire/en-02-monthly.png" alt="October against September across six metrics, three up and three down"></a>
-      <div class="pair">
-        <p class="cap">October against September. Three metrics rose and three fell, and all six were shown.
-        Separately that month, one capture campaign returned <b>2,645 leads</b> and coupon-attributed revenue
-        moved from almost nothing in September to <b>US$8.7k</b> in October.</p>
-        <figure class="srcdoc">
-          <a href="img/eclaire/src-monthly.png"><img src="img/eclaire/src-monthly.png" alt="Original client slide, monthly results with up and down arrows"></a>
-          <figcaption>Source document<span class="fn">October Monthly Review, results slide, green arrows up and red arrows down</span></figcaption>
-        </figure>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -188,8 +204,10 @@
         Candidate experiments were scored independently by three people on cost, probability of success and
         business impact, and the average decided what ran.</p>
         <figure class="srcdoc">
-          <a href="img/eclaire/src-sheet-scoring.png"><img src="img/eclaire/src-sheet-scoring.png" alt="Original scoring spreadsheet, each hypothesis rated by three people on three axes"></a>
-          <figcaption>Source spreadsheet<span class="fn">Growth Hack, hypothesis scoring, three reviewers rating each idea 0 to 10 on three axes</span></figcaption>
+          <a href="img/eclaire/src-northstar.png"><img src="img/eclaire/src-northstar.png" alt="Original weekly review slide declaring the north star metric and the status of each other metric"></a>
+          <figcaption>Source documents<span class="fn">Growth Hack, the weekly metrics review that declared the north star</span></figcaption>
+          <a href="img/eclaire/src-sheet-scoring.png" style="margin-top:14px"><img src="img/eclaire/src-sheet-scoring.png" alt="Original scoring spreadsheet, each hypothesis rated by three people on three axes"></a>
+          <figcaption><span class="fn" style="margin-top:0">And the scoring sheet behind it: three reviewers rating every idea 0 to 10 on cost, probability and impact</span></figcaption>
         </figure>
       </div>
     </div>
@@ -208,11 +226,28 @@
   </div>
 </section>
 
-<section>
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="client">
+      <span class="ctag">Client two</span>
+      <div class="cname">Ashton Pienaar<span class="sep">/</span><span class="co">health coaching brand</span></div>
+      <dl>
+        <dt>What they sold</dt>
+        <dd>One-to-one health coaching programmes for weight, hormones and fertility, sold to a
+        197,000-follower audience, with the practitioner himself as the brand.</dd>
+        <dt>What I delivered</dt>
+        <dd>Reel editing and copywriting, the content rebuilt around conversion rather than reach, and
+        AI-assisted lead flows into the enquiry process.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:34px">
   <div class="wrap">
     <div class="lab"><span class="n">04</span><h2>The creative</h2></div>
-    <p class="sub">Three reels edited for a 197,000-follower health brand, and the copy written for the same
-    account. English language, practitioner on camera.</p>
+    <p class="sub">Three reels I edited and two pieces of copy I wrote, all English language, practitioner on
+    camera.</p>
     <div class="hint">scroll sideways &middot; press play</div>
     <div class="hscroll">
       <video class="vp" controls preload="metadata" poster="img/ashton-v1.jpg" playsinline><source src="img/ashton-v1.mp4" type="video/mp4"></video>
@@ -227,31 +262,56 @@
   </div>
 </section>
 
-<section>
+<section style="padding-bottom:0">
   <div class="wrap">
-    <div class="lab"><span class="n">05</span><h2>The three physician accounts</h2></div>
-    <p class="sub">Two are Portuguese-language audiences in Brazil. The methods carry over; the language does
-    not.</p>
-    <div class="caselist">
-      <div class="case">
-        <div class="who">Gynecology</div>
-        <div class="t">From zero to a patient funnel</div>
-        <p>A new presence in endometriosis, urogynecology and integrative gynecology. Authority content plus
-        paid media, with a funnel built to attract, educate and convert new patients. Past 10,000 followers in
-        under eighteen months.</p>
-      </div>
-      <div class="case">
-        <div class="who">Aesthetic medicine</div>
-        <div class="t">Content tied to revenue</div>
-        <p>The account behind every exhibit above. Strong engagement, inconsistent sales, and nothing linking
-        the two. Rebuilt around a weekly measurement ritual, a declared north star and scored experiments.</p>
-      </div>
-      <div class="case">
-        <div class="who">Pediatrics</div>
-        <div class="t">Authority at scale</div>
-        <p>Content strategy and production for one of the largest pediatric audiences in its market. 400,000+
-        engaged followers in under two years, 100M+ reach, now past 712,000.</p>
-      </div>
+    <div class="client">
+      <span class="ctag">Client three</span>
+      <div class="cname">Dra. Priscila Matsuoka<span class="sep">/</span><span class="co">gynecology practice</span></div>
+      <dl>
+        <dt>What they sold</dt>
+        <dd>Consultations and robotic surgery in endometriosis, urogynecology and integrative gynecology,
+        from a practice with no social presence at all.</dd>
+        <dt>What I delivered</dt>
+        <dd>Authority-driven educational content, paid campaigns to reach new audiences, and a funnel
+        structured to attract, educate and convert new patients.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:30px;padding-bottom:0">
+  <div class="wrap">
+    <div class="ex">
+      <a class="shot" href="img/health-priscila.jpg"><img src="img/health-priscila.jpg" alt="Case slide: from zero to relevance, 10,000+ followers in under 18 months"></a>
+      <p class="cap" style="margin-top:14px">Past <b>10,000 followers in under eighteen months</b> from a
+      standing start, with the patient funnel built underneath it rather than bolted on afterwards.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="client">
+      <span class="ctag">Client four</span>
+      <div class="cname">Dra. Kelly Oliveira<span class="sep">/</span><span class="co">Pediatria Descomplicada</span></div>
+      <dl>
+        <dt>What they sold</dt>
+        <dd>Online courses and consultations in pediatrics, breastfeeding and child development, built on
+        the doctor's own authority.</dd>
+        <dt>What I delivered</dt>
+        <dd>Educational and highly shareable organic content, a paid media strategy amplifying what already
+        worked, and a funnel converting reach into community and paying clients.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:30px">
+  <div class="wrap">
+    <div class="ex">
+      <a class="shot" href="img/health-pedia.jpg"><img src="img/health-pedia.jpg" alt="Case slide: building authority from day one, 400,000+ engaged followers in under 2 years"></a>
+      <p class="cap" style="margin-top:14px"><b>400,000+ engaged followers in under two years</b> and
+      <b>100M+ reach</b> across organic and paid, now past 712,000.</p>
     </div>
 
     <div class="prov">
