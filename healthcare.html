@@ -63,7 +63,8 @@
   footer{text-align:center;color:var(--mut);font-size:13.5px;padding:40px 0 54px;border-top:1px solid var(--line);margin-top:40px}
   footer a{color:var(--amber)}
   /* lightbox */
-  .lb{position:fixed;inset:0;z-index:999;background:rgba(6,10,20,.93);display:flex;align-items:center;justify-content:center;padding:4vh 4vw}
+  .lb{position:fixed;inset:0;z-index:999;background:rgba(6,10,20,.93);display:none;align-items:center;justify-content:center;padding:4vh 4vw;cursor:zoom-out}
+  .lb.open{display:flex}
   .lb[hidden]{display:none}
   .lb img{max-width:100%;max-height:92vh;width:auto;height:auto;border-radius:10px;box-shadow:0 30px 80px -24px rgba(0,0,0,.9);display:block}
   .lbx{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));right:16px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(14,23,48,.9);color:#fff;font-size:26px;line-height:1;cursor:pointer;font-family:inherit}
@@ -277,17 +278,19 @@
 <script>
 (function(){
   var lb=document.getElementById('lb'),im=document.getElementById('lbimg'),bx=document.getElementById('lbx');
-  function open(src,alt){im.src=src;im.alt=alt||'';lb.hidden=false;document.body.style.overflow='hidden';bx.focus();}
-  function close(){lb.hidden=true;im.removeAttribute('src');document.body.style.overflow='';}
+  function open(src,alt){im.src=src;im.alt=alt||'';lb.hidden=false;lb.classList.add('open');document.body.style.overflow='hidden';bx.focus();}
+  function close(){lb.classList.remove('open');lb.hidden=true;im.removeAttribute('src');document.body.style.overflow='';}
+  close();
   document.querySelectorAll('a.shot, .srcdoc a').forEach(function(a){
     a.addEventListener('click',function(e){
       var img=a.querySelector('img'); if(!img) return;
       e.preventDefault(); open(a.getAttribute('href')||img.src,img.alt);
     });
   });
-  bx.addEventListener('click',close);
-  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!lb.hidden) close(); });
+  // any click inside the overlay closes it, so an image that fails to load can never trap you
+  lb.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  im.addEventListener('error',close);
 })();
 </script>
 
