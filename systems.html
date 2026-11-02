@@ -109,6 +109,19 @@
     .flow li:not(:last-child):after{content:"\2193";margin:4px 0 0 14px}
   }
   @media(max-width:480px){.row,.row.row3{grid-template-columns:1fr}}
+  .hyp{background:var(--pan);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px}
+  .hyp table{width:100%;border-collapse:collapse;font-size:14px}
+  .hyp th{text-align:left;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);font-weight:700;padding:12px 16px;border-bottom:1px solid var(--line)}
+  .hyp td{padding:12px 16px;border-bottom:1px solid var(--line);color:#c5d0e4;vertical-align:top}
+  .hyp tr:last-child td{border-bottom:0}
+  .hyp td b{color:#fff}
+  .hyp .sc{font-weight:800;color:var(--amber);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .hyp .st{font-size:12px;font-weight:700;padding:3px 9px;border-radius:12px;white-space:nowrap;display:inline-block}
+  .hyp .t{background:rgba(245,163,35,.15);color:var(--amber)}
+  .hyp .d{background:rgba(47,182,165,.15);color:var(--teal)}
+  .hyp .x{background:rgba(147,162,189,.15);color:var(--mut)}
+  .hypwrap{overflow-x:auto}
+  .hypwrap table{min-width:640px}
 </style>
 </head>
 <body>
@@ -135,7 +148,7 @@
 </div></div>
 
 <nav class="jump"><div class="wrap">
-  <a href="#funnel">Funnel</a><a href="#ads">Paid ads</a><a href="#pages">Landing pages</a><a href="#email">Email</a><a href="#reporting">Data &amp; weekly notes</a><a href="#web">Websites</a><a href="#before">Earlier work</a><a href="#how">How I work</a>
+  <a href="#funnel">Funnel</a><a href="#ads">Paid ads</a><a href="#pages">Landing pages</a><a href="#email">Email</a><a href="#reporting">Data &amp; weekly notes</a><a href="#method">Testing</a><a href="#web">Websites</a><a href="#before">Earlier work</a><a href="#how">How I work</a>
 </div></nav>
 
 <main class="wrap">
@@ -272,8 +285,8 @@
       <div class="tags"><span>Meta Graph API</span><span>YouTube Analytics</span><span>HubSpot</span><span>Python</span></div>
     </div>
     <div class="pair">
-      <a class="frame" href="img/se-dash.jpg"><img src="img/se-dash.jpg" alt="Live marketing performance dashboard" loading="lazy"></a>
-      <a class="frame" href="img/dash-ig.jpg"><img src="img/dash-ig.jpg" alt="Instagram deep dive dashboard" loading="lazy"></a>
+      <a class="frame" href="img/ads-skles-board.jpg"><img src="img/ads-skles-board.jpg" alt="Growth board: the ad and the form, each with KPIs and hypotheses" loading="lazy"></a>
+      <a class="frame" href="img/ads-dash-ecom.jpg"><img src="img/ads-dash-ecom.jpg" alt="Live e-commerce ads dashboard" loading="lazy"></a>
     </div>
   </div>
 
@@ -283,19 +296,39 @@
       <p>Each week: where we are against the goal, then what to stop, change or watch, ranked by how much money it moves. One page, written so you can act on it in five minutes.</p>
       <p>The KPIs it tracks are the ones that pay the bills: cost per lead, lead to call or registration rate, show-up rate, cost per buyer, revenue per email and payback. Opens, likes and impressions only appear when they explain one of those.</p>
     </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
     <div class="note-card">
-      <div class="nh"><b>Weekly note · Webinar funnel</b><span>Week 3 · April</span></div>
-      <div class="it"><span class="tag now">NOW</span><div>34 registrations this cycle, up from 8 last month, at $13.91 each.</div></div>
-      <div class="it"><span class="tag p0">P0</span><div><b>Stop the Traffic campaign.</b> $451 spent, 1,603 page views, zero tracked registrations.</div></div>
-      <div class="it"><span class="tag p1">P1</span><div><b>Invite the email list first.</b> List contacts show up at 89%, ad sign-ups at 28%.</div></div>
-      <div class="it"><span class="tag p2">P2</span><div><b>Ignore the lead drop.</b> Leads fell 65%, but it's two paused lead form campaigns whose leads rarely bought. Registrations are the real scoreboard now.</div></div>
-      <div class="src">The format of my weekly note, filled with numbers from a real 2026 client cycle.</div>
+      <div class="nh"><b>Monthly note · Lead campaign</b><span>October 2026</span></div>
+      <div class="it"><span class="tag now">NOW</span><div>44 leads at $7.02 each while the price of reach rose 85%. The creative paid for it: click rate up from 7.7% to 11.8%.</div></div>
+      <div class="it"><span class="tag p0">P0</span><div><b>Call the 21 who want to start within three months.</b> They are the warmest people the campaign has produced.</div></div>
+      <div class="it"><span class="tag p1">P1</span><div><b>Fund both ads, for different jobs.</b> One buys attention (13.8% click rate), the other converts (38% of clicks become leads, at $6.14).</div></div>
+      <div class="it"><span class="tag p2">P2</span><div><b>Move the buy button above the video.</b> Only 10% of visits click buy, and four in five never press play.</div></div>
+      <div class="src">The format of my note, with numbers from a real October 2026 client report.</div>
+    </div>
+    <a class="frame" href="img/ads-skles-report-adverts.jpg"><img src="img/ads-skles-report-adverts.jpg" alt="Monthly report: spend and leads by advert" loading="lazy"><span class="cap">From the same month's report</span></a>
     </div>
   </div>
 </section>
 
+<section id="method">
+  <div class="lab"><span class="n">06</span><h2>How I test and improve</h2></div>
+  <p class="sub">Every account runs on a growth board: the funnel read step by step, every idea scored before anyone builds it, and each test written down with its win condition before it starts. Nothing changes because it felt right that week.</p>
+  <div class="grid3">
+    <div class="box"><h4>Find the widest gap</h4><p>The funnel is measured at each step, from the ad to the payment. The step that loses the most people gets the next test, not the step that is easiest to change.</p></div>
+    <div class="box"><h4>Score every idea</h4><p>Each idea gets 0 to 10 on cost, odds of working and impact. The average sets the order, so the next test is chosen by its score and the owner of each step is named.</p></div>
+    <div class="box"><h4>Decide the win first</h4><p>Every test starts with a baseline, one metric and the result that counts as a win, then dated readings until it is called. When a step cannot be measured, the first test is the measurement.</p></div>
+  </div>
+  <div class="hyp"><div class="hypwrap"><table>
+    <tr><th>Idea, from a real board</th><th>Score</th><th>What happened</th></tr>
+    <tr><td><b>Name the price on the form's thank-you screen</b><br>The screen promised free training, the page asked for money.</td><td class="sc">7.3</td><td><span class="st d">shipped</span> Cost per lead fell from $7.63 to $7.05 on the new form.</td></tr>
+    <tr><td><b>Put the buy button above the 5-minute video</b><br>Four in five visitors never press play, and the button sat under the player.</td><td class="sc">7.7</td><td><span class="st t">under test</span> Baseline: 10% of visits click buy.</td></tr>
+    <tr><td><b>Move the qualifying question behind the contact fields</b><br>109 of 141 people left the form at that question.</td><td class="sc">7.7</td><td><span class="st x">retired</span> Meta always shows custom questions first. The idea became a new one: drop the question (8.0).</td></tr>
+    <tr><td><b>Show the price on day 2 of the emails, not day 12</b><br>An $8.99 subscription is an impulse decision.</td><td class="sc">7.0</td><td><span class="st t">waiting on approval</span> Changes a sequence the client signed off.</td></tr>
+  </table></div></div>
+</section>
+
 <section id="web">
-  <div class="lab"><span class="n">06</span><h2>Websites</h2></div>
+  <div class="lab"><span class="n">07</span><h2>Websites</h2></div>
   <p class="sub">Written and built by me, from the first page to the domain.</p>
 
   <div class="row row3" style="margin-bottom:14px">
@@ -331,7 +364,7 @@
 </section>
 
 <section id="before">
-  <div class="lab"><span class="n">07</span><h2>Earlier work</h2></div>
+  <div class="lab"><span class="n">08</span><h2>Earlier work</h2></div>
   <div class="grid3">
     <div class="box"><div class="big">R$10M+</div><h4>B2B tech consultancy · 2022-23</h4><p>Ran inbound and outbound together: lifecycle emails in HubSpot, one outbound sequence per sector, about 25 calls a month from cold leads. +256% qualified leads.</p></div>
     <div class="box"><div class="big">R$4.6M</div><h4>Corporate training company</h4><p>Qualified pipeline for a B2B corporate learning company.</p></div>
@@ -340,7 +373,7 @@
 </section>
 
 <section id="how">
-  <div class="lab"><span class="n">08</span><h2>How I work</h2></div>
+  <div class="lab"><span class="n">09</span><h2>How I work</h2></div>
   <div class="grid3">
     <div class="box"><h4>Every stage, one owner</h4><p>I write the strategy and run the ads, pages, email and automation myself. Social media content stays with your team or a creator, and I plan it so it feeds the funnel.</p></div>
     <div class="box"><h4>A written note every week</h4><p>Async by default: a short note on the numbers and the next moves, a live dashboard, and short videos when something needs showing. No status calls needed.</p></div>

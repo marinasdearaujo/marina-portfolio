@@ -130,6 +130,19 @@
   .shift p{color:#c5d0e4;font-size:15px}
   .who.moove{color:var(--amber)}
   @media(max-width:760px){.shift{grid-template-columns:1fr}}
+  .hyp{background:var(--pan);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px}
+  .hyp table{width:100%;border-collapse:collapse;font-size:14px}
+  .hyp th{text-align:left;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);font-weight:700;padding:12px 16px;border-bottom:1px solid var(--line)}
+  .hyp td{padding:12px 16px;border-bottom:1px solid var(--line);color:#c5d0e4;vertical-align:top}
+  .hyp tr:last-child td{border-bottom:0}
+  .hyp td b{color:#fff}
+  .hyp .sc{font-weight:800;color:var(--amber);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .hyp .st{font-size:12px;font-weight:700;padding:3px 9px;border-radius:12px;white-space:nowrap;display:inline-block}
+  .hyp .t{background:rgba(245,163,35,.15);color:var(--amber)}
+  .hyp .d{background:rgba(47,182,165,.15);color:var(--teal)}
+  .hyp .x{background:rgba(147,162,189,.15);color:var(--mut)}
+  .hypwrap{overflow-x:auto}
+  .hypwrap table{min-width:640px}
 </style>
 </head>
 <body>
@@ -156,7 +169,7 @@
 </div></div>
 
 <nav class="jump"><div class="wrap">
-  <a href="#shift">What changed</a><a href="#results">Results</a><a href="#system">The system</a><a href="#creative">Creative set</a><a href="#dashboards">Dashboards</a><a href="#start">How we start</a>
+  <a href="#shift">What changed</a><a href="#results">Results</a><a href="#system">The system</a><a href="#creative">Creative set</a><a href="#method">Testing</a><a href="#dashboards">Reports</a><a href="#start">How we start</a>
 </div></nav>
 
 <main class="wrap">
@@ -211,7 +224,7 @@
     <div class="txt">
       <div class="who">Real estate education · US · my account</div>
       <h3>Ad costs rose 85% in a month. The creative kept a lead at about $7.</h3>
-      <p>A lead campaign on Meta's instant form with four ads, each doing a different job. In October the cost per thousand impressions went from $36 to $67. The ads answered with a click rate that climbed from 7.7% to 11.8%, so the cost per lead only moved from $6.42 to $7.02.</p>
+      <p>A lead campaign on Meta's instant form with four ads, each doing a different job. In October the cost per thousand impressions went from $36 to $67. The ads answered with a click rate that climbed from 7.7% to 11.8%, so the cost per lead only moved from $6.42 to $7.02. On flat creative it would have been about $12, and the account's August campaign had paid $25.77.</p>
       <p>The form asks when the person plans to start, so whoever calls the leads begins with the ready ones. The objection ad ("you don't need a lot of money") turned 38% of its clicks into leads at $6.14.</p>
       <div class="metric">
         <div><div class="v">$7.02</div><div class="k">per lead, 44 leads in October</div></div>
@@ -271,7 +284,7 @@
     <div><b>Simplify the structure</b><p>Few campaigns, budget pooled at campaign level, broad audiences, so each campaign leaves the learning phase.</p></div>
     <div><b>Test what the ads add</b><p>Split by region or audience to see the sales the ads create, not just the ones they take credit for.</p></div>
     <div><b>Keep a scorecard</b><p>Cost per lead, cost per purchase and revenue by ad, on a dashboard that updates on its own.</p></div>
-    <div><b>Adjust every week</b><p>Pause what loses, refresh what fatigues, move budget to what sells, and write down why.</p></div>
+    <div><b>Test, then adjust</b><p>Ideas scored on a growth board, one test at a time with its win condition set first, and a weekly read of what changed.</p></div>
   </div>
 </section>
 
@@ -303,18 +316,39 @@
   </div>
 </section>
 
+<section id="method">
+  <div class="lab"><span class="n">05</span><h2>How I test and improve</h2></div>
+  <p class="sub">Every account runs on a growth board: the funnel read step by step, every idea scored before anyone builds it, and each test written down with its win condition before it starts. Nothing changes because it felt right that week.</p>
+  <div class="grid3">
+    <div class="box"><h4>Find the widest gap</h4><p>The funnel is measured at each step, from the ad to the payment. The step that loses the most people gets the next test, not the step that is easiest to change.</p></div>
+    <div class="box"><h4>Score every idea</h4><p>Each idea gets 0 to 10 on cost, odds of working and impact. The average sets the order, so the next test is chosen by its score and the owner of each step is named.</p></div>
+    <div class="box"><h4>Decide the win first</h4><p>Every test starts with a baseline, one metric and the result that counts as a win, then dated readings until it is called. When a step cannot be measured, the first test is the measurement.</p></div>
+  </div>
+  <div class="hyp"><div class="hypwrap"><table>
+    <tr><th>Idea, from a real board</th><th>Score</th><th>What happened</th></tr>
+    <tr><td><b>Name the price on the form's thank-you screen</b><br>The screen promised free training, the page asked for money.</td><td class="sc">7.3</td><td><span class="st d">shipped</span> Cost per lead fell from $7.63 to $7.05 on the new form.</td></tr>
+    <tr><td><b>Put the buy button above the 5-minute video</b><br>Four in five visitors never press play, and the button sat under the player.</td><td class="sc">7.7</td><td><span class="st t">under test</span> Baseline: 10% of visits click buy.</td></tr>
+    <tr><td><b>Move the qualifying question behind the contact fields</b><br>109 of 141 people left the form at that question.</td><td class="sc">7.7</td><td><span class="st x">retired</span> Meta always shows custom questions first. The idea became a new one: drop the question (8.0).</td></tr>
+    <tr><td><b>Show the price on day 2 of the emails, not day 12</b><br>An $8.99 subscription is an impulse decision.</td><td class="sc">7.0</td><td><span class="st t">waiting on approval</span> Changes a sequence the client signed off.</td></tr>
+  </table></div></div>
+</section>
+
 <section id="dashboards">
-  <div class="lab"><span class="n">05</span><h2>Dashboards instead of screenshots</h2></div>
+  <div class="lab"><span class="n">06</span><h2>Dashboards and reports instead of screenshots</h2></div>
   <p class="sub">Every client gets a live dashboard that pulls from Meta on its own: spend, the funnel from click to sale, and each ad's cost per result. A short written note each week says what changed and what to do next.</p>
   <div class="row row3">
     <a class="frame" href="img/ads-dash-ecom.jpg"><img src="img/ads-dash-ecom.jpg" alt="E-commerce dashboard" loading="lazy"><span class="cap">E-commerce</span></a>
     <a class="frame" href="img/ads-dash-law.jpg"><img src="img/ads-dash-law.jpg" alt="Law firm lead dashboard" loading="lazy"><span class="cap">Lead generation</span></a>
-    <a class="frame" href="img/se-dash.jpg"><img src="img/se-dash.jpg" alt="Webinar funnel dashboard" loading="lazy"><span class="cap">Webinar funnel</span></a>
+    <a class="frame" href="img/ads-skles-board.jpg"><img src="img/ads-skles-board.jpg" alt="Growth board: the ad and the form, each with its KPIs and hypotheses" loading="lazy"><span class="cap">Growth board</span></a>
+  </div>
+  <div class="pair" style="margin-top:16px">
+    <a class="frame" href="img/ads-skles-report-paid.jpg"><img src="img/ads-skles-report-paid.jpg" alt="Monthly report: media 85% dearer, cost per lead moved 9%" loading="lazy"><span class="cap">Monthly report: the headline</span></a>
+    <a class="frame" href="img/ads-skles-report-adverts.jpg"><img src="img/ads-skles-report-adverts.jpg" alt="Monthly report: spend and leads by advert, with what each advert is for" loading="lazy"><span class="cap">Every dollar, and which ad earned it</span></a>
   </div>
 </section>
 
 <section id="start">
-  <div class="lab"><span class="n">06</span><h2>How we start</h2></div>
+  <div class="lab"><span class="n">07</span><h2>How we start</h2></div>
   <div class="grid3">
     <div class="box"><h4>Audit, in 3 working days</h4><p>I go through your account and tracking and send a written plan: what to stop, what to fix in the signal, and the first creative set to brief.</p></div>
     <div class="box"><h4>Rebuild and launch</h4><p>Simplified structure, the five-ad set, and the dashboard connected to your account in the first two weeks.</p></div>
