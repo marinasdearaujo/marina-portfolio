@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marina Scheffer · Meta Ads</title>
+<meta name="description" content="Meta ads set up for how Meta picks ads now: simple structure, a five-ad creative set, clean signals and live dashboards. Results and method by Marina Scheffer.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--navy:#0e1730;--navy2:#0a1122;--pan:#16203c;--pan2:#1c274a;--txt:#eef2f8;--mut:#93a2bd;--orange:#e8631a;--amber:#f5a623;--teal:#2fb6a5;--line:#26314f}
+  html{scroll-behavior:smooth}
+  body{font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;background:var(--navy);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  header{position:relative;overflow:hidden}
+  .aurora{position:absolute;inset:-50% -20%;z-index:0;background:radial-gradient(38% 38% at 22% 32%,rgba(232,99,26,.5),transparent 60%),radial-gradient(38% 38% at 82% 24%,rgba(47,182,165,.42),transparent 60%),radial-gradient(46% 46% at 62% 84%,rgba(245,163,35,.36),transparent 60%);filter:blur(64px);animation:swirl 18s ease-in-out infinite alternate}
+  @keyframes swirl{0%{transform:translate(0,0) rotate(0)}100%{transform:translate(4%,3%) rotate(10deg)}}
+  header .wrap{position:relative;z-index:2;padding:70px 22px 66px}
+  .ey{color:var(--amber);font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px}
+  h1{font-size:56px;line-height:1.04;letter-spacing:-1.5px;font-weight:800;margin-bottom:18px;max-width:820px}
+  h1 em{font-style:normal;color:var(--orange)}
+  header p{max-width:640px;color:#c5d0e4;font-size:17px}
+  header p b{color:#fff}
+  .contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+  .contact a{font-size:14px;font-weight:700;text-decoration:none;padding:11px 20px;border-radius:30px}
+  .contact .p{background:var(--orange);color:#fff}
+  .contact .s{border:1px solid rgba(255,255,255,.25);color:#fff}
+  .strip{background:var(--orange);color:#fff}
+  .strip .wrap{display:flex;gap:14px 34px;flex-wrap:wrap;justify-content:center;padding:16px 22px;font-size:14px;font-weight:600}
+  .strip b{font-size:16px}
+  nav.jump{position:sticky;top:0;z-index:50;background:rgba(10,17,34,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav.jump .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 22px;scrollbar-width:none}
+  nav.jump a{flex:0 0 auto;font-size:13px;font-weight:700;text-decoration:none;color:#dfe6f1;padding:7px 14px;border-radius:20px;border:1px solid rgba(255,255,255,.16)}
+  nav.jump a:hover{border-color:var(--orange);color:#fff}
+  section{padding:72px 0 24px;scroll-margin-top:56px}
+  .lab{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+  .lab .n{font-family:Georgia,serif;font-size:15px;color:var(--orange);font-weight:700}
+  .lab h2{font-size:34px;letter-spacing:-.6px;color:#fff;font-weight:800;line-height:1.15}
+  .sub{color:var(--mut);margin-bottom:28px;font-size:16px;max-width:680px}
+  .case{display:grid;grid-template-columns:1fr 1.15fr;gap:34px;align-items:start;margin-bottom:46px}
+  .case.flip{grid-template-columns:1.15fr 1fr}
+  .case.flip .txt{order:2}
+  .txt .who{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:6px}
+  .txt h3{font-size:23px;line-height:1.25;color:#fff;margin-bottom:12px;letter-spacing:-.3px}
+  .txt p{color:#c5d0e4;font-size:15.5px;margin-bottom:12px}
+  .txt ul{list-style:none;margin:6px 0 14px}
+  .txt li{color:#c5d0e4;font-size:15px;padding-left:20px;position:relative;margin-bottom:7px}
+  .txt li:before{content:"";position:absolute;left:2px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--orange)}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .tags span{font-size:12px;font-weight:700;color:#dfe6f1;background:var(--pan2);border:1px solid var(--line);padding:4px 10px;border-radius:14px}
+  .metric{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0}
+  .metric>div{background:var(--pan);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:140px}
+  .metric .v{font-size:26px;font-weight:800;color:var(--amber);line-height:1.1}
+  .metric .k{font-size:12.5px;color:var(--mut)}
+  .frame{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 50px -26px rgba(0,0,0,.7);background:var(--pan);max-height:620px;position:relative}
+  .frame img{width:100%;display:block}
+  .frame:after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(transparent,rgba(14,23,48,.9))}
+  .frame .cap{position:absolute;left:14px;bottom:12px;z-index:2;font-size:12px;font-weight:700;color:#fff;background:rgba(10,17,34,.8);padding:5px 11px;border-radius:14px}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .row .frame{max-height:520px}
+  .card .t{font-weight:800;color:#fff;font-size:15.5px;margin-top:12px}
+  .card .d{color:var(--mut);font-size:14px}
+  .plat{display:flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--pan);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:-8px 0 34px}
+  .plat .l{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);font-weight:700;margin-right:6px}
+  .plat span.p{font-size:14.5px;font-weight:800;color:#fff;background:var(--navy2);border:1px solid var(--line);padding:6px 14px;border-radius:20px}
+  .plat .note{flex-basis:100%;color:var(--mut);font-size:14px;margin-top:6px}
+  .note-card{background:#f6f1e7;color:#1d2433;border-radius:14px;padding:26px 28px;box-shadow:0 24px 50px -26px rgba(0,0,0,.7);font-size:15px}
+  .note-card .nh{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px solid #d9cfbd;padding-bottom:10px;margin-bottom:14px}
+  .note-card .nh b{font-size:17px}
+  .note-card .nh span{color:#7a6f5c;font-size:13px}
+  .note-card .it{display:grid;grid-template-columns:64px 1fr;gap:10px;margin-bottom:12px;align-items:start}
+  .note-card .tag{font-size:11.5px;font-weight:800;letter-spacing:1px;text-align:center;border-radius:6px;padding:4px 0;color:#fff}
+  .note-card .p0{background:#c2410c}.note-card .p1{background:#b7791f}.note-card .p2{background:#2f7d72}.note-card .now{background:#1d2433}
+  .note-card .src{color:#7a6f5c;font-size:12.5px;margin-top:6px;border-top:1px solid #d9cfbd;padding-top:10px}
+  /* funnel map */
+  .flow{background:var(--pan);border:1px solid var(--line);border-radius:16px;padding:26px 22px;margin-bottom:22px}
+  .flow ol{list-style:none;display:flex;flex-wrap:wrap;gap:10px 0;align-items:stretch;counter-reset:s}
+  .flow li{display:flex;align-items:center}
+  .flow li .b{background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:10px 13px;font-size:13.5px;line-height:1.35;max-width:170px}
+  .flow li .b small{display:block;color:var(--mut);font-size:11.5px;margin-top:2px}
+  .flow li .b.k{border-color:var(--teal)}
+  .flow li .b.o{border-color:var(--orange)}
+  .flow li:not(:last-child):after{content:"\2192";color:var(--orange);font-weight:800;margin:0 9px}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:12.5px;color:var(--mut)}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .box{background:var(--pan);border:1px solid var(--line);border-top:3px solid var(--orange);border-radius:14px;padding:22px}
+  .box h4{color:#fff;font-size:17px;margin-bottom:8px}
+  .box p{color:#c5d0e4;font-size:14.5px}
+  .box .big{font-size:30px;font-weight:800;color:var(--amber);line-height:1.1;margin-bottom:4px}
+  .live{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--orange);text-decoration:none}
+  .live:after{content:" \2197"}
+  footer{margin-top:60px;border-top:1px solid var(--line);padding:46px 0 60px;text-align:center}
+  footer h2{font-size:30px;color:#fff;margin-bottom:10px;letter-spacing:-.4px}
+  footer p{color:var(--mut);max-width:560px;margin:0 auto 22px}
+  footer .contact{justify-content:center}
+  .lb{position:fixed;inset:0;background:rgba(5,9,20,.94);display:none;align-items:flex-start;justify-content:center;z-index:99;overflow:auto;padding:30px 16px;cursor:zoom-out}
+  .lb.on{display:flex}
+  .lb img{max-width:min(960px,100%);border-radius:10px}
+  .row.row3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){.row,.row.row3{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}}
+  @media(max-width:760px){
+    h1{font-size:38px}.lab h2{font-size:27px}
+    .case,.case.flip{grid-template-columns:1fr;gap:22px}.case.flip .txt{order:0}
+    .pair{grid-template-columns:1fr}
+    .flow ol{flex-direction:column}.flow li{flex-direction:column;align-items:flex-start}
+    .flow li .b{max-width:none}
+    .flow li:not(:last-child):after{content:"\2193";margin:4px 0 0 14px}
+  }
+  @media(max-width:480px){.row,.row.row3{grid-template-columns:1fr}}
+  /* ads page */
+  .rings{background:var(--pan);border:1px solid var(--line);border-radius:16px;padding:26px 22px}
+  .rings svg{width:100%;max-width:640px;display:block;margin:0 auto}
+  .rings .key{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:20px}
+  .rings .key div{background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;color:#c5d0e4}
+  .rings .key b{display:block;color:#fff;font-size:14.5px;margin-bottom:2px}
+  .rings .key .pr{border-left:3px solid var(--teal)}
+  .rings .key .rt{border-left:3px solid var(--orange)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;counter-reset:st}
+  .steps div{background:var(--pan);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;counter-increment:st}
+  .steps div:before{content:counter(st);font-family:Georgia,serif;color:var(--orange);font-weight:700;font-size:15px;display:block;margin-bottom:4px}
+  .steps b{color:#fff;font-size:16px;display:block;margin-bottom:4px}
+  .steps p{color:#c5d0e4;font-size:14.5px}
+  .shift{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .shift>div{background:var(--pan);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .shift>div.new{border-color:var(--teal)}
+  .shift .k{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--mut);margin-bottom:8px}
+  .shift .new .k{color:var(--teal)}
+  .shift p{color:#c5d0e4;font-size:15px}
+  .who.moove{color:var(--amber)}
+  @media(max-width:760px){.shift{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="aurora"></div>
+  <div class="wrap">
+    <div class="ey">Marina Scheffer · Meta ads</div>
+    <h1>Meta ads set up for how Meta <em>picks ads now.</em></h1>
+    <p>Fewer campaigns, more varied creative, clean conversion signals, and every week a read on the numbers that matter to the business: <b>cost per lead, cost per purchase, revenue</b>. Below are my own campaigns and accounts we run at Moove, the studio I run with Higor.</p>
+    <div class="contact">
+      <a class="p" href="mailto:marinasdearaujo@gmail.com">Email me</a>
+      <a class="s" href="systems.html">Full acquisition portfolio</a>
+      <a class="s" href="https://www.linkedin.com/in/marinascheffer/">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip"><div class="wrap">
+  <span><b>8 → 34</b> webinar registrations in 30 days</span>
+  <span><b>$6.45</b> per lead for a US law firm</span>
+  <span><b>2.3x</b> return on spend in an e-commerce week</span>
+  <span><b>2,004</b> WhatsApp conversations from one account</span>
+</div></div>
+
+<nav class="jump"><div class="wrap">
+  <a href="#shift">What changed</a><a href="#results">Results</a><a href="#system">The system</a><a href="#creative">Creative set</a><a href="#dashboards">Dashboards</a><a href="#start">How we start</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="shift">
+  <div class="lab"><span class="n">01</span><h2>What changed in Meta ads</h2></div>
+  <p class="sub">Meta now uses an AI retrieval system, called Andromeda, to choose which ads each person could see before the auction even starts. It works best with a simple account and a wide, varied pool of creative to match against each person.</p>
+  <div class="shift">
+    <div><div class="k">What used to work</div><p>Many small campaigns, tight interest targeting, two or three winning ads pushed until they burn out, and success judged by whatever Ads Manager attributes to the last click.</p></div>
+    <div class="new"><div class="k">What works now</div><p>A few campaigns with the budget pooled, broad audiences, several genuinely different ads per campaign, a pixel that reports the real conversion with good match quality, and results judged on what the business sells.</p></div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="lab"><span class="n">02</span><h2>Results</h2></div>
+  <p class="sub">Every account is judged on what happens after the click: a registration, a lead the team can call, a purchase.</p>
+
+  <div class="case">
+    <div class="txt">
+      <div class="who">Small business software · US · my account</div>
+      <h3>Switched off the campaign that looked busy and rebuilt the one that converts</h3>
+      <p>A Traffic campaign had spent $451 for 1,603 landing page views and zero tracked registrations. I stopped it, rebuilt the webinar campaign on Meta's conversion objective with the registration as the event, and moved the email list to the front of the invite plan.</p>
+      <div class="metric">
+        <div><div class="v">8 → 34</div><div class="k">registrations, March to April</div></div>
+        <div><div class="v">$13.91</div><div class="k">per registration</div></div>
+        <div><div class="v">15</div><div class="k">attended, target was 10</div></div>
+      </div>
+      <div class="tags"><span>Conversion objective</span><span>Pixel events</span><span>Email list to ads</span></div>
+    </div>
+    <div class="row" style="grid-template-columns:1fr 1fr">
+      <a class="frame" href="img/ad-1.jpg"><img src="img/ad-1.jpg" alt="Webinar ad creative" loading="lazy"></a>
+      <a class="frame" href="img/ad-2.jpg"><img src="img/ad-2.jpg" alt="Webinar ad variant" loading="lazy"></a>
+    </div>
+  </div>
+
+  <div class="case flip">
+    <div class="txt">
+      <div class="who moove">E-commerce · Brazil · Moove client</div>
+      <h3>R$2,238 in ads, R$5,212 in sales in one week</h3>
+      <p>A purchase campaign with video and static creative, tracked from the visit to the checkout to the sale. The creative table shows which ad actually sells: the second video brought 16 of the 25 purchases at the lowest cost.</p>
+      <div class="metric">
+        <div><div class="v">2.3x</div><div class="k">revenue per real spent</div></div>
+        <div><div class="v">25</div><div class="k">purchases at R$89.52 each</div></div>
+        <div><div class="v">1,195 → 119</div><div class="k">visits to checkouts</div></div>
+      </div>
+      <div class="tags"><span>Sales objective</span><span>Purchase event</span><span>Creative-level reporting</span></div>
+    </div>
+    <a class="frame" href="img/ads-dash-ecom.jpg"><img src="img/ads-dash-ecom.jpg" alt="E-commerce ad dashboard: spend, revenue, CPA, funnel and creative table" loading="lazy"><span class="cap">Live dashboard, week of Jul 23, 2025</span></a>
+  </div>
+
+  <div class="case">
+    <div class="txt">
+      <div class="who moove">Immigration law firm · US · Moove client</div>
+      <h3>59 leads in three weeks at $6.45 each</h3>
+      <p>One ad per type of case (divorce, visa urgency, status adjustment, approved I-140), each sending people straight into a message with the firm. The attorney sees the weekly cost per lead by ad, so she knows which case type the budget is buying.</p>
+      <div class="metric">
+        <div><div class="v">$6.45</div><div class="k">per lead, Jan 15 to Feb 4</div></div>
+        <div><div class="v">56%</div><div class="k">of clicks became a message</div></div>
+        <div><div class="v">$380</div><div class="k">total spend for the period</div></div>
+      </div>
+      <div class="tags"><span>Lead generation</span><span>Click to message</span><span>Weekly dashboard</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <a class="frame" href="img/ads-dash-law.jpg"><img src="img/ads-dash-law.jpg" alt="Law firm ad dashboard: 59 leads at 6.45 cost per lead" loading="lazy"><span class="cap">Jan 15 to Feb 4, 2026</span></a>
+      <a class="frame" href="img/ads-dash-law2.jpg"><img src="img/ads-dash-law2.jpg" alt="Law firm weekly dashboard with comparison to the previous week" loading="lazy"><span class="cap">The weekly view, with last week next to it</span></a>
+    </div>
+  </div>
+
+  <div class="case flip">
+    <div class="txt">
+      <div class="who moove">Immigration services · New York and Massachusetts · Moove client</div>
+      <h3>Three years in one account: 2,004 conversations started on WhatsApp</h3>
+      <p>Separate campaigns for New York and Massachusetts so the two markets can be compared, retargeting for people who engaged without writing, and lead form tests side by side with message campaigns, where a lead cost about twice as much as a conversation.</p>
+      <div class="metric">
+        <div><div class="v">R$68k</div><div class="k">managed across 26 campaigns</div></div>
+        <div><div class="v">2,004</div><div class="k">conversations with the team</div></div>
+        <div><div class="v">R$34</div><div class="k">average per conversation</div></div>
+      </div>
+      <div class="tags"><span>State split</span><span>Retargeting</span><span>Click to WhatsApp</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <a class="frame" href="img/ads-manager-3yr.jpg"><img src="img/ads-manager-3yr.jpg" alt="Ads Manager: 26 campaigns, 2,004 messaging conversations, R$68,310 spent" loading="lazy"><span class="cap">Ads Manager, Dec 2022 to Jan 2026</span></a>
+      <a class="frame" href="img/ads-manager-7mo.jpg"><img src="img/ads-manager-7mo.jpg" alt="Ads Manager: 18 campaigns, 904 conversations" loading="lazy"><span class="cap">Nov 2023 to May 2024: 904 conversations</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="system">
+  <div class="lab"><span class="n">03</span><h2>The system, in seven steps</h2></div>
+  <p class="sub">The same order on every account. The first two steps usually find money before anything new is launched.</p>
+  <div class="steps">
+    <div><b>Audit and clean the data</b><p>What each campaign really produced, which events fire, and what is double counted.</p></div>
+    <div><b>Fix the signal</b><p>Pixel events for the real conversion, with the value when there is a sale, and match quality checked.</p></div>
+    <div><b>Build the creative set</b><p>Five ads with different jobs, so the system has real variety to match against each person.</p></div>
+    <div><b>Simplify the structure</b><p>Few campaigns, budget pooled at campaign level, broad audiences, so each campaign leaves the learning phase.</p></div>
+    <div><b>Test what the ads add</b><p>Split by region or audience to see the sales the ads create, not just the ones they take credit for.</p></div>
+    <div><b>Keep a scorecard</b><p>Cost per lead, cost per purchase and revenue by ad, on a dashboard that updates on its own.</p></div>
+    <div><b>Adjust every week</b><p>Pause what loses, refresh what fatigues, move budget to what sells, and write down why.</p></div>
+  </div>
+</section>
+
+<section id="creative">
+  <div class="lab"><span class="n">04</span><h2>The five-ad creative set</h2></div>
+  <p class="sub">Five ads that do different jobs instead of five versions of the same ad. The top three find new people, the bottom two bring back the ones who looked and did not act.</p>
+  <div class="rings">
+    <svg viewBox="0 0 640 330" role="img" aria-label="Five overlapping rings: testimonial, demo and story on top for prospecting, reminder and objection handler below for retargeting">
+      <g fill="none" stroke-width="3">
+        <circle cx="130" cy="110" r="88" stroke="#2fb6a5"/>
+        <circle cx="320" cy="110" r="88" stroke="#2fb6a5"/>
+        <circle cx="510" cy="110" r="88" stroke="#2fb6a5"/>
+        <circle cx="225" cy="215" r="88" stroke="#e8631a"/>
+        <circle cx="415" cy="215" r="88" stroke="#e8631a"/>
+      </g>
+      <g fill="#eef2f8" font-family="Avenir Next,Helvetica Neue,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle">
+        <text x="130" y="96">Testimonial</text><text x="130" y="116" font-size="13" font-weight="400" fill="#93a2bd">a customer says it</text>
+        <text x="320" y="96">Demo</text><text x="320" y="116" font-size="13" font-weight="400" fill="#93a2bd">show how it works</text>
+        <text x="510" y="96">Story</text><text x="510" y="116" font-size="13" font-weight="400" fill="#93a2bd">before and after</text>
+        <text x="225" y="250">Reminder</text><text x="225" y="270" font-size="13" font-weight="400" fill="#93a2bd">you looked, here it is</text>
+        <text x="415" y="250">Objection</text><text x="415" y="270" font-size="13" font-weight="400" fill="#93a2bd">answer the doubt</text>
+      </g>
+    </svg>
+    <div class="key">
+      <div class="pr"><b>Prospecting</b>Testimonial, demo and story reach people who have never heard of you, each from a different angle.</div>
+      <div class="rt"><b>Retargeting</b>Reminder and objection ads go to site visitors, cart abandoners and people who engaged without buying.</div>
+      <div><b>Refreshed monthly</b>When an ad tires, it is replaced by a new ad with the same job, so the set stays varied.</div>
+    </div>
+  </div>
+</section>
+
+<section id="dashboards">
+  <div class="lab"><span class="n">05</span><h2>Dashboards instead of screenshots</h2></div>
+  <p class="sub">Every client gets a live dashboard that pulls from Meta on its own: spend, the funnel from click to sale, and each ad's cost per result. A short written note each week says what changed and what to do next.</p>
+  <div class="row row3">
+    <a class="frame" href="img/ads-dash-ecom.jpg"><img src="img/ads-dash-ecom.jpg" alt="E-commerce dashboard" loading="lazy"><span class="cap">E-commerce</span></a>
+    <a class="frame" href="img/ads-dash-law.jpg"><img src="img/ads-dash-law.jpg" alt="Law firm lead dashboard" loading="lazy"><span class="cap">Lead generation</span></a>
+    <a class="frame" href="img/se-dash.jpg"><img src="img/se-dash.jpg" alt="Webinar funnel dashboard" loading="lazy"><span class="cap">Webinar funnel</span></a>
+  </div>
+</section>
+
+<section id="start">
+  <div class="lab"><span class="n">06</span><h2>How we start</h2></div>
+  <div class="grid3">
+    <div class="box"><h4>Audit, in 3 working days</h4><p>I go through your account and tracking and send a written plan: what to stop, what to fix in the signal, and the first creative set to brief.</p></div>
+    <div class="box"><h4>Rebuild and launch</h4><p>Simplified structure, the five-ad set, and the dashboard connected to your account in the first two weeks.</p></div>
+    <div class="box"><h4>Weekly read</h4><p>One short note a week with the numbers, what changed and what comes next. No status calls needed.</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  <h2>Ads spending but not selling?</h2>
+  <p>Send me what is running today and I'll tell you what I would stop first.</p>
+  <div class="contact">
+    <a class="p" href="mailto:marinasdearaujo@gmail.com">Email me</a>
+    <a class="s" href="systems.html">Full acquisition portfolio</a>
+  </div>
+</div></footer>
+
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+  var lb=document.getElementById('lb'),lbi=lb.firstElementChild;
+  document.querySelectorAll('a.frame').forEach(function(a){a.addEventListener('click',function(e){var i=a.querySelector('img');if(!i)return;e.preventDefault();lbi.src=i.currentSrc||i.src;lb.classList.add('on');});});
+  lb.addEventListener('click',function(){lb.classList.remove('on');});
+  addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on');});
+</script>
+</body>
+</html>
