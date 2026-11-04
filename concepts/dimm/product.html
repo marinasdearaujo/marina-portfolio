@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dimm Contour Sleep Mask</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.bar{background:var(--navy);color:#fff;text-align:center;font-size:13.5px;padding:9px 16px}
+.bar b{color:var(--amber)}
+.nav{display:flex;justify-content:space-between;align-items:center;max-width:1080px;margin:0 auto;padding:14px 20px;border-bottom:1px solid var(--line)}
+.nav .logo{font-family:Fraunces,serif;font-weight:700;font-size:26px;letter-spacing:-.01em}
+.nav span{font-size:14px;color:var(--mute)}
+.pdp{max-width:1080px;margin:0 auto;padding:26px 20px;display:grid;grid-template-columns:1.05fr 1fr;gap:36px}
+.gal img{border-radius:14px}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.thumbs img{aspect-ratio:1;object-fit:cover;border-radius:10px}
+.buy{min-width:0}
+.rating{font-size:14px;color:var(--mute);display:flex;gap:8px;align-items:center}
+.buy h1{font-size:clamp(28px,4vw,38px);margin:8px 0 10px}
+.buy .sub{color:var(--mute);margin:0 0 16px}
+.ben{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:8px}
+.ben li{padding-left:28px;position:relative}
+.ben li:before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:#e3f1e9;color:var(--green);font-size:12px;font-weight:700;display:grid;place-items:center}
+.packs{display:grid;gap:10px;margin-bottom:16px}
+.pack{display:grid;grid-template-columns:22px 1fr auto;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;background:#fff;position:relative}
+.pack.on{border-color:var(--navy);box-shadow:0 0 0 1px var(--navy)}
+.pack .r{width:20px;height:20px;border-radius:50%;border:2px solid var(--line)}
+.pack.on .r{border:6px solid var(--navy)}
+.pack b{display:block}
+.pack small{color:var(--mute)}
+.pack .p{text-align:right}
+.pack .p s{color:var(--mute);font-size:13px;display:block}
+.pack .p b{font-size:19px}
+.pill{position:absolute;top:-10px;right:14px;background:var(--amber);color:#1a1205;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px;font-size:12.5px;text-align:center;color:var(--mute)}
+.trust div{background:var(--oat);border-radius:8px;padding:10px 6px}
+.trust b{display:block;color:var(--ink);font-size:13.5px}
+.band{background:var(--oat);padding:48px 0;margin-top:20px}
+.band h2{font-size:clamp(26px,4vw,34px);text-align:center;margin-bottom:26px}
+.how{max-width:1080px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.how div{background:#fff;border-radius:14px;padding:22px}
+.how h3{font-size:20px;margin-bottom:8px}
+.how p{margin:0;font-size:15.5px;color:var(--mute)}
+.revs{max-width:1080px;margin:0 auto;padding:46px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.revs h2{grid-column:1/-1;font-size:30px;text-align:center}
+.rv{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}
+.rv p{margin:8px 0;font-size:15.5px}
+.faq{max-width:720px;margin:0 auto;padding:10px 20px 20px}
+.faq h2{font-size:30px;text-align:center;margin-bottom:16px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{font-weight:600;cursor:pointer}
+details p{margin:10px 0 0;color:var(--mute)}
+.g{max-width:720px;margin:20px auto 0;padding:24px;text-align:center;border:2px dashed var(--navy);border-radius:16px}
+.g h3{font-size:24px;margin-bottom:6px}
+@media(max-width:820px){.pdp{grid-template-columns:1fr;gap:20px}.how,.revs{grid-template-columns:1fr}}
+</style></head><body>
+<div class="concept"><b>Portfolio concept</b> by Marina Scheffer · fictional brand, sample copy · a product page with bundles built to raise AOV</div>
+<div class="bar">Free EU shipping · <b>60-night trial</b> · Up to 30% off bundles this week</div>
+<div class="nav"><div class="logo">dimm</div><span>Sleep masks · Travel · Help</span></div>
+
+<section class="pdp">
+<div class="gal"><img src="img/hero.jpg" alt="Dimm Contour sleep mask">
+<div class="thumbs"><img src="img/sleep.jpg" alt="Wearing the mask"><img src="img/bundle.jpg" alt="Bundle contents"><img src="img/tired.jpg" alt="Waking before dawn"></div></div>
+<div class="buy">
+<div class="rating"><span class="stars">★★★★★</span><span>4.8 · sample rating</span></div>
+<h1>Dimm Contour Sleep Mask</h1>
+<p class="sub">Real darkness, with no pressure on your eyes. Sleep past dawn, on planes, and through your partner's phone light.</p>
+<ul class="ben"><li>Molded cups seal out light without touching your eyelids</li><li>A soft nose flap closes the gap where flat masks leak</li><li>A low profile that stays on for side sleepers</li><li>Washable cover and a split strap that won't pull your hair</li></ul>
+<div class="packs" id="packs">
+<div class="pack" data-n="1"><span class="r"></span><div><b>1 mask</b><small>For you</small></div><div class="p"><b>€39</b></div></div>
+<div class="pack on" data-n="2"><span class="pill">Most popular</span><span class="r"></span><div><b>2 masks</b><small>For you and your partner · save €9</small></div><div class="p"><s>€78</s><b>€69</b></div></div>
+<div class="pack" data-n="3"><span class="pill" style="background:var(--navy);color:#fff">Best value</span><span class="r"></span><div><b>3 masks + travel case</b><small>Home, travel and a spare · save €28</small></div><div class="p"><s>€117</s><b>€89</b></div></div>
+</div>
+<a class="btn" href="#" id="add">Add 2 masks to cart · €69<small>Ships in 1–2 days from Germany</small></a>
+<div class="trust"><div><b>60 nights</b>to try it</div><div><b>Free</b>EU shipping</div><div><b>2-year</b>warranty</div></div>
+</div>
+</section>
+
+<section class="band"><h2>Why flat masks never got you there</h2>
+<div class="how">
+<div><h3>Flat masks press</h3><p>To block light, they push on your eyes, so you loosen them, so they leak.</p></div>
+<div><h3>Contoured cups seal</h3><p>The cups sit around your eyes, so the edges can seal tightly with no pressure.</p></div>
+<div><h3>Dawn stays outside</h3><p>Early light is a wake-up signal. Keep it out and your alarm decides when you wake.</p></div>
+</div></section>
+
+<section class="revs"><h2>What sleepers say</h2>
+<div class="rv"><span class="sample">Sample review</span><div class="stars">★★★★★</div><p>"First mask that doesn't leak at the nose. I sleep until 7 now, even in June."</p><b>Lena, Hamburg</b></div>
+<div class="rv"><span class="sample">Sample review</span><div class="stars">★★★★★</div><p>"Night shifts made daytime sleep impossible. This made it possible."</p><b>Marta, Lisbon</b></div>
+<div class="rv"><span class="sample">Sample review</span><div class="stars">★★★★☆</div><p>"Bought the 3-pack. One lives in my carry-on, and my partner took the other."</p><b>Jonas, Rotterdam</b></div>
+</section>
+
+<section class="faq"><h2>Questions</h2>
+<details open><summary>Will it work if I sleep on my side?</summary><p>Yes. The low-profile cups and split strap were designed for side sleepers.</p></details>
+<details><summary>What if it doesn't work for me?</summary><p>Try it for 60 nights. If you don't sleep better, send it back for a full refund. No forms, no questions.</p></details>
+<details><summary>How do I clean it?</summary><p>The cover comes off and goes in the wash at 30°C.</p></details>
+<details><summary>When will it arrive?</summary><p>Orders ship from Germany within 1–2 working days. Most EU deliveries arrive in 2–5 days.</p></details>
+<div class="g"><h3>The 60-night promise</h3><p style="margin:0;color:var(--mute)">Sleep on it for two months. If you're still waking at dawn, you get your money back.</p></div>
+</section>
+<footer>A concept page by Marina Scheffer. Dimm is a fictional brand, and all ratings and reviews are samples.</footer>
+<div class="sticky"><a class="btn" href="#packs">Choose your pack · from €39</a></div>
+<script>
+const price={1:39,2:69,3:89},label={1:'1 mask',2:'2 masks',3:'3 masks + case'};
+document.querySelectorAll('.pack').forEach(p=>p.addEventListener('click',()=>{document.querySelectorAll('.pack').forEach(x=>x.classList.remove('on'));p.classList.add('on');const n=p.dataset.n;document.getElementById('add').firstChild.textContent='Add '+label[n]+' to cart · €'+price[n]}));
+document.getElementById('add').addEventListener('click',e=>e.preventDefault());
+</script>
+</body></html>
