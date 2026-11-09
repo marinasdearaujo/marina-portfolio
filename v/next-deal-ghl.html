@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow">
+<title>Next Deal GHL Blueprint</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@500&display=swap">
+<style>
+:root{--bg:#f6f2ea;--ink:#13202e;--soft:#4a5566;--line:#e1d9c8;--card:#fff;--navy:#13202e;--acc:#e0892b;--acc2:#b8641a;--cream:#f6f2ea}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 'DM Sans',Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding-block:48px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:56px}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5vw,48px)} h2{font-size:clamp(24px,3.4vw,32px)}
+.eye{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--acc2)}
+p{margin:0;color:var(--soft);max-width:68ch}
+section{display:flex;flex-direction:column;gap:18px}
+.head{display:flex;flex-direction:column;gap:8px}
+.pipe{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;font-weight:700;font-size:14px;line-height:1.3;display:flex;flex-direction:column;gap:4px}
+.st small{font-weight:400;color:var(--soft);font-size:12.5px}
+.st b{font-size:11px;color:var(--acc2);letter-spacing:.1em}
+.st.end{background:var(--navy);color:var(--cream);border-color:var(--navy)} .st.end small{color:#c9d2dc} .st.end b{color:var(--acc)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{margin:0;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font:500 13px/1 'DM Mono',ui-monospace,monospace;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:6px 8px}
+.time{display:flex;flex-direction:column;gap:0;border-left:3px solid var(--acc);margin-left:8px}
+.ev{display:grid;grid-template-columns:92px minmax(0,1fr);gap:14px;padding:12px 0 12px 18px;position:relative}
+.ev::before{content:"";position:absolute;left:-8px;top:18px;width:13px;height:13px;border-radius:50%;background:var(--acc);border:3px solid var(--bg)}
+.ev .tm{font-family:Fraunces,Georgia,serif;font-size:22px;font-weight:600}
+.ev div:last-child{color:var(--soft)} .ev strong{color:var(--ink)}
+.steps{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.steps li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;color:var(--soft);font-size:15px}
+.steps li b{color:var(--acc2);font-size:13px;letter-spacing:.06em}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.chain span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:500;font-size:14px}
+.chain i{color:var(--acc2);font-style:normal;font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);font-weight:700;background:var(--bg)}
+tr.tot td{font-weight:700;background:#fbf3e7}
+.note{font-size:13.5px;color:var(--soft)}
+.leads td,.leads th{text-align:left;white-space:normal;font-size:13px;padding:8px 10px}
+.leads td.n{text-align:right;white-space:nowrap}
+footer{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--soft);font-size:14px;border-top:1px solid var(--line);padding-top:18px}
+footer a{color:var(--acc2)}
+@media (max-width:760px){.pipe{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2{grid-template-columns:1fr}.ev{grid-template-columns:72px minmax(0,1fr)}}
+@media print{body{font-size:12px}h1{font-size:34px}h2{font-size:22px}.wrap{padding:0;gap:26px;max-width:none}.pipe{grid-template-columns:repeat(5,minmax(0,1fr))}.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}.ev{grid-template-columns:70px minmax(0,1fr);padding-block:7px}.ev .tm{font-size:18px}.card,.time,.head{break-inside:avoid}section{break-inside:avoid}.leadsec .tw{break-inside:auto}html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}th,td{padding:7px 5px;font-size:10.5px;white-space:normal}.tw{overflow:visible}table{table-layout:fixed}table:not(.leads) th:first-child{width:22%}.leads th:nth-child(1){width:4%}.leads th:nth-child(2){width:20%}.leads th:nth-child(3){width:22%}.leads th:nth-child(4){width:8%}.leads th:nth-child(5){width:10%}.leads th:nth-child(6){width:8%}.st{padding:8px}.leads td,.leads th{font-size:10.5px;padding:5px 7px}.leadsec{break-inside:auto}.leads tr{break-inside:avoid}}
+@page{size:Letter;margin:14mm}
+</style></head><body><div class="wrap">
+<section><div class="head"><div class="eye">For Josh Kantor · Next Deal Lending</div><h1>How the GHL side would run, from first reply to funded loan</h1>
+<p>The pipeline, the five minutes after a positive reply, the follow-ups that keep files moving, and how every funded loan traces back to one campaign. Built under your accounts, owned by you.</p></div></section>
+
+<section><div class="head"><div class="eye">01 · Pipeline</div><h2>Ten stages, new lead to funded</h2></div>
+<div class="pipe"><div class="st"><b>01</b>New Lead<small>Lead enters from Instantly or a form</small></div><div class="st"><b>02</b>Positive Reply<small>Opportunity opens, rep assigned</small></div><div class="st"><b>03</b>Call Booked<small>Address, type, amount captured</small></div><div class="st"><b>04</b>Call Held<small>Or No-Show, with its own flow</small></div><div class="st"><b>05</b>Application Sent<small>Link sent on the call</small></div><div class="st"><b>06</b>Docs Pending<small>Checklist per document</small></div><div class="st"><b>07</b>In Underwriting<small>File complete</small></div><div class="st"><b>08</b>Term Sheet Issued<small>Leverage, rate, timeline</small></div><div class="st"><b>09</b>Clear to Close<small>Final conditions</small></div><div class="st end"><b>10</b>Funded<small>Bonus event, one per loan</small></div></div>
+<div class="grid2">
+<div class="card"><h3>Custom fields</h3><div class="chips"><span>Loan Amount ($)</span><span>Property Address</span><span>Loan Type: Fix and Flip · Bridge · DSCR · New Construction</span><span>Purchase Price</span><span>ARV</span><span>Rehab Budget</span><span>Source Campaign (locked)</span><span>Funded Date</span><span>Funded Amount</span></div></div>
+<div class="card"><h3>Tags</h3><div class="chips"><span>src:cold-email</span><span>c01-tampa-cash</span><span>c02-active-flippers</span><span>metro:tampa</span><span>loan:dscr</span><span>no-show</span><span>docs-missing</span><span>dnc</span></div><p class="note">Not Now and Lost move to a nurture pipeline instead of being deleted.</p></div>
+</div></section>
+
+<section><div class="head"><div class="eye">02 · Speed to lead</div><h2>A positive reply lands at 2:00 PM</h2></div>
+<div class="time">
+<div class="ev"><div class="tm">2:00</div><div><strong>Instantly marks it Interested</strong> and a webhook sends the lead, the reply and the campaign ID to GHL. Contact updated, opportunity opened in Positive Reply, rep assigned.</div></div>
+<div class="ev"><div class="tm">2:01</div><div><strong>The rep gets a push and an email</strong> with the reply text, the deal details and one-tap call. The lead gets a short answer in the same thread with the calendar link.</div></div>
+<div class="ev"><div class="tm">2:05</div><div><strong>The rep calls.</strong> Booking form captures address, loan type and amount. Stage moves to Call Booked, confirmation and reminders go out.</div></div>
+<div class="ev"><div class="tm">4:00</div><div><strong>Not booked yet?</strong> A second email goes out and the call task stays open. Texts only for people who opt in on the booking form, never the cold list.</div></div>
+</div></section>
+
+<section><div class="head"><div class="eye">03 · Nothing goes cold</div><h2>Two follow-up flows</h2></div>
+<div class="grid2">
+<div class="card"><h3>No-show</h3><ul class="steps"><li><b>0 MIN</b>Reschedule email with the calendar link</li><li><b>SAME DAY</b>Call task for the rep</li><li><b>DAY 1</b>Short check-in email (plus text if opted in)</li><li><b>DAY 3</b>Email with the deal angle</li><li><b>DAY 7</b>Last email, then nurture</li></ul><p class="note">Booking again stops the flow automatically.</p></div>
+<div class="card"><h3>Missing documents</h3><ul class="steps"><li><b>DAY 1</b>Email listing only what is still missing, with upload link</li><li><b>DAY 2</b>Reminder</li><li><b>DAY 3</b>Call task for the rep</li><li><b>DAY 4</b>Reminder</li><li><b>DAY 7</b>Final reminder and flag</li></ul><p class="note">Checklist fields: ID, entity docs, bank statements, purchase contract, rehab budget. Any stage idle for 5+ days alerts the rep.</p></div>
+</div></section>
+
+<section><div class="head"><div class="eye">04 · Attribution</div><h2>Every funded loan points to one campaign</h2></div>
+<div class="chain"><span>Clay list + campaign ID</span><i>→</i><span>Instantly sequence</span><i>→</i><span>Reply webhook</span><i>→</i><span>GHL Source Campaign, locked at first positive reply</span><i>→</i><span>Funded report by campaign</span></div>
+<p>One opportunity per loan, one payout per loan, tracked in your CRM.</p></section>
+
+<section><div class="head"><div class="eye">05 · Friday scoreboard</div><h2>What lands in your inbox every Friday</h2><p>Layout with the week 6 targets from my answers, not results.</p></div>
+<div class="tw"><table><tr><th>Campaign</th><th>Sent</th><th>Bounce</th><th>Replies</th><th>Positive</th><th>Booked</th><th>Held</th><th>Apps</th><th>Docs done</th><th>Term sheets</th><th>Funded</th></tr>
+<tr><td>c01 Tampa cash buyers</td><td>750</td><td>&lt;2%</td><td>38</td><td>13</td><td>5</td><td>4</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
+<tr><td>c02 Active flippers</td><td>750</td><td>&lt;2%</td><td>37</td><td>12</td><td>5</td><td>4</td><td>·</td><td>·</td><td>·</td><td>·</td></tr>
+<tr class="tot"><td>Week 6 target</td><td>1,500</td><td>&lt;2%</td><td>4 to 6%</td><td>22 to 30</td><td>8 to 12</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td></tr></table></div>
+<p class="note">Also on the sheet: funded volume, cost per booked call, kill or scale call per campaign, and my hours.</p></section>
+
+<footer><span>Marina Scheffer · Growth &amp; Acquisition Specialist</span><a href="https://marinasdearaujo.github.io/marina-portfolio/systems.html">Portfolio</a><a href="https://marinasdearaujo.github.io/marina-portfolio/v/next-deal.html">Video walkthrough</a></footer>
+</div></body></html>
