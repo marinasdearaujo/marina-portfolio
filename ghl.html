@@ -1,0 +1,140 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Marina Scheffer · GoHighLevel Playbook</title>
+<meta name="description" content="How I set up GoHighLevel for a business that sells on a call: pipeline, speed to lead, email follow-ups, show rate and data back to Meta.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;700&family=DM+Mono:wght@500&display=swap">
+<style>
+:root{--bg:#f5f4f1;--ink:#0e1730;--soft:#4c566b;--line:#e1ddd5;--card:#fff;--navy:#0e1730;--acc:#e8631a;--teal:#2fb6a5;--cream:#fbf3ec;--sage:#f5a623}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:56px}
+h1,h2{font-family:'Source Serif 4',Georgia,serif;font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5vw,48px)} h2{font-size:clamp(24px,3.4vw,32px)}
+.eye{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--acc)}
+p{margin:0;color:var(--soft);max-width:68ch}
+section{display:flex;flex-direction:column;gap:18px}
+.head{display:flex;flex-direction:column;gap:8px}
+.hero{background:var(--navy);border-radius:6px;padding:40px 36px}
+.hero .eye{color:var(--sage)} .hero h1{color:#fff} .hero p{color:#c9d2e3}
+.hero .who{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px;font-size:14px}
+.hero .who a{color:var(--sage)}
+.pipe{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;font-weight:700;font-size:14px;line-height:1.3;display:flex;flex-direction:column;gap:4px}
+.st small{font-weight:400;color:var(--soft);font-size:12.5px}
+.st b{font-size:11px;color:var(--acc);letter-spacing:.1em}
+.st.end{background:var(--navy);color:#fff;border-color:var(--navy)} .st.end small{color:#c9d2e3} .st.end b{color:var(--sage)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{margin:0;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font:500 13px/1 'DM Mono',ui-monospace,monospace;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:6px 8px}
+.time{display:flex;flex-direction:column;border-left:3px solid var(--acc);margin-left:8px}
+.ev{display:grid;grid-template-columns:92px minmax(0,1fr);gap:14px;padding:12px 0 12px 18px;position:relative}
+.ev::before{content:"";position:absolute;left:-8px;top:18px;width:13px;height:13px;border-radius:50%;background:var(--acc);border:3px solid var(--bg)}
+.ev .tm{font-family:'Source Serif 4',Georgia,serif;font-size:22px;font-weight:600}
+.ev div:last-child{color:var(--soft)} .ev strong{color:var(--ink)}
+.steps{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.steps li{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;color:var(--soft);font-size:15px}
+.steps li b{color:var(--acc);font-size:13px;letter-spacing:.06em}
+.flow{display:flex;flex-direction:column;gap:10px}
+.fl{display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.fl b{color:var(--acc);font-size:13px;letter-spacing:.06em;padding-top:2px}
+.fl div{color:var(--soft);font-size:15px;display:flex;flex-direction:column;gap:6px}
+.fl strong{color:var(--ink)}
+.br{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.br span{border-radius:8px;padding:8px 10px;font-size:14px;background:var(--bg);border:1px solid var(--line)}
+.br span i{font-style:normal;font-weight:700;color:var(--ink)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.chain span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:500;font-size:14px}
+.chain i{color:var(--acc);font-style:normal;font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);font-weight:700;background:var(--bg)}
+td{color:var(--soft)}
+.note{font-size:13.5px;color:var(--soft)}
+.callout{border-left:4px solid var(--teal);background:var(--card);border-radius:0 12px 12px 0;padding:14px 18px;color:var(--soft);font-size:15px}
+.callout strong{color:var(--ink)}
+.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.checks li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--soft);font-size:15px}
+.checks li strong{display:block;color:var(--ink);margin-bottom:2px}
+footer{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--soft);font-size:14px;border-top:1px solid var(--line);padding-top:18px}
+footer a{color:var(--acc)}
+@media (max-width:760px){.pipe{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2,.checks,.br{grid-template-columns:1fr}.ev{grid-template-columns:72px minmax(0,1fr)}.hero{padding:28px 22px}}
+</style></head><body><div class="wrap">
+
+<section class="hero"><div class="head"><div class="eye">Marina Scheffer · GoHighLevel playbook</div>
+<h1>From the first lead to a closed deal, inside GoHighLevel</h1>
+<p>How I set up GHL for a business that sells on a call: the pipeline, the first five minutes after a lead comes in, the email follow-ups, getting people to show up, and sending the right events back to Meta. Stage names and fields change with each business; the logic doesn't.</p>
+<div class="who"><a href="systems.html">Full portfolio</a><a href="ads.html">Meta ads results</a></div></div></section>
+
+<section><div class="head"><div class="eye">01 · Pipeline</div><h2>Eight stages, new lead to won</h2><p>One opportunity per deal. Nothing is deleted: "Not now" and "Lost" move to a nurture pipeline, because a no today is often a yes in three months.</p></div>
+<div class="pipe">
+<div class="st"><b>01</b>New Lead<small>Form, ad or positive reply</small></div>
+<div class="st"><b>02</b>Contacted<small>First touch logged, under 5 minutes</small></div>
+<div class="st"><b>03</b>Qualified<small>Timeline and budget confirmed</small></div>
+<div class="st"><b>04</b>Call Booked<small>Confirmation and reminders start</small></div>
+<div class="st"><b>05</b>Call Held<small>Or No-Show, with its own flow</small></div>
+<div class="st"><b>06</b>Proposal Sent<small>Or application, quote, checkout link</small></div>
+<div class="st"><b>07</b>Waiting on Client<small>Docs, payment or signature</small></div>
+<div class="st end"><b>08</b>Won<small>Value recorded, sent back to the ads</small></div>
+</div>
+<div class="grid2">
+<div class="card"><h3>Custom fields</h3><div class="chips"><span>Source Campaign (locked)</span><span>Ad / Form</span><span>Timeline: now · 3 months · later</span><span>Budget or Deal Size</span><span>Booked Date</span><span>Won Date</span><span>Won Value</span></div><p class="note">Source Campaign locks at the first touch, so every won deal points to exactly one campaign.</p></div>
+<div class="card"><h3>Tags</h3><div class="chips"><span>src:meta-form</span><span>src:cold-email</span><span>form:&lt;name&gt;</span><span>ready-3mo</span><span>opened-no-click</span><span>no-show</span><span>docs-missing</span><span>dnc</span></div><p class="note">Tags drive the workflows; fields hold the facts the report needs.</p></div>
+</div></section>
+
+<section><div class="head"><div class="eye">02 · Speed to lead</div><h2>A lead lands at 2:00 PM</h2><p>The first five minutes decide most of what happens next, so the system does the busywork and the rep only has to call.</p></div>
+<div class="time">
+<div class="ev"><div class="tm">2:00</div><div><strong>The lead arrives</strong> from a Meta instant form, a landing page or a positive email reply (by webhook). Contact created or updated, tagged with the form and ad, opportunity opened, rep assigned (round robin if there's more than one).</div></div>
+<div class="ev"><div class="tm">2:01</div><div><strong>The rep gets an alert</strong> with what the lead answered and a one-tap call. The lead gets a short, personal-sounding email with the calendar link, plus a text if they opted in.</div></div>
+<div class="ev"><div class="tm">2:05</div><div><strong>The rep calls.</strong> If they book, the stage moves to Call Booked and the show-up sequence starts.</div></div>
+<div class="ev"><div class="tm">4:00</div><div><strong>Not booked yet?</strong> A second message goes out and the call task stays open. Next morning, the task comes back to the top of the rep's list.</div></div>
+</div>
+<div class="callout"><strong>Leads ready soon go first.</strong> One form question ("when do you plan to start?") sorts the queue, so the rep calls the "within 3 months" people before anyone else.</div></section>
+
+<section><div class="head"><div class="eye">03 · Email follow-up</div><h2>A drip that reacts to what people do</h2><p>A starting cadence, adjusted once the data comes in. Each email does one job, and the branches make sure nobody gets the same email twice.</p></div>
+<div class="flow">
+<div class="fl"><b>DAY 0</b><div><strong>Welcome</strong>What they asked for, who you are, the calendar link.</div></div>
+<div class="fl"><b>DAY 2</b><div><strong>Check, then branch</strong><div class="br"><span><i>Opened or clicked:</i> next email in the sequence</span><span><i>Didn't open:</i> the same email with a new subject line, once only</span></div></div></div>
+<div class="fl"><b>DAY 4</b><div><strong>Proof</strong>A result from someone like them, in their words.</div></div>
+<div class="fl"><b>DAY 7</b><div><strong>The objection</strong>The thing that stops most people, answered plainly.</div></div>
+<div class="fl"><b>DAY 10</b><div><strong>The direct ask</strong>Book the call, with a reason to do it this week.</div></div>
+<div class="fl"><b>DAY 14</b><div><strong>Last email, then nurture</strong>A low-key note; after that, one useful email a month.</div></div>
+</div>
+<div class="grid2">
+<div class="card"><h3>Opens lie, clicks don't</h3><p>Apple Mail and some other inboxes "open" every email automatically for privacy, so many people who never read it count as openers. I branch on opens, but a click or a reply is the signal I trust.</p></div>
+<div class="card"><h3>Rules on every workflow</h3><ul class="steps"><li><b>RE-ENTRY</b>Off, so a contact can't get the sequence twice</li><li><b>GOAL</b>Reply, book or buy pulls them out at once</li><li><b>EXIT TAG</b>Marks who finished, for the next campaign</li><li><b>HOURS</b>Sends inside business hours, in their time zone</li></ul></div>
+</div></section>
+
+<section><div class="head"><div class="eye">04 · Getting people to show up</div><h2>From booked to on the call</h2><p>When under half of booked calls show, the problem is usually the days between the booking and the call, not the ads.</p></div>
+<div class="grid2">
+<div class="card"><h3>After booking</h3><ul class="steps"><li><b>NOW</b>Confirmation with the time in their zone and what the call covers</li><li><b>DAY -1</b>Something short to watch or read, so they arrive invested</li><li><b>24 H</b>Reminder by email, plus text if opted in</li><li><b>1 H</b>Reminder with the link</li></ul><p class="note">Keep the booking window short. Calls booked more than two days out lose people.</p></div>
+<div class="card"><h3>No-show</h3><ul class="steps"><li><b>0 MIN</b>Reschedule email with the calendar link</li><li><b>SAME DAY</b>Call task for the rep</li><li><b>DAY 1</b>Short check-in (plus text if opted in)</li><li><b>DAY 3</b>Email with a new angle</li><li><b>DAY 7</b>Last email, then nurture</li></ul><p class="note">Booking again stops the flow automatically.</p></div>
+</div>
+<div class="card"><h3>Waiting on the client</h3><ul class="steps"><li><b>DAY 1</b>Email listing only what is still missing, with the upload or payment link</li><li><b>DAY 2</b>Reminder</li><li><b>DAY 3</b>Call task for the rep</li><li><b>DAY 4</b>Reminder</li><li><b>DAY 7</b>Final reminder, and the deal is flagged</li></ul><p class="note">Any stage idle for 5+ days alerts the rep.</p></div>
+</section>
+
+<section><div class="head"><div class="eye">05 · Data back to the ads</div><h2>Meta learns from the CRM, not from the form</h2><p>Optimizing for raw leads teaches Meta to find people who fill in forms. Sending pipeline stages back teaches it to find people who book and buy.</p></div>
+<div class="chain"><span>Lead with its ad and form</span><i>→</i><span>Stage changes in GHL</span><i>→</i><span>Event sent to Meta with the lead ID</span><i>→</i><span>Campaign optimizes for qualified leads</span></div>
+<div class="grid2">
+<div class="card"><h3>Which event to optimize for</h3><p>Booked calls are usually too few for Meta to learn from; it needs around 50 events a week. So I send <b>Qualified</b> as the event the campaign optimizes for, and <b>Booked</b> and <b>Won</b> as the ones we report on.</p></div>
+<div class="card"><h3>Before trusting any number</h3><p>I check match quality in Events Manager and compare the counts with the pipeline. If they don't match, the report waits until they do.</p></div>
+</div></section>
+
+<section><div class="head"><div class="eye">06 · Friday scoreboard</div><h2>One table, every week</h2><p>The layout of the weekly note. Each row is a source or a campaign.</p></div>
+<div class="tw"><table><tr><th>Source</th><th>Leads</th><th>Called in 5 min</th><th>Qualified</th><th>Booked</th><th>Show rate</th><th>Won</th><th>Cost per booked call</th><th>Call</th></tr>
+<tr><td>Meta · form A</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>scale / hold / kill</td></tr>
+<tr><td>Meta · form B</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>scale / hold / kill</td></tr>
+<tr><td>Cold email · campaign 1</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>scale / hold / kill</td></tr></table></div>
+<p class="note">Under the table: where leads dropped this week, the one change I'm making next, and what I need from you.</p></section>
+
+<section><div class="head"><div class="eye">07 · Before anything goes live</div><h2>What I test, every time</h2><p>Each of these broke on a real account once. Now they're on the launch checklist.</p></div>
+<ul class="checks">
+<li><strong>A fake lead through the whole path</strong>From the ad form to the rep's alert, the emails and the pipeline, before a cent is spent.</li>
+<li><strong>Phone numbers with the country code</strong>Without it, the rep's dialer can't call anyone, and nothing shows an error.</li>
+<li><strong>The Meta connection, weekly</strong>When the connection token expires, leads stop arriving quietly. A weekly check and a test lead after any change.</li>
+<li><strong>Every branch, with test contacts</strong>One that opens, one that doesn't, one that books: each should end in the right place, with the right tags.</li>
+</ul></section>
+
+<footer><span>Marina Scheffer · Growth &amp; Acquisition Specialist</span><a href="systems.html">Portfolio</a><a href="ads.html">Meta ads</a><a href="linkedin.html">LinkedIn content</a></footer>
+</div></body></html>
