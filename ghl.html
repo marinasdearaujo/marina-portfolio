@@ -54,7 +54,7 @@ td{color:var(--soft)}
 .note{font-size:13.5px;color:var(--soft)}
 .callout{border-left:4px solid var(--teal);background:var(--card);border-radius:0 12px 12px 0;padding:14px 18px;color:var(--soft);font-size:15px}
 .callout strong{color:var(--ink)}
-.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:0;padding:0;list-style:none}
 .checks li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--soft);font-size:15px}
 .checks li strong{display:block;color:var(--ink);margin-bottom:2px}
 footer{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--soft);font-size:14px;border-top:1px solid var(--line);padding-top:18px}
@@ -64,7 +64,7 @@ footer a{color:var(--acc)}
 
 <section class="hero"><div class="head"><div class="eye">Marina Scheffer · GoHighLevel playbook</div>
 <h1>From the first lead to a closed deal, inside GoHighLevel</h1>
-<p>How I set up GHL for a business that sells on a call: the pipeline, the first five minutes after a lead comes in, the email follow-ups, getting people to show up, and sending the right events back to Meta. Stage names and fields change with each business; the logic doesn't.</p>
+<p>How I set up GHL for a business that sells on a call: the pipeline, the first five minutes after a lead comes in, the email follow-ups, getting people to show up, following up after the call, and sending the right events back to Meta. Stage names and fields change with each business; the logic doesn't.</p>
 <div class="who"><a href="systems.html">Full portfolio</a><a href="ads.html">Meta ads results</a></div></div></section>
 
 <section><div class="head"><div class="eye">01 · Pipeline</div><h2>Eight stages, new lead to won</h2><p>One opportunity per deal. Nothing is deleted: "Not now" and "Lost" move to a nurture pipeline, because a no today is often a yes in three months.</p></div>
@@ -79,7 +79,7 @@ footer a{color:var(--acc)}
 <div class="st end"><b>08</b>Won<small>Value recorded, sent back to the ads</small></div>
 </div>
 <div class="grid2">
-<div class="card"><h3>Custom fields</h3><div class="chips"><span>Source Campaign (locked)</span><span>Ad / Form</span><span>Timeline: now · 3 months · later</span><span>Budget or Deal Size</span><span>Booked Date</span><span>Won Date</span><span>Won Value</span></div><p class="note">Source Campaign locks at the first touch, so every won deal points to exactly one campaign.</p></div>
+<div class="card"><h3>Custom fields</h3><div class="chips"><span>Source Campaign (locked)</span><span>Ad / Form</span><span>Timeline: now · 3 months · later</span><span>Budget or Deal Size</span><span>Booked Date</span><span>Won Date</span><span>Won Value</span><span>Call Outcome</span><span>Lost Reason</span></div><p class="note">Source Campaign locks at the first touch, so every won deal points to exactly one campaign.</p></div>
 <div class="card"><h3>Tags</h3><div class="chips"><span>src:meta-form</span><span>src:cold-email</span><span>form:&lt;name&gt;</span><span>ready-3mo</span><span>opened-no-click</span><span>no-show</span><span>docs-missing</span><span>dnc</span></div><p class="note">Tags drive the workflows; fields hold the facts the report needs.</p></div>
 </div></section>
 
@@ -114,25 +114,32 @@ footer a{color:var(--acc)}
 <div class="card"><h3>Waiting on the client</h3><ul class="steps"><li><b>DAY 1</b>Email listing only what is still missing, with the upload or payment link</li><li><b>DAY 2</b>Reminder</li><li><b>DAY 3</b>Call task for the rep</li><li><b>DAY 4</b>Reminder</li><li><b>DAY 7</b>Final reminder, and the deal is flagged</li></ul><p class="note">Any stage idle for 5+ days alerts the rep.</p></div>
 </section>
 
-<section><div class="head"><div class="eye">05 · Data back to the ads</div><h2>Meta learns from the CRM, not from the form</h2><p>Optimizing for raw leads teaches Meta to find people who fill in forms. Sending pipeline stages back teaches it to find people who book and buy.</p></div>
+<section><div class="head"><div class="eye">05 · After the call</div><h2>Most deals close in the follow-up</h2><p>The rep picks a call outcome before closing the call task. That one field starts the right follow-up and, over a month, shows exactly where deals are lost.</p></div>
+<div class="grid2">
+<div class="card"><h3>Held, not closed yet</h3><ul class="steps"><li><b>SAME DAY</b>Recap email: what we talked about, the next step, the link</li><li><b>DAY 2</b>The objection they raised, answered</li><li><b>DAY 4</b>Proof from someone in their situation</li><li><b>DAY 6</b>Call task, with a clear deadline if the offer has one</li><li><b>DAY 10</b>Last note, then nurture</li></ul><p class="note">Buying stops the flow and moves the deal to Won.</p></div>
+<div class="card"><h3>Call outcomes</h3><div class="chips"><span>Closed</span><span>Thinking it over</span><span>Money</span><span>Timing</span><span>Needs to ask partner</span><span>Not a fit</span></div><p class="note">The monthly count by outcome tells you whether to fix the ads (wrong people), the call (right people, no close) or the follow-up (closes that slip away).</p></div>
+</div></section>
+
+<section><div class="head"><div class="eye">06 · Data back to the ads</div><h2>Meta learns from the CRM, not from the form</h2><p>Optimizing for raw leads teaches Meta to find people who fill in forms. Sending pipeline stages back teaches it to find people who book and buy.</p></div>
 <div class="chain"><span>Lead with its ad and form</span><i>→</i><span>Stage changes in GHL</span><i>→</i><span>Event sent to Meta with the lead ID</span><i>→</i><span>Campaign optimizes for qualified leads</span></div>
 <div class="grid2">
 <div class="card"><h3>Which event to optimize for</h3><p>Booked calls are usually too few for Meta to learn from; it needs around 50 events a week. So I send <b>Qualified</b> as the event the campaign optimizes for, and <b>Booked</b> and <b>Won</b> as the ones we report on.</p></div>
 <div class="card"><h3>Before trusting any number</h3><p>I check match quality in Events Manager and compare the counts with the pipeline. If they don't match, the report waits until they do.</p></div>
 </div></section>
 
-<section><div class="head"><div class="eye">06 · Friday scoreboard</div><h2>One table, every week</h2><p>The layout of the weekly note. Each row is a source or a campaign.</p></div>
-<div class="tw"><table><tr><th>Source</th><th>Leads</th><th>Called in 5 min</th><th>Qualified</th><th>Booked</th><th>Show rate</th><th>Won</th><th>Cost per booked call</th><th>Call</th></tr>
+<section><div class="head"><div class="eye">07 · Friday scoreboard</div><h2>One table, every week</h2><p>The layout of the weekly note. Each row is a source or a campaign.</p></div>
+<div class="tw"><table><tr><th>Source</th><th>Leads</th><th>Called in 5 min</th><th>Qualified</th><th>Booked</th><th>Show rate</th><th>Closed</th><th>Cost per booked call</th><th>Call</th></tr>
 <tr><td>Meta · form A</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>scale / hold / kill</td></tr>
 <tr><td>Meta · form B</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>scale / hold / kill</td></tr>
 <tr><td>Cold email · campaign 1</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td>scale / hold / kill</td></tr></table></div>
 <p class="note">Under the table: where leads dropped this week, the one change I'm making next, and what I need from you.</p></section>
 
-<section><div class="head"><div class="eye">07 · Before anything goes live</div><h2>What I test, every time</h2><p>Each of these broke on a real account once. Now they're on the launch checklist.</p></div>
+<section><div class="head"><div class="eye">08 · Before anything goes live</div><h2>What I test, every time</h2><p>Each of these broke on a real account once. Now they're on the launch checklist.</p></div>
 <ul class="checks">
 <li><strong>A fake lead through the whole path</strong>From the ad form to the rep's alert, the emails and the pipeline, before a cent is spent.</li>
 <li><strong>Phone numbers with the country code</strong>Without it, the rep's dialer can't call anyone, and nothing shows an error.</li>
 <li><strong>The Meta connection, weekly</strong>When the connection token expires, leads stop arriving quietly. A weekly check and a test lead after any change.</li>
+<li><strong>Texting is registered</strong>US texts from GHL need A2P 10DLC registration and an opt-in on the form. Without it, messages get blocked quietly.</li>
 <li><strong>Every branch, with test contacts</strong>One that opens, one that doesn't, one that books: each should end in the right place, with the right tags.</li>
 </ul></section>
 
