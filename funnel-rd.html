@@ -1,0 +1,194 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Marina Scheffer · Funnel R&D</title>
+<meta name="description" content="Funnels Marina Scheffer optimized: opt-in rates, traffic quality, tracking, follow-up workflows and the testing system behind them.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;700&family=DM+Mono:wght@500&display=swap">
+<style>
+:root{--bg:#f5f4f1;--ink:#0e1730;--soft:#4c566b;--line:#e1ddd5;--card:#fff;--navy:#0e1730;--acc:#e8631a;--teal:#2fb6a5;--cream:#fbf3ec;--sage:#f5a623;--say:#fff6c9;--sayb:#e9c93a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:52px}
+h1,h2{font-family:'Source Serif 4',Georgia,serif;font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5vw,48px)} h2{font-size:clamp(24px,3.4vw,32px)}
+.eye{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--acc)}
+p{margin:0;color:var(--soft);max-width:68ch}
+section{display:flex;flex-direction:column;gap:18px}
+.head{display:flex;flex-direction:column;gap:8px}
+.hero{background:var(--navy);border-radius:6px;padding:40px 36px;position:relative}
+.hero .eye{color:var(--sage)} .hero h1{color:#fff} .hero p{color:#c9d2e3}
+.hero .who{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px;font-size:14px}
+.hero .who a{color:var(--sage)}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.kpi b{font:500 11px/1.2 'DM Mono',ui-monospace,monospace;letter-spacing:.06em;color:var(--acc);text-transform:uppercase}
+.kpi strong{font-family:'Source Serif 4',Georgia,serif;font-size:30px;font-weight:600;line-height:1.05}
+.kpi small{color:var(--soft);font-size:13px;line-height:1.35}
+.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.case img{width:100%;height:100%;object-fit:cover;display:block;max-width:100%;min-height:240px}
+.case.top img{object-position:top}
+.case .bd{padding:22px 24px 22px 0;display:flex;flex-direction:column;gap:12px;min-width:0}
+.tag{font:500 12px/1 'DM Mono',ui-monospace,monospace;color:var(--acc);letter-spacing:.04em}
+.case h3{margin:0;font-size:20px;line-height:1.25}
+.ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ba div{border-radius:10px;padding:10px 12px;background:var(--bg);display:flex;flex-direction:column;gap:2px}
+.ba div.after{background:var(--cream)}
+.ba i{font-style:normal;font:500 11px/1 'DM Mono',ui-monospace,monospace;color:var(--soft);text-transform:uppercase;letter-spacing:.06em}
+.ba span{font-weight:700;font-size:17px}
+ul.pts{margin:0;padding-left:18px;color:var(--soft);font-size:15px;display:flex;flex-direction:column;gap:4px}
+ul.pts strong{color:var(--ink)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{margin:0;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.card img{border-radius:8px;border:1px solid var(--line);max-width:100%}
+.card strong{color:var(--ink)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.chain span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:500;font-size:14px}
+.chain i{color:var(--acc);font-style:normal;font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);font-weight:700;background:var(--bg);white-space:nowrap}
+td{color:var(--soft)} td:first-child{color:var(--ink);font-weight:500}
+.pill{display:inline-block;font:500 11.5px/1 'DM Mono',ui-monospace,monospace;padding:5px 7px;border-radius:5px;background:var(--bg);white-space:nowrap}
+.pill.win{background:#dff4ef;color:#13675c}.pill.run{background:var(--cream);color:#9a4310}
+.callout{border-left:4px solid var(--teal);background:var(--card);border-radius:0 12px 12px 0;padding:14px 18px;color:var(--soft);font-size:15px}
+.callout strong{color:var(--ink)}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.rules li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--soft);font-size:15px}
+.rules li strong{display:block;color:var(--ink);margin-bottom:2px}
+.days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.day{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--acc);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.day b{font:500 12px/1 'DM Mono',ui-monospace,monospace;color:var(--acc)}
+.day strong{font-size:17px}
+.day p{font-size:14.5px}
+footer{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--soft);font-size:14px;border-top:1px solid var(--line);padding-top:18px}
+footer a{color:var(--acc)}
+/* talking points: only with #notes */
+.say{display:none;background:var(--say);border:1px solid var(--sayb);border-radius:10px;padding:10px 14px;font-size:14.5px;color:#3d3300;line-height:1.5}
+.say::before{content:"SAY  ";font:500 11px/1 'DM Mono',ui-monospace,monospace;letter-spacing:.1em;color:#8a6d00}
+.say mark{background:#ffe066;color:inherit;padding:0 2px;border-radius:3px}
+.notes-only{display:none}
+body.notes .say{display:block} body.notes .notes-only{display:flex}
+#tg{position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:5;border:0;border-radius:999px;padding:10px 14px;font:600 13px Inter,Arial,sans-serif;background:var(--navy);color:#fff;cursor:pointer;opacity:.25}
+#tg:hover,body.notes #tg{opacity:1}
+body.notes #tg{background:var(--sayb);color:#3d3300}
+@media (max-width:760px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.case,.grid2,.grid3,.days{grid-template-columns:1fr}.case .bd{padding:0 18px 20px}.hero{padding:28px 22px}}
+</style></head><body><div class="wrap">
+
+<section class="hero"><div class="head"><div class="eye">Marina Scheffer · Funnel research & development</div>
+<h1>Find the leak. Test one thing. Turn the winner into a template.</h1>
+<p>Funnels I've optimized across Meta, opt-in pages and follow-up, with my role, what I changed and the before and after. Then how I'd run the testing system for your client accounts.</p>
+<div class="who"><a href="#optin">Opt-in</a><a href="#traffic">Traffic & tracking</a><a href="#followup">Follow-up</a><a href="#upsell">Offers & upsell</a><a href="#system">Testing system</a><a href="#first30">First 30 days</a></div></div></section>
+
+<div class="say"><mark>Open:</mark> "The line in your post I liked most was <mark>don't declare winners prematurely</mark>. Most funnel testing I've audited failed there, not in the ideas. I'm Marina, in Brazil, 10+ years building acquisition funnels. I'm the person who <mark>writes the copy, builds the automation, and reads the data</mark> to decide what to test next."</div>
+
+<section><div class="head"><div class="eye">Your KPIs, my numbers</div><h2>The metrics you'll measure me on, from real funnels</h2></div>
+<div class="kpis">
+<div class="kpi"><b>Opt-in</b><strong>37.8%</strong><small>click to lead on the best Meta ad, real estate education</small></div>
+<div class="kpi"><b>Opt-in page</b><strong>212 → 2,827</strong><small>free analysis requests in 4 months, skincare clinic</small></div>
+<div class="kpi"><b>Cost per lead</b><strong>$25.77 → $7.02</strong><small>Aug to Oct, in a month CPM rose 85%</small></div>
+<div class="kpi"><b>Follow-up</b><strong>89% vs 28%</strong><small>webinar show-up, nurtured list vs cold ads</small></div>
+</div></section>
+
+<section id="optin"><div class="head"><div class="eye">01 · Opt-in conversion</div><h2>More of the right visitors become leads</h2></div>
+
+<div class="case"><img src="img/ads-skles-objection.jpg" alt="Objection ad: You don't need a lot of money" loading="lazy">
+<div class="bd"><span class="tag">US real estate education · Meta + instant form · Aug to Oct 2026</span>
+<h3>Four ads, each with one job</h3>
+<div class="ba"><div><i>Before</i><span>$25.77 / lead</span></div><div class="after"><i>After</i><span>$7.02 / lead</span></div></div>
+<ul class="pts"><li><strong>Role:</strong> media buying, copy, form, follow-up</li><li><strong>Tested:</strong> angle per ad (story, objection, numbers, W-2 earner)</li><li><strong>Won:</strong> objection ad, 37.8% click to lead at $6.14</li><li><strong>Quality:</strong> 39 of 40 left a phone, 21 of 40 "within 3 months"</li></ul>
+<div class="say">"CPM went up 85% in October and CPL barely moved, because <mark>CTR went from 7.7% to 11.8%</mark>. The copy absorbed the cost. And I added <mark>one qualifier question</mark> so the follow-up knows who to call first."</div>
+</div></div>
+
+<div class="case top"><img src="img/sys-lp-eclaire-analysis.jpg" alt="Free skin analysis opt-in page" loading="lazy">
+<div class="bd"><span class="tag">Skincare clinic · opt-in page · 4 months</span>
+<h3>A free analysis as the entry offer</h3>
+<div class="ba"><div><i>Before</i><span>212 requests</span></div><div class="after"><i>After</i><span>2,827 requests</span></div></div>
+<ul class="pts"><li><strong>Role:</strong> owned growth: offer, page, ads, follow-up</li><li><strong>Tested:</strong> the offer itself, then format, CTA and hook by tag</li><li><strong>Method:</strong> monthly best vs worst, next ideas scored before running</li></ul>
+<div class="say">"The biggest lift wasn't a headline, it was <mark>changing the offer</mark>: from 'buy a treatment' to 'get a free analysis'. Lower commitment, and the analysis itself sells the treatment."</div>
+</div></div>
+
+<div class="case"><img src="img/eclaire-leads-oct.jpg" alt="Spin-to-win opt-in: 2,645 leads, R$31.7k" loading="lazy">
+<div class="bd"><span class="tag">Same clinic · anniversary campaign</span>
+<h3>A gamified opt-in: spin to win</h3>
+<div class="ba"><div><i>Leads</i><span>2,645</span></div><div class="after"><i>Revenue</i><span>R$31.7k</span></div></div>
+<ul class="pts"><li>Name + email to spin, prizes as discount tiers</li><li>Every lead tagged by prize, so follow-up matched the discount they won</li></ul>
+<div class="say">"Opt-in tests aren't only copy. Sometimes it's <mark>the mechanic</mark>. Here the form became a game, and the follow-up was <mark>segmented by the prize</mark> each person won."</div>
+</div></div>
+</section>
+
+<section id="traffic"><div class="head"><div class="eye">02 · Traffic quality & tracking</div><h2>Meta was buying clicks. I made it buy registrations.</h2></div>
+<div class="case"><img src="img/ads-se-webinar.jpg" alt="Webinar ad" loading="lazy" style="object-fit:contain;background:#0b2a3a">
+<div class="bd"><span class="tag">Small business education · webinar funnel · 30 days</span>
+<h3>Fixed the tracking, then the optimization event</h3>
+<div class="ba"><div><i>Before</i><span>$451 · 0 tracked regs</span></div><div class="after"><i>After</i><span>8 → 34 regs · $13.91</span></div></div>
+<ul class="pts"><li><strong>Found:</strong> a Traffic campaign with 1,603 page views and no registration event firing</li><li><strong>Changed:</strong> registration event validated, campaign moved to Conversions</li><li><strong>Result:</strong> 15 attended against a target of 10</li></ul>
+<div class="say">"Before I test anything, I <mark>check the tracking</mark>. Here $451 had gone to clicks with zero tracked registrations. <mark>You can't A/B test on numbers you don't trust.</mark>"</div>
+</div></div>
+<div class="callout"><strong>Ad to page to message, one promise.</strong> The ad's hook, the page headline and the first follow-up message say the same thing in the same words. When CTR is high and opt-in is low, the break is almost always there.</div>
+</section>
+
+<section id="followup"><div class="head"><div class="eye">03 · Follow-up that converts · GoHighLevel</div><h2>Where most of the money is made after the opt-in</h2></div>
+<div class="grid2">
+<div class="card"><h3>4 GHL accounts I've managed</h3>
+<ul class="pts"><li><strong>Real estate education:</strong> Meta instant form → pipeline, call queue, email nurture</li><li><strong>Credit repair agency:</strong> intake, document collection, follow-up until the file is complete</li><li><strong>Management consulting:</strong> webinar registration, reminders, show-up flows</li><li><strong>AI consulting (B2B):</strong> outbound and referral sequences</li></ul>
+<p style="font-size:14px">Workflows, triggers, tags, segmentation, pipeline stages, conversion events back to Meta.</p></div>
+<div class="card"><h3>Referral follow-up sequence · 62 contacts</h3><img src="img/samba-sequence-rates.png" alt="Sequence performance: 52% open, 10% reply, 5% meeting" loading="lazy"></div>
+</div>
+<div class="chain"><span>Opt-in</span><i>→</i><span>Instant SMS + email</span><i>→</i><span>Tag by answer</span><i>→</i><span>Branch on open / click</span><i>→</i><span>Offer deadline</span><i>→</i><span>Purchase = exit</span></div>
+<div class="say">"In the webinar funnel the <mark>nurtured list showed up at 89%, cold ads at 28%</mark>. That told us the next tests belonged in follow-up, not more traffic. The things I'd test in your workflows: <mark>first-message delay, frequency, sequence length and deadline</mark>, one at a time." Full playbook: <a href="ghl.html">ghl.html</a></div>
+<div class="say">If he asks <mark>"what broke?"</mark>: phone numbers saved without country code, so the dialer and SMS couldn't reach them. And lead alerts stopped when the Meta token expired. <mark>Both are on my launch checklist now.</mark></div>
+</section>
+
+<section id="upsell"><div class="head"><div class="eye">04 · Offers & upsell</div><h2>Test the offer, judge it on revenue per lead</h2></div>
+<div class="grid2">
+<div class="card"><h3>Scarcity offer, 3 months running</h3><p><strong>"First 100 to tag a friend get 50% off."</strong> Revenue on it grew every month it ran:</p>
+<div class="ba"><div><i>Month 1</i><span>US$1.2k</span></div><div class="after"><i>Month 3</i><span>US$2.2k</span></div></div></div>
+<div class="card"><h3>How I'd test your upsell page</h3>
+<ul class="pts"><li><strong>Offer:</strong> what's in it, bonus vs discount</li><li><strong>Price:</strong> anchor, payment plan, one-click</li><li><strong>Presentation:</strong> video vs text, order of proof</li><li><strong>Flow:</strong> upsell on thank-you page vs in follow-up</li></ul></div>
+</div>
+<div class="say">If he asks for <mark>upsell take rates</mark>: "My upsell work was offer-level, like this scarcity offer. I won't give you a take rate I can't back. What I'd bring is the discipline: <mark>one variable at a time, and a higher take rate that lowers revenue per lead doesn't count as a win</mark>."</div>
+</section>
+
+<section id="system"><div class="head"><div class="eye">05 · The testing system</div><h2>A roadmap anyone on the team can read</h2></div>
+<div class="tw"><table>
+<tr><th>Test</th><th>Hypothesis</th><th>Metric</th><th>Call it when</th><th>Status</th></tr>
+<tr><td>Opt-in headline</td><td>Naming the outcome beats naming the product</td><td>Opt-in rate</td><td>100 opt-ins per variant + 7 days</td><td><span class="pill run">Running</span></td></tr>
+<tr><td>First SMS delay</td><td>Instant beats 10 min for booked calls</td><td>Booked within 48 h</td><td>200 leads per arm</td><td><span class="pill">Queued</span></td></tr>
+<tr><td>Upsell deadline</td><td>48 h deadline lifts purchases without refunds</td><td>Revenue per lead</td><td>Full 2 cycles</td><td><span class="pill">Queued</span></td></tr>
+<tr><td>Form qualifier</td><td>One timing question improves lead quality</td><td>% "within 3 months"</td><td>Done</td><td><span class="pill win">Won → template</span></td></tr>
+</table></div>
+<ul class="rules">
+<li><strong>Sample size set before launch</strong>Decided up front, so nobody calls it on day two.</li>
+<li><strong>One variable at a time</strong>Otherwise a win teaches you nothing.</li>
+<li><strong>Full weeks only</strong>Weekday vs weekend traffic behaves differently.</li>
+<li><strong>Revenue is the tiebreaker</strong>Opt-in up but revenue per lead down is not a win.</li>
+</ul>
+<div class="chain"><span>Winning test</span><i>→</i><span>Funnel template</span><i>→</i><span>GHL snapshot</span><i>→</i><span>SOP</span><i>→</i><span>Deploy checklist</span><i>→</i><span>Next client, day one</span></div>
+<div class="say">"Each win gets <mark>documented the same day</mark>: what changed, the numbers, the screenshot. Then it becomes a template and a checklist, so <mark>the next account starts from the winner, not from zero</mark>."</div>
+</section>
+
+<section id="first30"><div class="head"><div class="eye">06 · First 30 days</div><h2>What you'd get from me, week by week</h2></div>
+<div class="days">
+<div class="day"><b>Week 1</b><strong>Audit & tracking</strong><p>Read the KPIs per step, validate pixel, events and GHL conversion data. List the biggest drop-off.</p></div>
+<div class="day"><b>Week 2</b><strong>Roadmap & first tests</strong><p>Hypotheses scored by impact and effort. First opt-in test and first workflow timing test live.</p></div>
+<div class="day"><b>Weeks 3 to 4</b><strong>Results & templates</strong><p>Read what's ready, document it, turn the first winner into a template and SOP.</p></div>
+</div></section>
+
+<section class="notes-only" style="gap:12px"><div class="head"><div class="eye">Only you see this · hours & money</div><h2>The "to be determined" hours</h2></div>
+<div class="say"><mark>Ask first:</mark> "The post says hours to be determined. <mark>How many hours a month do you picture</mark> for this, at least at the start?"</div>
+<div class="say"><mark>If he turns it back to you:</mark> "I'd start at <mark>60 to 80 hours a month</mark>, about 15 to 20 a week, on a set schedule. The first month is audit, roadmap and the first tests. Once the template system is built we'll know if it needs more." At $30/h that's <mark>$1,800 to $2,400 a month</mark>.</div>
+<div class="say"><mark>If he wants more (30+ h/week):</mark> "I can grow into that. Let's start at 20 for the first month and review together after the first results." Contract-to-hire: "I'm open to it, I'd like the first month to show you the fit." <mark>Don't mention other clients' hours.</mark></div>
+<div class="say"><mark>Ask him:</mark> 1) How many client accounts run this funnel today, and is it the same funnel in all? 2) What are opt-in and upsell rates now? 3) Who builds pages, me or a designer? 4) Who owns the ad accounts, do I buy media or advise? 5) What does a great first 90 days look like for you?</div>
+</section>
+
+<footer><span>Marina Scheffer · Growth & acquisition</span><a href="ghl.html">GoHighLevel playbook</a><a href="copy.html">Copy & pages</a><a href="systems.html">Systems</a><a href="Marina-Scheffer-CV.pdf">CV</a></footer>
+</div>
+<button id="tg" type="button">Talking points</button>
+<script>
+const b=document.body,t=document.getElementById('tg');
+const set=on=>{b.classList.toggle('notes',on);t.textContent=on?'Hide talking points':'Talking points'};
+set(location.hash==='#notes');
+t.onclick=()=>{const on=!b.classList.contains('notes');set(on);history.replaceState(null,'',on?'#notes':location.pathname)};
+</script>
+</body></html>
